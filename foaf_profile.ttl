@@ -1,0 +1,332 @@
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix zoo: <http://mojezoo.cz/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:Výběh a rdfs:Class ; 
+	rdf:subClassOf skos:Concept ;
+	rdfs:label "Výběh"@cs ;
+    rdfs:comment "Libovolný prostor, ve kterém žije nějaké zvíře."@cs .
+
+	ex:popisLokace a rdf:Property ;
+		rdfs:label "Popis lokace"@cs ;
+		rdfs:domain ex:Výběh;
+		rdfs:range xsd:string .
+
+	ex:datumVýstavby a rdf:Property ;
+		rdfs:label "Datum výstavby"@cs ;
+		rdfs:domain ex:Výběh;
+		rdfs:range xsd:date .
+
+	ex:průměrnáTeplota a rdf:Property ;
+		rdfs:label "Průměrná teplota"@cs ;
+		rdfs:domain ex:Zaměstnanec ;
+		rdfs:range xsd:integer .
+
+
+ex:ZvířeTyp a rdfs:Class ; 
+	rdf:subClassOf skos:Concept ;
+	rdfs:label "Typ zvířete"@cs ;
+    rdfs:comment "Označuje konkrétní druh zvířete"@cs .
+
+	ex:popisChovu a rdf:Property ;
+		rdfs:label "Popis chovu"@cs ;
+		rdfs:domain  ex:Concept ;
+		rdfs:range xsd:string .
+
+zoo:TypyZvířat a skos:ConceptScheme ;
+	rdfs:label "Typy zvířat"@cs ;
+	skos:prefLabel "Typy zvířat"@cs .
+
+
+@prefix dbo: <http://dbpedia.org/ontology/> .
+
+# TODO: zeptat se
+# ex:Zvíře a rdfs:Class ;
+#	rdfs:label "Zvíře" .
+
+	ex:popisZdravotníhoStavu a rdf:Property ;
+		rdfs:label "Popis zdravotního stavu"@cs ;
+		rdfs:domain dbo:Animal ;
+		rdfs:range xsd:string .
+
+	ex:datumNarození a rdf:Property ;
+		rdfs:label "Datum narození"@cs ;
+		rdfs:domain dbo:Animal ;
+		rdfs:range xsd:date .
+
+	ex:datumPříchoduDoZoo a rdf:Property ;
+		rdfs:label "Datum příchodu do zoo"@cs ;
+		rdfs:domain dbo:Animal ;
+		rdfs:range xsd:date .
+
+
+
+ex:TypStravy a rdfs:Class ; 
+	rdf:subClassOf skos:Concept ;
+	rdfs:label "Typ Stravy"@cs .
+
+	ex:cena a rdf:Property ;
+		rdfs:label "Cena"@cs ;
+		rdfs:domain  ex:TypStravy ;
+		rdfs:range xsd:integer .
+
+	ex:kalorie a rdf:Property ;
+		rdfs:label "Kalorie"@cs ;
+		rdfs:domain  ex:TypStravy ;
+		rdfs:range xsd:integer .
+
+
+
+ex:Pavilon a rdfs:Class; 
+	rdf:subClassOf skos:ConceptScheme;
+	rdfs:label "Pavilon"@cs ;
+    rdfs:comment "Pavilon obsahuje výběhy."@cs .
+
+	ex:datumVzniku a rdf:Property ;
+		rdfs:label "Datum vzniku"@cs ;
+		rdfs:domain ex:Pavilon ;
+		rdfs:range xsd:date .
+	
+
+
+
+@prefix w3c: <http://www.w3.org/ns/org#> .
+
+ex:Zaměstnanec a skos:Concept ;
+	rdfs:label "Zaměstnanec"@cs
+	
+ex:Uklízeč a rdfs:Class ;
+	rdfs:subClassOf ex:Zaměstnanec;	
+	rdfs:label "Uklízeč"@cs ;
+        rdfs:comment "Uklízeč zajišťuje čistotu prostor."@cs .
+
+
+ex:Veterinář a rdfs:Class ;
+	rdfs:subClassOf ex:Zaměstnanec;	
+	rdfs:label "Veterinář"@cs ;
+        rdfs:comment "Stará se o zdravotní stav zvířat."@cs .
+
+ex:Pečovatel a rdfs:Class ;
+	rdfs:subClassOf ex:Zaměstnanec;	
+	rdfs:label "Pečovatel"@cs, "Employee"@en ;
+        rdfs:comment "Zajišťuje údržbu výběhů zvířat."@cs .
+
+ex:PrůvodcePavilonem a rdfs:Class ;
+	rdfs:subClassOf ex:Zaměstnanec;	
+	rdfs:label "Průvodce pavilonem"@cs, "Employee"@en ;
+        rdfs:comment "Provádí návštěvníky pavilonem."@cs .
+
+	ex:plat a rdf:Property ;
+		rdfs:label "Plat"@cs ;
+		rdfs:domain ex:Zaměstnanec;
+		rdfs:range xsd:integer .
+
+	ex:telefonníČíslo a rdf:Property ;
+		rdfs:label "Telefonní číslo"@cs ;
+		rdfs:domain ex:Zaměstnanec;
+		rdfs:range xsd:string .
+
+
+
+ex:spravuje a rdf:Property .
+ex:stravuje a rdf:Property .
+ex:lzeSpatřit a rdf:Property .
+ex:domovem a rdf:Property .
+ex:pečuje a rdf:Property .
+ex:sekcí a rdf:Property .
+ex:prováděníPavilonem a rdf:Property .
+
+
+
+
+
+zoo:Afrika a ex:Pavilon ;
+	rdfs:label "Afrika"@cs ;
+	ex:datumVzniku 2004-06-01 .
+
+zoo:Plazy a ex:Pavilon ;
+	rdfs:label "Afrika"@cs ;
+	ex:datumVzniku 2004-06-01 .
+
+zoo:Prales a ex:Pavilon ;
+	rdfs:label "Afrika"@cs ;
+	ex:datumVzniku 2004-06-01 .
+
+
+
+
+
+
+zoo:Savana a ex:Výběh ;
+	skos:inScheme zoo:Afrika ;
+	rdfs:label "Savana"@cs ;
+	ex:popisLokace "S1" ;
+	ex:datumVýstavby 2002-09-24 ;
+	dcterms:description "1200 m^2 rovinné travnaté plochy,  na okrajích s velkými rozestupy rostou baobaby a blahovičníky."@cs .
+
+zoo:Poušť a ex:Výběh ;
+	skos:inScheme zoo:Afrika ;
+	rdfs:label "Pouštní krajina"@cs ;
+	ex:popisLokace "S2" ;
+	ex:datumVýstavby 2003-08-19 ;
+	dcterms:description "1500 m^2 rovinné písčité plochy,  na levém okraji roste mix listnatých stromů. "@cs .
+	
+zoo:Hory a ex:Výběh ;
+	skos:inScheme zoo:Afrika ;
+	rdfs:label "Hornatá krajina"@cs ;
+	ex:popisLokace "S3" ;
+	ex:datumVýstavby 2005-06-02 ;
+	dcterms:description "1000 m^2 plochy strmitých skalisek. "@cs .
+
+zoo:TeráriumKober a ex:Výběh ;
+	skos:inScheme zoo:Plazy ;
+	rdfs:label "Terárium kober"@cs ;
+	ex:popisLokace "PL1" ;
+	ex:datumVýstavby 2011-04-01 ;
+	dcterms:description "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi "@cs .
+
+
+zoo:VýběhGoril a ex:Výběh ;
+	skos:inScheme zoo:Prales ;
+	rdfs:label "Výběh goril"@cs ;
+	ex:popisLokace "PR2" ;
+	ex:datumVýstavby 2010-04-12 ;
+	dcterms:description "100 m^2 plochy, prosklenný plot, nerovný travnatý povrch, roste zde několik dubů. "@cs .
+
+
+
+
+
+zoo:typyStravy a skos:ConceptScheme .
+
+zoo:Seno a ex:TypStravy ;
+	skos:inScheme zoo:typyStravy ;
+	rdfs:label "Seno"@cs ;
+	ex:cena 1000 ; # za celý balík
+	ex:kalorie 3160 . # kilo kalorií na 1 kg sena
+
+zoo:Myš a ex:TypStravy ;
+	rdfs:label "Myš"@cs ;
+	ex:cena 10 ;
+	ex:kalorie 50 .
+
+zoo:Meloun a ex:TypStravy ; 
+	skos:inScheme zoo:typyStravy ;
+	rdfs:label "Meloun"@cs ;
+	ex:cena 30 ; # za 1 kg
+	ex:kalorie 28 .
+
+
+
+
+zoo:Zebra a ex:ZvířeTyp ;
+	skos:inScheme zoo:TypyZvířat ;
+	skos:prefLabel "Zebra"@cs, "Zebra"@en ;
+	ex:lzeSpatřit zoo:Savana ;
+	dcterms:description "Bílý kůň s černýma pruhama"@cs ;
+	ex:popisChovu "Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. 
+			Zimu tráví ve stájích"@cs ;
+	ex:stravuje zoo:seno .
+
+zoo:VelbloudDvouhrbý a ex:ZvířeTyp ;
+	skos:inScheme zoo:TypyZvířat ;
+	skos:prefLabel "Velbloud dvouhrbý"@cs ;
+	dcterms:description "Hnědý kůň s dvouma hrbama"@cs ;
+	ex:popisChovu "Velbloud je velmi nenáročné zvíře, živí se trávou, senem. 
+			Zimu tráví ve stájích. Když jednou zapomenete dodat vodu, nic se nestane."@cs ;
+	ex:stravuje zoo:seno .
+
+zoo:PaovceHřivnatá a ex:ZvířeTyp ;
+	skos:inScheme zoo:TypyZvířat ;
+	skos:prefLabel "Paovce hřivnatá"@cs ;
+	dcterms:description "Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe."@cs ;
+	ex:popisChovu "Živí se trávou, senem. Zimu tráví ve stájích."@cs ;
+	ex:stravuje zoo:seno .
+
+zoo:KobraKrálovská a ex:ZvířeTyp ;
+	skos:inScheme zoo:TypyZvířat ;
+	skos:prefLabel "Kobra královská"@cs ;
+	ex:lzeSpatřit zoo:TeráriumKober ;
+	dcterms:description "je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie."@cs ;
+	ex:popisChovu "Živí se myšmi, nutné je být opatrný, jedná se o jednovatého hada."@cs ;
+	ex:stravuje zoo:Myš .
+
+
+zoo:GorilaNížnná a ex:ZvířeTyp ;
+	skos:inScheme zoo:TypyZvířat ;
+	skos:prefLabel "Gorila"@cs ;
+	ex:lzeSpatřit zoo:VýběhGoril ;
+	dcterms:description "Domovem goril jsou tropické lesy v rovníkové Africe, kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve."@cs ;
+	ex:popisChovu "Živí se částí rostlin, ovoce, mravenci. "@cs ;
+	ex:stravuje zoo:Meloun .
+
+
+
+
+
+zoo:Černobíl a dbo:Animal ;
+	rdfs:label "Černobíl"@cs ;
+	dcterms:type zoo:Zebra ;
+	ex:domovem zoo:Savana ;
+	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+	ex:datumNarození 2012-04-02 ;
+	ex:datumPříchoduDoZoo 2012-04-02 .
+
+zoo:Erin a dbo:Animal ;
+	rdfs:label "Erin"@cs ;
+	dcterms:type zoo:Zebra ;
+	ex:domovem zoo:Savana ;
+	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+	ex:datumNarození 2010-01-10 ;
+	ex:datumPříchoduDoZoo 2010-01-10 .
+
+zoo:Bessie a dbo:Animal ;
+	rdfs:label "Bessie"@cs ;
+	dcterms:type zoo:Zebra ;
+	ex:domovem zoo:Savana ;
+	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+	ex:datumNarození 2009-05-12 ;
+	ex:datumPříchoduDoZoo 2010-01-8 .
+
+zoo:George a dbo:Animal ;
+	rdfs:label "George"@cs ;
+	dcterms:type zoo:Gorila ;
+	ex:domovem zoo:VýběhGoril ;
+	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+	ex:datumNarození 1995-05-12 ;
+	ex:datumPříchoduDoZoo 2005-01-8 .
+
+zoo:Lenka a dbo:Animal ;
+	rdfs:label "Lenka"@cs ;
+	dcterms:type zoo:Kobra ;
+	ex:domovem zoo:TeráriumKober ;
+	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+	ex:datumNarození 2015-03-01 ;
+	ex:datumPříchoduDoZoo 2018-05-10 .
+
+
+
+
+
+zoo:Uklízeč_1 a ex:Uklízeč ;
+	rdfs:label "Petr Novotný"@cs ;
+	ex:plat 25000 ;
+	ex:telefonníČíslo "+420 111222333" .
+
+zoo:Pečovatel_1 a ex:Pečovatel ;
+	rdfs:label "Marie Novotná"@cs ;
+	ex:plat 35000 ;
+	ex:telefonníČíslo "+420 111222334" ;
+	ex:spravuje zoo:Poušť, zoo:Savana, zoo:Hory, zoo:TeráriumKober, zoo:VýběhGoril .
+	
+zoo:Veterinář_1 a ex:Veterinář ;
+	rdfs:label "Marek Novotný"@cs ;
+	ex:plat 40000 ;
+	ex:telefonníČíslo "+420 111222335" ;
+	ex:pečuje zoo:Poušť, zoo:Savana, zoo:Hory, zoo:TeráriumKober, zoo:VýběhGoril .
+
+zoo:Průvodce_pavilonem_1 a ex:PrůvodcePavilonem ;
+	rdfs:label "Anna Novotná"@cs ;
+	ex:plat 30000 ;
+	ex:telefonníČíslo "+420 111222336" ;
+	ex:prováděníPavilonem zoo:Afrika, zoo:Plazy, zoo:Prales .
