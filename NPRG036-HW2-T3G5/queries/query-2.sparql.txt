@@ -1,0 +1,63 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX zoo: <http://mojezoo.cz/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX w3c: <http://www.w3.org/ns/org#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+# Tento sparql dotaz vyhledá zvíře, které bude mít nejdříve narozeniny ze všech zvířat, a také vrátí počet dnů, za jak dlouho je bude mít
+
+SELECT ?zvire ?dobaZaJakDlohouBudouNarozeniny WHERE {
+    BIND(xsd:dateTime(NOW()) AS ?currnetDate)
+    BIND(YEAR(?currnetDate) AS ?yearCurrent)
+    BIND(MONTH(?currnetDate) AS ?monthCurrent)
+    BIND(DAY(?currnetDate) AS ?dayCurrent)
+
+    {    
+    # vártí aktuální datum month složky převedené do počtu dnů
+    SELECT (SUM(?pocetDniMesice) AS ?pocetDnuZMesicuAktuálníhoRoku) WHERE {
+            BIND(xsd:dateTime(NOW()) AS ?currnetDate)
+            BIND(MONTH(?currnetDate) AS ?monthCurrent)
+        
+            VALUES(?monthNumber ?pocetDniMesice){
+                (1 31)(2 28)(3 31)(4 30)(5 31)(6 30)(7 31)(8 31)(9 30)(10 31)(11 30)(12 31) # dokazu prevadet mesice na dny, prevedeme stari na dny
+            }
+            FILTER(?monthNumber < ?monthCurrent)
+        }
+    }
+    # vypočte aktuální datum převedené do dnů
+    BIND(?yearCurrent * 365 + ?pocetDnuZMesicuAktuálníhoRoku + ?dayCurrent AS ?pocetDnu)
+
+                
+    {    
+        # vártí datum narozenin month složky všech zvířat převedené do počtu dnů
+        SELECT ?zvire ?datumNarození (SUM(?pocetDniMesice) AS ?pocetDnuZMesicuAktuálníhoRokuProDaneZvire) WHERE {
+            ?zvire ex:datumNarození ?datumNarození .
+            VALUES(?monthNumber ?pocetDniMesice){
+                (0 0)(1 31)(2 28)(3 31)(4 30)(5 31)(6 30)(7 31)(8 31)(9 30)(10 31)(11 30)(12 31)
+            }
+            FILTER(?monthNumber < MONTH(?datumNarození))
+        } GROUP BY ?zvire ?datumNarození
+    }
+
+        # vypočte datumy narozenin všech zvířat převedené do dnů
+    BIND(YEAR(?datumNarození) * 365 + ?pocetDnuZMesicuAktuálníhoRokuProDaneZvire + DAY(?datumNarození) AS ?narozeniVeDnech)
+
+    # vypočte, jak dloho jednotlivá zvířata žijí 
+    BIND(?pocetDnu - ?narozeniVeDnech AS ?dobaJakDlouhožije)
+
+    # provádí 365 - dobaJakDlouhoŽije % 365, bohužel jsem nenašel funkci modulo
+    BIND(365 - (?dobaJakDlouhožije - (FLOOR(?dobaJakDlouhožije / 365) * 365)) AS ?dobaZaJakDlohouBudouNarozeniny)	
+
+} ORDER BY ?dobaZaJakDlohouBudouNarozeniny LIMIT 1
+
+
+  
+  
+  
+  

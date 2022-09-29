@@ -1,0 +1,56 @@
+Zoo:
+
+Náš konceptuální model popisuje data naší smyšlené zoologické zahrady.
+Zoologická zahrada má své výběhy a popřípadě pavilony, v nich jsou umístěná zvířata nějakého druhu, a o která se stará určitá skupina lidí.
+
+Výběh:
+Každé místo v zoo, kde žijí nějaké zvířátka je v datech reprezentováno třídou Výběh.
+Může to představovat cokoli od běžného výběhu, přez terária až k akváriím.
+    • Lokace: Souřadnice místa kde se výběh nachází, reprezentováno stringem.
+    • Datum výstavby: Datum kdy byl pavilon vybudován, reprezentováno date.
+    • Průměrná teplota: Průměrná naměřená teplota ve výběhu, reprezentováno floatem
+    • Popis: Přibližný popis výběhu, reprezentován stringem.
+    • Pečovatelé: Seznam pečovatelů starajících se o výběh, reprezetováno list(Pečovatel).
+    • Veterináři: Seznam veterinářů starajicích se o tento výběh, reprezetováno list(Veterinář).
+
+ZvířeTyp:
+Každý výběh musí obsahovat také 1, nebo více typů zvířat. které lze v daném výběhu nalézt. Jeden druh zvířete se může vyskytovat ve více výbězích. 
+    • Název: Jméno druhu zvířete, reprezentováno stringem.
+    • Popis:  Přibližný popis zvířete, reprezentován stringem.
+    • Popis chovu: Instrukce jak se k chovat tento typ zvířete, reprezentován stringem.
+    • Typy stravy: Popisuje druhy jídla, kterými se krmí tento typ zvířete, reprezentováno list(TypStravy).
+
+TypStravy:
+Jednotlivé druhy potravy pro konkrétní typy zvířat.
+    • Název: Jméno daného jídla, popř. stručný popis, reprezentován stringem.
+    • Cena: Kolik strojí porce tohoto typu stravy, reprezentováno floatem.
+    • Kalorie: Množství kalorií v jedné porci tohoto typu stravy, reprezentováno floatem. 
+
+Zvíře:
+Zvíře reprezentuje konkrétní zvíře daného typu. 
+    • Jméno: Reprezentováno stringem.
+    • Zdravotní stav: Popisuje aktuální zdravotní stav, popř.  aktuální medikaci. Reprezentováno stringem.
+    • Datum narození: Reprezentováno date.
+    • Datum příchodu do zoo: V případě, že se zvíře narodilo v zoo je datum shodné s datem narození. Reprezentováno date.
+    • Typ zvířete: Jeden konkrétní typ zvířere, reprezentován ZvířeTyp.
+    • Výběh: Jeden výběh, ve kterém zvíře žije, reprezentován Výběh.
+
+Pavilon:
+Pavilon je větší celek zahrady skládající se z více výběhů s různými zvířátky.
+    • Název: Jméno daného pavilonu, reprezentováno stringem.
+    • Datum vzniku: Datum kdy byl pavilon postaven, reprezentováno date.
+    • Datum poslední rekonstrukce: Pokud pavilon nebyl renovován, je tato hodnota rovna datu vzniku. Reprezentováno date.
+    • Výběhy: Seznam všech výběhů v pavilonu, reprezentováno list(Výběh).
+    • Průvodci pavilonem: Seznam všech průvodců v pavilonu, reprezentováno list(Průvodce)
+
+
+Zaměstnanec: 
+Zaměstnance je například již zmíněný průvodce pavilonem, který provádí  alespoň  v jednom pavilonu. Dále zoo má zaměstnance veterináře, který pečuje o zvířata v daných výbězích,
+nebo pečovatele, který spravuje alespoň jeden výběh a všechna zvířata v něm.
+    • Jméno: Reprezentováno stringem.
+    • Plat: Suma, kterou zaměstnanec měsíčně obdrží za vykonanou práci, reprezentováno floatem.
+    • Telefoní číslo: Telefoní kontakt na zaměstnance, reprezentováno stringem.
+
+Uklízeč, Veterinář, Pečovatel a Průvodce pavilonem:
+Reprezentace konkrétního typu zaměstnance.
+    • Zaměstnanec: Reprezentován typem Zaměstnanec.
