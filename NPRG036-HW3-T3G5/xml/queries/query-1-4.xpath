@@ -1,0 +1,3 @@
+(: vybere nejstarší zvíře v zoo,  využívá fci min, poběží pouze na xpath 2.0:)
+
+//Zvíře[./number(translate(./datumNarození/text(),'-','')) = min(//Zvíře/number(translate(./datumNarození/text(),'-','')))]

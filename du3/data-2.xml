@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Zoo 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="http://mojezoo.cz/ schema-1.xsd"
+    xmlns="http://mojezoo.cz/">
+    <Pavilon>
+        <nazev>Afrika</nazev>
+        <datumVystavby>2004-06-01</datumVystavby>
+        <datumPosledniRekonstrukce>2020-02-05</datumPosledniRekonstrukce>
+        <Vybeh>
+            <nazev>Savana</nazev>
+            <lokaceNaMape>S1</lokaceNaMape>
+            <datumVystavby>2002-09-24</datumVystavby>
+            <popis xml:lang="cs">1200 m^2 rovinne travnate plochy,  na okrajich s velkymi rozestupy rostou baobaby a blahoviCniky.</popis>
+            
+            <ZvireTyp></ZvireTyp>
+
+            <Zvire>
+                <jmeno>Cernobil</jmeno>
+	            <popisZdravotnihoStavu xml:lang="cs">Zdravy jedinec</popisZdravotnihoStavu>  
+	            <datumNarozeni>2012-04-02</datumNarozeni>
+            	<datumPrichoduDoZoo>2012-04-02</datumPrichoduDoZoo>
+                <ZvireTyp nazevTypu="Zebra" />
+            </Zvire>
+
+            <Zvire>
+                <jmeno>Erin</jmeno>
+	            <popisZdravotnihoStavu xml:lang="cs">Zdravy jedinec</popisZdravotnihoStavu>  
+	            <datumNarozeni>2010-01-10</datumNarozeni>
+            	<datumPrichoduDoZoo>2010-01-10</datumPrichoduDoZoo>
+                <ZvireTyp nazevTypu="Zebra" />
+            </Zvire>
+
+            <Zvire>
+                <jmeno>Bessie</jmeno> 
+	            <popisZdravotnihoStavu xml:lang="cs">Zdravy jedinec</popisZdravotnihoStavu>  
+	            <datumNarozeni>2009-05-12</datumNarozeni>
+            	<datumPrichoduDoZoo>2010-01-18</datumPrichoduDoZoo>
+                <ZvireTyp nazevTypu="Zebra" />
+            </Zvire>
+
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+        
+        <Vybeh>
+            <nazev>Poušť</nazev>
+            <lokaceNaMape>S2</lokaceNaMape>
+            <datumVystavby>2003-08-19</datumVystavby>
+            <popis xml:lang="cs">1500 m^2 rovinne pisCite plochy,  na levem okraji roste mix listnatych stromu. </popis>
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+
+        <Vybeh>
+            <nazev>Hory</nazev>
+            <lokaceNaMape>S3</lokaceNaMape>
+            <datumVystavby>2005-06-02</datumVystavby>
+            <popis xml:lang="cs">1000 m^2 plochy strmitych skalisek. </popis>
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+
+        <Vybeh>
+            <nazev>TerariumKober</nazev>
+            <lokaceNaMape>S3</lokaceNaMape>
+            <datumVystavby>2005-06-02</datumVystavby>
+            <popis xml:lang="cs">1000 m^2 plochy strmitych skalisek. </popis>
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+
+        <Vybeh>
+            <nazev>VybehGoril</nazev>
+            <lokaceNaMape>S3</lokaceNaMape>
+            <datumVystavby>2005-06-02</datumVystavby>
+            <popis xml:lang="cs">1000 m^2 plochy strmitych skalisek. </popis>
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+
+        <PruvodcePavilonem nazevTypu="Pruvodce_pavilonem_1"/>
+    </Pavilon>
+
+
+
+    <Pavilon>
+        <nazev>Plazy</nazev>
+        <datumVystavby>2004-06-01</datumVystavby>
+        <datumPosledniRekonstrukce>2020-02-05</datumPosledniRekonstrukce>
+
+        <Vybeh>
+            <nazev>TerariumKober</nazev>
+            <lokaceNaMape>PL1</lokaceNaMape>
+            <datumVystavby>2011-04-01</datumVystavby>
+            <popis xml:lang="cs">4 m^2 plochy, prosklenne terrarium s umelym jezirkem a starymi dubovymi vetvemi </popis>
+            <Zvire>
+                <jmeno>Lenka</jmeno>  
+	            <popisZdravotnihoStavu xml:lang="cs">Zdravy jedinec</popisZdravotnihoStavu>  
+	            <datumNarozeni>2015-03-01</datumNarozeni>
+            	<datumPrichoduDoZoo>2018-05-10</datumPrichoduDoZoo>
+                <ZvireTyp nazevTypu="KobraKralovska" />
+            </Zvire>            
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+        
+        <PruvodcePavilonem nazevTypu="Pruvodce_pavilonem_1"/>
+    </Pavilon>
+
+    <Pavilon>
+        <nazev>Prales</nazev>
+        <datumVystavby>2004-06-01</datumVystavby>
+        <datumPosledniRekonstrukce>2018-04-08</datumPosledniRekonstrukce>
+
+        <Vybeh>
+            <nazev>VybehGoril</nazev>
+            <lokaceNaMape>PR2</lokaceNaMape>
+            <datumVystavby>2010-04-12</datumVystavby>
+            <popis xml:lang="cs">100 m^2 plochy, prosklenny plot, nerovny travnaty povrch, roste zde nekolik dubu.</popis>
+            <Zvire>
+                <jmeno>George</jmeno>
+	            <popisZdravotnihoStavu xml:lang="cs">Zdravy jedinec</popisZdravotnihoStavu>
+	            <datumNarozeni>1995-05-12</datumNarozeni>
+            	<datumPrichoduDoZoo>2005-01-18</datumPrichoduDoZoo>
+                <ZvireTyp nazevTypu="GorilaNižnna" />
+            </Zvire>           
+            <Veterinar nazevTypu="Veterinar_1"/>
+            <PeCovatel nazevTypu="PeCovatel_1"/>
+        </Vybeh>
+        
+        <PruvodcePavilonem nazevTypu="Pruvodce_pavilonem_1"/>
+    </Pavilon>
+
+
+
+    <TypyZvirat>
+        <ZvireTyp nazev="Zebra">
+            <nazev>Zebra</nazev>
+            <popis xml:lang="cs">Bily kuň s Cernyma pruhama</popis>
+            <popisChovu xml:lang="cs">Zebry maji rady slunne teple travnate plane, živi se travou, senem. Zimu travi ve stajich</popisChovu>
+            <TypStravy nazevTypu="Seno"/>
+        </ZvireTyp>
+        
+        <ZvireTyp nazev="VelbloudDvouhrby">
+            <nazev>Velbloud dvouhrby</nazev>
+            <popis xml:lang="cs">Hnedy kuň s dvouma hrbama</popis>
+            <popisChovu xml:lang="cs">Velbloud je velmi nenaroCne zvire, živi se travou, senem. Zimu travi ve stajich. Když jednou zapomenete dodat vodu, nic se nestane.</popisChovu>
+            <TypStravy nazevTypu="Seno"/>
+        </ZvireTyp>
+
+        <ZvireTyp nazev="PaovceHrivnata">
+            <nazev>Paovce hrivnata</nazev>
+            <popis xml:lang="cs">Jedna se o druh z podCeledi kozy a ovce puvodem ze skal hor v Severni Africe.</popis>
+            <popisChovu xml:lang="cs">Živi se travou, senem. Zimu travi ve stajich.</popisChovu>
+            <TypStravy nazevTypu="Seno"/>
+        </ZvireTyp>
+
+        <ZvireTyp nazev="KobraKralovska">
+            <nazev>Kobra kralovska</nazev>
+            <popis xml:lang="cs">je druhem jedovateho hada z Celedi koralovcovitych, ktery žije v oblasti jižni a jihovychodni Asie.</popis>
+            <popisChovu xml:lang="cs">Živi se myšmi, nutne je byt opatrny, jedna se o jednovateho hada.</popisChovu>
+            <TypStravy nazevTypu="Myš"/>
+        </ZvireTyp>
+
+        <ZvireTyp nazev="GorilaNižnna">
+            <nazev>Gorila Nižnna</nazev>
+            <popis xml:lang="cs">Domovem goril jsou tropicke lesy v rovnikove Africe, kde se vyskytuji ve dvou oblastech oddelenych deštnym lesem konžske panve.</popis>
+            <popisChovu xml:lang="cs">Živi se Casti rostlin, ovoce, mravenci.</popisChovu>
+            <TypStravy nazevTypu="Meloun"/>
+        </ZvireTyp>
+    </TypyZvirat>
+
+
+    <TypyStrav>
+        <TypStravy nazev="Seno">
+            <cena currency="CZK">65</cena>
+            <kalorie>3160</kalorie>
+        </TypStravy>
+        
+        <TypStravy nazev="Myš">
+            <cena currency="CZK">80</cena>
+            <kalorie>50</kalorie>
+        </TypStravy>
+
+        <TypStravy nazev="Meloun">
+            <cena currency="CZK">130</cena>
+            <kalorie>28</kalorie>
+        </TypStravy>
+    </TypyStrav>
+    
+
+    <Zamestnanci>
+        <UklizeC nazev="UklizeC_1">
+            <givenName>Petr</givenName>   
+            <familyName>Novotny</familyName>
+            <plat currency="CZK">25000</plat>
+            <telefonniCislo>tel:+420 111 222 333</telefonniCislo>
+        </UklizeC>
+
+        <PeCovatel nazev="PeCovatel_1">
+            <givenName>Marie</givenName>   
+            <familyName>Novotna</familyName>
+            <plat currency="CZK">38000</plat>
+            <telefonniCislo>tel:+420 111 222 334</telefonniCislo>
+        </PeCovatel>
+
+        <Veterinar nazev="Veterinar_1">
+            <givenName>Marek</givenName>   
+            <familyName>Novotny</familyName>
+            <plat currency="CZK">48000</plat>
+            <telefonniCislo>tel:+420 111 222 335</telefonniCislo>
+        </Veterinar>
+
+        <PruvodcePavilonem nazev="Pruvodce_pavilonem_1">
+            <givenName>Anna</givenName>   
+            <familyName>Novotna</familyName>
+            <plat currency="CZK">35000</plat>
+            <telefonniCislo>tel:+420 111 222 336</telefonniCislo>
+        </PruvodcePavilonem>
+    </Zamestnanci>
+</Zoo>

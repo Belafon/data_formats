@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://mojezoo.cz/"
+    targetNamespace="http://mojezoo.cz/" >
+    
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+    schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+
+    <xs:element name="TypyZvířat">
+        <xs:complexType>
+            <xs:sequence minOccurs="0">
+                <xs:element ref="ZvířeTyp"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="název" type="xs:string"/> 
+
+    <xs:element name="popis">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="xml:lang" use="optional" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ZvířeTyp">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="popis" maxOccurs="1"/>
+                <xs:element ref="popisChovu" maxOccurs="1"/>
+                <xs:element ref="TypStravy" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="název" type="xs:ID"></xs:attribute>
+            <xs:attribute name="názevTypu" type="xs:IDREF"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+  
+    <xs:element name="popisChovu">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="xml:lang" use="optional" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

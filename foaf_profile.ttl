@@ -1,6 +1,13 @@
 @prefix ex: <http://example.org/vocabulary/> .
 @prefix zoo: <http://mojezoo.cz/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix w3c: <http://www.w3.org/ns/org#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+
 
 ex:Výběh a rdfs:Class ; 
 	rdf:subClassOf skos:Concept ;
@@ -38,7 +45,6 @@ zoo:TypyZvířat a skos:ConceptScheme ;
 	skos:prefLabel "Typy zvířat"@cs .
 
 
-@prefix dbo: <http://dbpedia.org/ontology/> .
 
 # TODO: zeptat se
 # ex:Zvíře a rdfs:Class ;
@@ -90,10 +96,9 @@ ex:Pavilon a rdfs:Class;
 
 
 
-@prefix w3c: <http://www.w3.org/ns/org#> .
 
 ex:Zaměstnanec a skos:Concept ;
-	rdfs:label "Zaměstnanec"@cs
+	rdfs:label "Zaměstnanec"@cs .
 	
 ex:Uklízeč a rdfs:Class ;
 	rdfs:subClassOf ex:Zaměstnanec;	
@@ -142,16 +147,19 @@ ex:prováděníPavilonem a rdf:Property .
 
 zoo:Afrika a ex:Pavilon ;
 	rdfs:label "Afrika"@cs ;
-	ex:datumVzniku 2004-06-01 .
+	ex:datumVzniku "    1"^^xsd:dataTime ;
+    dcterms:modified "2020-02-05"^^xsd:dataTime .
 
 zoo:Plazy a ex:Pavilon ;
 	rdfs:label "Afrika"@cs ;
-	ex:datumVzniku 2004-06-01 .
+	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
+    dcterms:modified "2019-02-15"^^xsd:dataTime .
+
 
 zoo:Prales a ex:Pavilon ;
 	rdfs:label "Afrika"@cs ;
-	ex:datumVzniku 2004-06-01 .
-
+	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
+    dcterms:modified "2018-04-08"^^xsd:dataTime .
 
 
 
@@ -161,28 +169,28 @@ zoo:Savana a ex:Výběh ;
 	skos:inScheme zoo:Afrika ;
 	rdfs:label "Savana"@cs ;
 	ex:popisLokace "S1" ;
-	ex:datumVýstavby 2002-09-24 ;
+	ex:datumVýstavby "2002-09-24"^^xsd:dataTime ;
 	dcterms:description "1200 m^2 rovinné travnaté plochy,  na okrajích s velkými rozestupy rostou baobaby a blahovičníky."@cs .
 
 zoo:Poušť a ex:Výběh ;
 	skos:inScheme zoo:Afrika ;
 	rdfs:label "Pouštní krajina"@cs ;
 	ex:popisLokace "S2" ;
-	ex:datumVýstavby 2003-08-19 ;
+	ex:datumVýstavby "2003-08-19"^^xsd:dataTime ;
 	dcterms:description "1500 m^2 rovinné písčité plochy,  na levém okraji roste mix listnatých stromů. "@cs .
 	
 zoo:Hory a ex:Výběh ;
 	skos:inScheme zoo:Afrika ;
 	rdfs:label "Hornatá krajina"@cs ;
 	ex:popisLokace "S3" ;
-	ex:datumVýstavby 2005-06-02 ;
+	ex:datumVýstavby "2005-06-02"^^xsd:dataTime ;
 	dcterms:description "1000 m^2 plochy strmitých skalisek. "@cs .
 
 zoo:TeráriumKober a ex:Výběh ;
 	skos:inScheme zoo:Plazy ;
 	rdfs:label "Terárium kober"@cs ;
 	ex:popisLokace "PL1" ;
-	ex:datumVýstavby 2011-04-01 ;
+	ex:datumVýstavby "2011-04-01"^^xsd:dataTime ;
 	dcterms:description "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi "@cs .
 
 
@@ -190,7 +198,7 @@ zoo:VýběhGoril a ex:Výběh ;
 	skos:inScheme zoo:Prales ;
 	rdfs:label "Výběh goril"@cs ;
 	ex:popisLokace "PR2" ;
-	ex:datumVýstavby 2010-04-12 ;
+	ex:datumVýstavby "2010-04-12"^^xsd:dataTime ;
 	dcterms:description "100 m^2 plochy, prosklenný plot, nerovný travnatý povrch, roste zde několik dubů. "@cs .
 
 
@@ -224,16 +232,14 @@ zoo:Zebra a ex:ZvířeTyp ;
 	skos:prefLabel "Zebra"@cs, "Zebra"@en ;
 	ex:lzeSpatřit zoo:Savana ;
 	dcterms:description "Bílý kůň s černýma pruhama"@cs ;
-	ex:popisChovu "Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. 
-			Zimu tráví ve stájích"@cs ;
+	ex:popisChovu "Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. Zimu tráví ve stájích"@cs ;
 	ex:stravuje zoo:seno .
 
 zoo:VelbloudDvouhrbý a ex:ZvířeTyp ;
 	skos:inScheme zoo:TypyZvířat ;
 	skos:prefLabel "Velbloud dvouhrbý"@cs ;
 	dcterms:description "Hnědý kůň s dvouma hrbama"@cs ;
-	ex:popisChovu "Velbloud je velmi nenáročné zvíře, živí se trávou, senem. 
-			Zimu tráví ve stájích. Když jednou zapomenete dodat vodu, nic se nestane."@cs ;
+	ex:popisChovu "Velbloud je velmi nenáročné zvíře, živí se trávou, senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu, nic se nestane."@cs ;
 	ex:stravuje zoo:seno .
 
 zoo:PaovceHřivnatá a ex:ZvířeTyp ;
@@ -269,40 +275,40 @@ zoo:Černobíl a dbo:Animal ;
 	dcterms:type zoo:Zebra ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození 2012-04-02 ;
-	ex:datumPříchoduDoZoo 2012-04-02 .
+	ex:datumNarození "2012-04-02"^^xsd:dateTime ;
+	ex:datumPříchoduDoZoo "2012-04-02"^^xsd:dateTime .
 
 zoo:Erin a dbo:Animal ;
 	rdfs:label "Erin"@cs ;
 	dcterms:type zoo:Zebra ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození 2010-01-10 ;
-	ex:datumPříchoduDoZoo 2010-01-10 .
+	ex:datumNarození "2010-01-10"^^xsd:dateTime ;
+	ex:datumPříchoduDoZoo "2010-01-10"^^xsd:dateTime .
 
 zoo:Bessie a dbo:Animal ;
 	rdfs:label "Bessie"@cs ;
 	dcterms:type zoo:Zebra ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození 2009-05-12 ;
-	ex:datumPříchoduDoZoo 2010-01-8 .
+	ex:datumNarození "2009-05-12"^^xsd:dateTime ;
+	ex:datumPříchoduDoZoo "2010-01-8"^^xsd:dateTime .
 
 zoo:George a dbo:Animal ;
 	rdfs:label "George"@cs ;
 	dcterms:type zoo:Gorila ;
 	ex:domovem zoo:VýběhGoril ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození 1995-05-12 ;
-	ex:datumPříchoduDoZoo 2005-01-8 .
+	ex:datumNarození "1995-05-12"^^xsd:dateTime ;
+	ex:datumPříchoduDoZoo "2005-01-8"^^xsd:dateTime .
 
 zoo:Lenka a dbo:Animal ;
 	rdfs:label "Lenka"@cs ;
 	dcterms:type zoo:Kobra ;
 	ex:domovem zoo:TeráriumKober ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození 2015-03-01 ;
-	ex:datumPříchoduDoZoo 2018-05-10 .
+	ex:datumNarození "2015-03-01"^^xsd:dateTime ;
+	ex:datumPříchoduDoZoo "2018-05-10"^^xsd:dateTime .
 
 
 
@@ -330,3 +336,5 @@ zoo:Průvodce_pavilonem_1 a ex:PrůvodcePavilonem ;
 	ex:plat 30000 ;
 	ex:telefonníČíslo "+420 111222336" ;
 	ex:prováděníPavilonem zoo:Afrika, zoo:Plazy, zoo:Prales .
+
+

@@ -1,0 +1,3 @@
+(: Následující kód vyhledá všechny průvodce pavilonem, kteří pracují v pavilonu, který obsahuje 
+    výběh, který obsahuje více jak 2 zvířata  :)
+/Zoo/Zaměstnanci/child::PrůvodcePavilonem[@název = //Výběh[count(Zvíře) > 2]/parent::Pavilon/child::PrůvodcePavilonem/@názevTypu]

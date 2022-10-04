@@ -1,0 +1,4 @@
+givenName,nickname,age
+John,"""the One""",45
+Jane,"she who prefers newlines",27
+Bob,,24.5

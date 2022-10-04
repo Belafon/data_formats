@@ -1,0 +1,45 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX fo: <http://purl.org/ontology/fo/>
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX zoo: <http://mojezoo.cz/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX w3c: <http://www.w3.org/ns/org#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+
+
+# vybere zvíře, které se narodilo v zoo a k tomu vybere všechny pečovatele a veterináře, kteří se o takové zvíře starají
+
+SELECT ?zvíře ?jmenoPečovatele ?jmenoVeterináře  WHERE {
+	?zvíře a dbo:Animal ;
+  		ex:datumNarození ?datumNarození ;
+  		ex:datumPříchoduDoZoo ?datumPřichoduDoZoo ;
+    	ex:domovem ?výběh .
+      	
+  	FILTER(YEAR(?datumNarození) = YEAR(?datumPřichoduDoZoo) 
+    	&& MONTH(?datumNarození) = MONTH(?datumPřichoduDoZoo) 
+    	&& DAY(?datumNarození) = DAY(?datumPřichoduDoZoo))
+  	
+  	?pečovatel a ex:Pečovatel ;
+     	foaf:familyName ?primeniPečovatele ;
+     	foaf:givenName ?krestniPečovatele ;
+      	ex:spravuje ?výběh .
+  	
+  	BIND(CONCAT(STR(?krestniPečovatele), " ", STR(?primeniPečovatele)) AS ?jmenoPečovatele )
+  
+  	?veterinář a ex:Veterinář ;
+    	foaf:familyName ?primeniVeterináře ;
+     	foaf:givenName ?krestniVeterináře ;
+      	ex:pečuje ?výběh .
+
+    BIND(CONCAT(STR(?krestniVeterináře), " ", STR(?primeniVeterináře)) AS ?jmenoVeterináře )
+
+}

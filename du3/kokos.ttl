@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions">
+
+    <xsl:output method="text" encoding="UTF-8" indent="yes" />
+
+    <xsl:template match="Zoo">
+        @prefix ex: &lt;http://example.org/vocabulary/&gt; .
+        @prefix zoo: &lt;http://mojezoo.cz/&gt; .
+        @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+        @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+        @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+        @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+        @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+        @prefix w3c: &lt;http://www.w3.org/ns/org#&gt; .
+        @prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+        @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+        
+        ex:Výběh a rdfs:Class ; 
+            rdf:subClassOf skos:Concept ;
+    	    rdfs:label "Výběh"@cs ;
+    	    rdfs:comment "Libovolný prostor, ve kterém žije nějaké zvíře."@cs .
+
+    		ex:popisLokace a rdf:Property ;
+    			rdfs:label "Popis lokace"@cs ;
+    			rdfs:domain ex:Výběh;
+    			rdfs:range xsd:string .
+    
+    		ex:datumVýstavby a rdf:Property ;
+    			rdfs:label "Datum výstavby"@cs ;
+    			rdfs:domain ex:Výběh;
+    			rdfs:range xsd:date .
+    
+    		ex:průměrnáTeplota a rdf:Property ;
+    			rdfs:label "Průměrná teplota"@cs ;
+    			rdfs:domain ex:Zaměstnanec ;
+    			rdfs:range xsd:integer .
+			
+    	ex:ZvířeTyp a rdfs:Class ; 
+    		rdf:subClassOf skos:Concept ;
+    		rdfs:label "Typ zvířete"@cs ;
+    		rdfs:comment "Označuje konkrétní druh zvířete"@cs .
+    
+    		ex:popisChovu a rdf:Property ;
+    			rdfs:label "Popis chovu"@cs ;
+    			rdfs:domain  ex:Concept ;
+    			rdfs:range xsd:string .
+    
+    	zoo:TypyZvířat a skos:ConceptScheme ;
+    		rdfs:label "Typy zvířat"@cs ;
+    		skos:prefLabel "Typy zvířat"@cs .
+    
+    		ex:popisZdravotníhoStavu a rdf:Property ;
+    			rdfs:label "Popis zdravotního stavu"@cs ;
+    			rdfs:domain dbo:Animal ;
+    			rdfs:range xsd:string .
+    
+    		ex:datumNarození a rdf:Property ;
+    			rdfs:label "Datum narození"@cs ;
+    			rdfs:domain dbo:Animal ;
+    			rdfs:range xsd:date .
+    
+    		ex:datumPříchoduDoZoo a rdf:Property ;
+    			rdfs:label "Datum příchodu do zoo"@cs ;
+    			rdfs:domain dbo:Animal ;
+    			rdfs:range xsd:date .
+    			
+    	ex:Pavilon a rdfs:Class; 		
+    		rdf:subClassOf skos:ConceptScheme;
+    		rdfs:label "Pavilon"@cs ;
+    		rdfs:comment "Pavilon obsahuje výběhy."@cs .
+    
+    		ex:datumVzniku a rdf:Property ;
+    			rdfs:label "Datum vzniku"@cs ;
+    			rdfs:domain ex:Pavilon ;
+    			rdfs:range xsd:date .
+    	
+    
+    	ex:TypStravy a rdfs:Class ; 
+    		rdf:subClassOf skos:Concept ;
+    		rdfs:label "Typ Stravy"@cs .
+    
+    		ex:cena a rdf:Property ;
+    			rdfs:label "Cena"@cs ;
+    			rdfs:domain  ex:TypStravy ;
+    			rdfs:range xsd:integer .
+    
+    		ex:kalorie a rdf:Property ;
+    			rdfs:label "Kalorie"@cs ;
+    			rdfs:domain  ex:TypStravy ;
+    			rdfs:range xsd:integer .
+    
+    
+    
+    	ex:Pavilon a rdfs:Class; 
+    		rdf:subClassOf skos:ConceptScheme;
+    		rdfs:label "Pavilon"@cs ;
+    		rdfs:comment "Pavilon obsahuje výběhy."@cs .

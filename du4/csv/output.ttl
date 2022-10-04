@@ -1,0 +1,670 @@
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://example.org/vocabulary/> .
+@prefix ns1: <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-2.csv#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns2: <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-4.csv#> .
+@prefix ns3: <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-7.csv#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns4: <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-14.csv#> .
+@prefix ns5: <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-15.csv#> .
+@prefix ns6: <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-16.csv#> .
+
+<http://mojezoo.cz/data.csv-metadata.json>
+  a csvw:TableGroup ;
+  csvw:table <http://mojezoo.cz/Table_Pavilon>, <http://mojezoo.cz/Table_sekci>, <http://mojezoo.cz/Table_Vybeh>, <http://mojezoo.cz/lze_spatrit>, <http://mojezoo.cz/Table_ZvireTyp>, <http://mojezoo.cz/Table_Zvire>, <http://mojezoo.cz/Table_pecuje>, <http://mojezoo.cz/Table_Zamestnanec>, <http://mojezoo.cz/Table_UnitPriceSpecification>, <http://mojezoo.cz/Table_>, <http://mojezoo.cz/Table_Uklizec>, <http://mojezoo.cz/Table_Pruvodce_pavilonem>, <http://mojezoo.cz/Table_Pecovatel>, <http://mojezoo.cz/Table_spravuje>, <http://mojezoo.cz/Table_provadeni_pavilonem>, <http://mojezoo.cz/Table_stravuje>, <http://mojezoo.cz/Table_TypyStravy> ;
+  prov:wasGeneratedBy [
+    a prov:Activity ;
+    prov:wasAssociatedWith <https://rubygems.org/gems/rdf-tabular> ;
+    prov:startedAtTime "2022-05-02T22:51:24.462+02:00"^^xsd:dateTime ;
+    prov:endedAtTime "2022-05-02T22:51:24.682+02:00"^^xsd:dateTime ;
+    prov:qualifiedUsage [
+      a prov:Usage ;
+      prov:entity <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-1.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-2.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-4.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-7.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-8.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-10.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-11.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-12.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-13.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-14.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-15.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-16.csv>, <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-17.csv> ;
+      prov:hadRole csvw:csvEncodedTabularData
+    ], [
+      a prov:Usage ;
+      prov:entity <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data.csv-metadata.json> ;
+      prov:hadRole csvw:tabularMetadata
+    ]
+  ] .
+
+<http://mojezoo.cz/Table_Pavilon>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-1.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-1.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Afrika>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-1.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/Plazy>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-1.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/Prales>
+  ] ;
+  dc:title "Pavilon" .
+
+<http://mojezoo.cz/Afrika>
+  a <http://example.org/vocabulary/Pavilon> ;
+  rdfs:label "Afrika" ;
+  ns0:datumVzniku "2004-06-01"^^xsd:date ;
+  dc:modified "2020-02-05"^^xsd:date .
+
+<http://mojezoo.cz/Plazy>
+  a ns0:Pavilon ;
+  rdfs:label "Plazy" ;
+  ns0:datumVzniku "2004-06-01"^^xsd:date ;
+  dc:modified "2019-02-15"^^xsd:date .
+
+<http://mojezoo.cz/Prales>
+  a ns0:Pavilon ;
+  rdfs:label "Prales" ;
+  ns0:datumVzniku "2004-06-01"^^xsd:date ;
+  dc:modified "2018-04-08"^^xsd:date .
+
+<http://mojezoo.cz/Table_sekci>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-2.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-2.csv#row=2> ;
+    csvw:describes [ ns1:pavilon_id "Afrika" ], <http://mojezoo.cz/Savana>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url ns1:row=3 ;
+    csvw:describes [ ns1:pavilon_id "Afrika" ], <http://mojezoo.cz/Pou%C5%A1%C5%A5>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url ns1:row=4 ;
+    csvw:describes [ ns1:pavilon_id "Afrika" ], <http://mojezoo.cz/Hory>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url ns1:row=5 ;
+    csvw:describes [ ns1:pavilon_id "Plazy" ], <http://mojezoo.cz/Ter%C3%A1riumKober>
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url ns1:row=6 ;
+    csvw:describes [ ns1:pavilon_id "Prales" ], <http://mojezoo.cz/V%C3%BDb%C4%9BhGoril>
+  ] ;
+  dc:title "sekcí" .
+
+<http://mojezoo.cz/Savana>
+  skos:inScheme <http://mojezoo.cz/Afrika> ;
+  a ns0:Výběh ;
+  rdfs:label "Savana" ;
+  ns0:datumVýstavby "2002-09-24"^^xsd:date ;
+  ns0:popisLokace "S1" ;
+  dc:description "\"1200 m^2 rovinné travnaté plochy, na okrajích s velkými rozestupy rostou baobaby a blahovičníky.\""@cs .
+
+<http://mojezoo.cz/Pou%C5%A1%C5%A5>
+  skos:inScheme <http://mojezoo.cz/Afrika> ;
+  a ns0:Výběh ;
+  rdfs:label "Poušť" ;
+  ns0:datumVýstavby "2003-08-19"^^xsd:date ;
+  ns0:popisLokace "S2" ;
+  dc:description "\"1500 m^2 rovinné písčité plochy, na levém okraji roste mix listnatých stromů. \""@cs .
+
+<http://mojezoo.cz/Hory>
+  skos:inScheme <http://mojezoo.cz/Afrika> ;
+  a ns0:Výběh ;
+  rdfs:label "Hory" ;
+  ns0:datumVýstavby "2005-06-02"^^xsd:date ;
+  ns0:popisLokace "S3" ;
+  dc:description "\"1000 m^2 plochy strmitých skalisek. \""@cs .
+
+<http://mojezoo.cz/Ter%C3%A1riumKober>
+  skos:inScheme <http://mojezoo.cz/Plazy> ;
+  a ns0:Výběh ;
+  rdfs:label "TeráriumKober" ;
+  ns0:datumVýstavby "2011-04-01"^^xsd:date ;
+  ns0:popisLokace "PL1" ;
+  dc:description "\"4 m^2 plochy,prosklenné terrárium s umělým jezírkem a starými dubovými větvemi \""@cs .
+
+<http://mojezoo.cz/V%C3%BDb%C4%9BhGoril>
+  skos:inScheme <http://mojezoo.cz/Prales> ;
+  a ns0:Výběh ;
+  rdfs:label "VýběhGoril" ;
+  ns0:datumVýstavby "2010-04-12"^^xsd:date ;
+  ns0:popisLokace "PR2" ;
+  dc:description "\"100 m^2 plochy,prosklenný plot,nerovný travnatý povrch,roste zde několik dubů. \""@cs .
+
+<http://mojezoo.cz/Table_Vybeh>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Savana>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/Pou%C5%A1%C5%A5>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/Hory>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv#row=5> ;
+    csvw:describes <http://mojezoo.cz/Ter%C3%A1riumKober>
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-3.csv#row=6> ;
+    csvw:describes <http://mojezoo.cz/V%C3%BDb%C4%9BhGoril>
+  ] ;
+  dc:title "Výběh" .
+
+<http://mojezoo.cz/lze_spatrit>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-4.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-4.csv#row=2> ;
+    csvw:describes [ ns2:zvireTyp_id "Zebra" ], <http://mojezoo.cz/Zebra>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url ns2:row=3 ;
+    csvw:describes [ ns2:zvireTyp_id "KobraKrálovská" ], <http://mojezoo.cz/KobraKr%C3%A1lovsk%C3%A1>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url ns2:row=4 ;
+    csvw:describes [ ns2:zvireTyp_id "GorilaNížnná" ], <http://mojezoo.cz/GorilaN%C3%AD%C5%BEnn%C3%A1>
+  ] ;
+  dc:title "lze_spatrit" .
+
+<http://mojezoo.cz/Zebra>
+  ns0:lzeSpatřit "Savana" ;
+  a ns0:ZvířeTyp ;
+  skos:prefLabel "Zebra" ;
+  dc:description "\"Bílý kůň s černýma pruhama\""@cs ;
+  ns0:popisChovu "\"Zebry mají rády slunné teplé travnaté pláně,živí se trávou,senem. Zimu tráví ve stájích\""@cs ;
+  ns0:stravuje "Seno" .
+
+<http://mojezoo.cz/KobraKr%C3%A1lovsk%C3%A1>
+  ns0:lzeSpatřit "TeráriumKober" ;
+  a ns0:ZvířeTyp ;
+  skos:prefLabel "KobraKrálovská" ;
+  dc:description "\"je druhem jedovatého hada z čeledi korálovcovitých,který žije v oblasti jižní a jihovýchodní Asie.\""@cs ;
+  ns0:popisChovu "\"Živí se myšmi,nutné je být opatrný,jedná se o jednovatého hada.\""@cs ;
+  ns0:stravuje "Myš" .
+
+<http://mojezoo.cz/GorilaN%C3%AD%C5%BEnn%C3%A1>
+  ns0:lzeSpatřit "VýběhGoril" ;
+  a ns0:ZvířeTyp ;
+  skos:prefLabel "GorilaNížnná" ;
+  dc:description "\"Domovem goril jsou tropické lesy v rovníkové Africe,kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve.\""@cs ;
+  ns0:popisChovu "\"Živí se částí rostlin, ovoce, mravenci. \""@cs ;
+  ns0:stravuje "Meloun" .
+
+<http://mojezoo.cz/Table_ZvireTyp>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Zebra>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/VelbloudDvouhrb%C3%BD>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/PaovceH%C5%99ivnat%C3%A1>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv#row=5> ;
+    csvw:describes <http://mojezoo.cz/KobraKr%C3%A1lovsk%C3%A1>
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-5.csv#row=6> ;
+    csvw:describes <http://mojezoo.cz/GorilaN%C3%AD%C5%BEnn%C3%A1>
+  ] ;
+  dc:title "ZvířeTyp" .
+
+<http://mojezoo.cz/VelbloudDvouhrb%C3%BD>
+  a ns0:ZvířeTyp ;
+  skos:prefLabel "VelbloudDvouhrbý" ;
+  dc:description "\"Hnědý kůň s dvouma hrbama\""@cs ;
+  ns0:popisChovu "\"Velbloud je velmi nenáročné zvíře,živí se trávou,senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu,nic se nestane.\""@cs .
+
+<http://mojezoo.cz/PaovceH%C5%99ivnat%C3%A1>
+  a ns0:ZvířeTyp ;
+  skos:prefLabel "PaovceHřivnatá" ;
+  dc:description "\"Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe.\""@cs ;
+  ns0:popisChovu "\"Živí se trávou,senem. Zimu tráví ve stájích.\""@cs .
+
+<http://mojezoo.cz/Table_Zvire>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/%C4%8Cernob%C3%ADl>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/Erin>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/Bessie>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv#row=5> ;
+    csvw:describes <http://mojezoo.cz/George>
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-6.csv#row=6> ;
+    csvw:describes <http://mojezoo.cz/Lenka>
+  ] ;
+  dc:title "Zvíře" .
+
+<http://mojezoo.cz/%C4%8Cernob%C3%ADl>
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Černobíl" ;
+  ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
+  ns0:datumNarození "2012-04-02"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2012-04-02"^^xsd:date ;
+  dc:type "1" ;
+  ns0:domovem "1" .
+
+<http://mojezoo.cz/Erin>
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Erin" ;
+  ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
+  ns0:datumNarození "2010-04-02"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2010-04-02"^^xsd:date ;
+  dc:type "1" ;
+  ns0:domovem "1" .
+
+<http://mojezoo.cz/Bessie>
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Bessie" ;
+  ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
+  ns0:datumNarození "2009-04-02"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2010-04-02"^^xsd:date ;
+  dc:type "1" ;
+  ns0:domovem "1" .
+
+<http://mojezoo.cz/George>
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "George" ;
+  ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
+  ns0:datumNarození "1995-05-12"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2010-01-08"^^xsd:date ;
+  dc:type "5" ;
+  ns0:domovem "5" .
+
+<http://mojezoo.cz/Lenka>
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Lenka" ;
+  ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
+  ns0:datumNarození "2015-05-12"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2018-01-08"^^xsd:date ;
+  dc:type "4" ;
+  ns0:domovem "4" .
+
+<http://mojezoo.cz/Table_pecuje>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-7.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-7.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/1>, [ ns3:veterinar_id "1" ]
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url ns3:row=3 ;
+    csvw:describes <http://mojezoo.cz/1>, [ ns3:veterinar_id "1" ]
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url ns3:row=4 ;
+    csvw:describes <http://mojezoo.cz/1>, [ ns3:veterinar_id "1" ]
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url ns3:row=5 ;
+    csvw:describes <http://mojezoo.cz/1>, [ ns3:veterinar_id "1" ]
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url ns3:row=6 ;
+    csvw:describes <http://mojezoo.cz/1>, [ ns3:veterinar_id "1" ]
+  ] ;
+  dc:title "pečuje" .
+
+<http://mojezoo.cz/1>
+  ns0:pečuje "Savana", "Poušť", "Hory", "TeráriumKober", "VýběhGoril" ;
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 25000 .
+
+<http://mojezoo.cz/Table_Zamestnanec>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-8.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-8.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/PetrNovotn%C3%BD>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-8.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/MarieNovotn%C3%A1>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-8.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/MarekNovotn%C3%BD>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-8.csv#row=5> ;
+    csvw:describes <http://mojezoo.cz/AnnaNovotn%C3%A1>
+  ] ;
+  dc:title "Zaměstnanec" .
+
+<http://mojezoo.cz/PetrNovotn%C3%BD>
+  a ns0:Zaměstnanec ;
+  foaf:givenName "Petr" ;
+  foaf:familyName "Novotný" ;
+  vcard:hasTelephone "tel:+420111222333" ;
+  gr:hasPriceSpecification "1" .
+
+<http://mojezoo.cz/MarieNovotn%C3%A1>
+  a ns0:Zaměstnanec ;
+  foaf:givenName "Marie" ;
+  foaf:familyName "Novotná" ;
+  vcard:hasTelephone "tel:+420111222334" ;
+  gr:hasPriceSpecification "2" .
+
+<http://mojezoo.cz/MarekNovotn%C3%BD>
+  a ns0:Zaměstnanec ;
+  foaf:givenName "Marek" ;
+  foaf:familyName "Novotný" ;
+  vcard:hasTelephone "tel:+420111222335" ;
+  gr:hasPriceSpecification "3" .
+
+<http://mojezoo.cz/AnnaNovotn%C3%A1>
+  a ns0:Zaměstnanec ;
+  foaf:givenName "Anna" ;
+  foaf:familyName "Novotná" ;
+  vcard:hasTelephone "tel:+420111222336" ;
+  gr:hasPriceSpecification "4" .
+
+<http://mojezoo.cz/Table_UnitPriceSpecification>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/1>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/2>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/3>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=5> ;
+    csvw:describes <http://mojezoo.cz/4>
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=6> ;
+    csvw:describes <http://mojezoo.cz/5>
+  ], [
+    csvw:rownum 6 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=7> ;
+    csvw:describes <http://mojezoo.cz/6>
+  ], [
+    csvw:rownum 7 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-9.csv#row=8> ;
+    csvw:describes <http://mojezoo.cz/7>
+  ] ;
+  dc:title "UnitPriceSpecification" .
+
+<http://mojezoo.cz/2>
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 38000 .
+
+<http://mojezoo.cz/3>
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 48000 .
+
+<http://mojezoo.cz/4>
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 35000 .
+
+<http://mojezoo.cz/5>
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 65 .
+
+<http://mojezoo.cz/6>
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 80 .
+
+<http://mojezoo.cz/7>
+  a gr:UnitPriceSpecification ;
+  gr:hasCurrency "CZK" ;
+  gr:hasCurrencyValue 130 .
+
+<http://mojezoo.cz/Table_>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-10.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-10.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Veterin%C3%A1%C5%99_1>
+  ] ;
+  dc:title "Veterinář" .
+
+<http://mojezoo.cz/Veterin%C3%A1%C5%99_1>
+  a ns0:Veterinář ;
+  ns0:je_zamestnanec "MarekNovotný" .
+
+<http://mojezoo.cz/Table_Uklizec>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-11.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-11.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Ukl%C3%ADze%C4%8D_1>
+  ] ;
+  dc:title "Uklízeč" .
+
+<http://mojezoo.cz/Ukl%C3%ADze%C4%8D_1>
+  a ns0:Uklízeč ;
+  ns0:je_zamestnanec "PetrNovotný" .
+
+<http://mojezoo.cz/Table_Pruvodce_pavilonem>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-12.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-12.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Pruvodce_pavilonem_1>
+  ] ;
+  dc:title "Průvodce pavilonem" .
+
+<http://mojezoo.cz/Pruvodce_pavilonem_1>
+  a ns0:PrůvodcePavilonem ;
+  ns0:je_zamestnanec "AnnaNovotná" ;
+  ns0:prováděníPavilonem "Afrika", "Plazy", "Prales" .
+
+<http://mojezoo.cz/Table_Pecovatel>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-13.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-13.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  ] ;
+  dc:title "Pečovatel" .
+
+<http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  a ns0:Pečovatel ;
+  ns0:je_zamestnanec "MarieNovotná" ;
+  ns0:spravuje "Savana", "Poušť", "Hory", "TeráriumKober", "VýběhGoril" .
+
+<http://mojezoo.cz/Table_spravuje>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-14.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-14.csv#row=2> ;
+    csvw:describes [ ns4:pecovatel_id "Pečovatel_1" ], <http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url ns4:row=3 ;
+    csvw:describes [ ns4:pecovatel_id "Pečovatel_1" ], <http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url ns4:row=4 ;
+    csvw:describes [ ns4:pecovatel_id "Pečovatel_1" ], <http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  ], [
+    csvw:rownum 4 ;
+    a csvw:Row ;
+    csvw:url ns4:row=5 ;
+    csvw:describes [ ns4:pecovatel_id "Pečovatel_1" ], <http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  ], [
+    csvw:rownum 5 ;
+    a csvw:Row ;
+    csvw:url ns4:row=6 ;
+    csvw:describes [ ns4:pecovatel_id "Pečovatel_1" ], <http://mojezoo.cz/Pe%C4%8Dovatel_1>
+  ] ;
+  dc:title "spravuje" .
+
+<http://mojezoo.cz/Table_provadeni_pavilonem>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-15.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-15.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Pruvodce_pavilonem_1>, [ ns5:pruvodce_pavilonem_id "Pruvodce_pavilonem_1" ]
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url ns5:row=3 ;
+    csvw:describes <http://mojezoo.cz/Pruvodce_pavilonem_1>, [ ns5:pruvodce_pavilonem_id "Pruvodce_pavilonem_1" ]
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url ns5:row=4 ;
+    csvw:describes <http://mojezoo.cz/Pruvodce_pavilonem_1>, [ ns5:pruvodce_pavilonem_id "Pruvodce_pavilonem_1" ]
+  ] ;
+  dc:title "Provádění pavilonem" .
+
+<http://mojezoo.cz/Table_stravuje>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-16.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-16.csv#row=2> ;
+    csvw:describes [ ns6:zvireTyp_id "Zebra" ], <http://mojezoo.cz/Zebra>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url ns6:row=3 ;
+    csvw:describes [ ns6:zvireTyp_id "KobraKrálovská" ], <http://mojezoo.cz/KobraKr%C3%A1lovsk%C3%A1>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url ns6:row=4 ;
+    csvw:describes [ ns6:zvireTyp_id "GorilaNížnná" ], <http://mojezoo.cz/GorilaN%C3%AD%C5%BEnn%C3%A1>
+  ] ;
+  dc:title "stravuje" .
+
+<http://mojezoo.cz/Table_TypyStravy>
+  a csvw:Table ;
+  csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-17.csv> ;
+  csvw:row [
+    csvw:rownum 1 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-17.csv#row=2> ;
+    csvw:describes <http://mojezoo.cz/Seno>
+  ], [
+    csvw:rownum 2 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-17.csv#row=3> ;
+    csvw:describes <http://mojezoo.cz/My%C5%A1>
+  ], [
+    csvw:rownum 3 ;
+    a csvw:Row ;
+    csvw:url <file:C:/Users/ticha/Documents/Škola/mff/datove_fomraty/data_formats/du4/csv/data-17.csv#row=4> ;
+    csvw:describes <http://mojezoo.cz/Meloun>
+  ] ;
+  dc:title "TypStravy" .
+
+<http://mojezoo.cz/Seno>
+  a ns0: ;
+  ns0: "Seno", 4, 3160 .
+
+<http://mojezoo.cz/My%C5%A1>
+  a ns0: ;
+  ns0: "Myš", 5, 5000 .
+
+<http://mojezoo.cz/Meloun>
+  a ns0: ;
+  ns0: "Meloun", 6, 2800 .

@@ -8,6 +8,8 @@
 @prefix w3c: <http://www.w3.org/ns/org#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
 
 ex:Výběh a rdfs:Class ; 
 	rdf:subClassOf skos:Concept ;
@@ -116,16 +118,6 @@ ex:PrůvodcePavilonem a rdfs:Class ;
 	rdfs:label "Průvodce pavilonem"@cs, "Employee"@en ;
         rdfs:comment "Provádí návštěvníky pavilonem."@cs .
 
-	ex:plat a rdf:Property ;
-		rdfs:label "Plat"@cs ;
-		rdfs:domain ex:Zaměstnanec;
-		rdfs:range xsd:integer .
-
-	ex:telefonníČíslo a rdf:Property ;
-		rdfs:label "Telefonní číslo"@cs ;
-		rdfs:domain ex:Zaměstnanec;
-		rdfs:range xsd:string .
-
 
 
 ex:spravuje a rdf:Property ;
@@ -157,15 +149,20 @@ ex:prováděníPavilonem a rdf:Property ;
 
 zoo:Afrika a ex:Pavilon ;
 	rdfs:label "Afrika"@cs ;
-	ex:datumVzniku "2004-06-01"^^xsd:dataTime .
+	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
+    dcterms:modified "2020-02-05"^^xsd:dataTime .
 
 zoo:Plazy a ex:Pavilon ;
 	rdfs:label "Plazy"@cs ;
-	ex:datumVzniku "2004-06-01"^^xsd:dataTime .
+	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
+    dcterms:modified "2019-02-15"^^xsd:dataTime .
+
 
 zoo:Prales a ex:Pavilon ;
 	rdfs:label "Prales"@cs ;
-	ex:datumVzniku "2004-06-01"^^xsd:dataTime .
+	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
+    dcterms:modified "2018-04-08"^^xsd:dataTime .
+
 
 
 
@@ -198,7 +195,7 @@ zoo:TeráriumKober a ex:Výběh ;
 	rdfs:label "Terárium kober"@cs ;
 	ex:popisLokace "PL1" ;
 	ex:datumVýstavby "2011-04-01"^^xsd:dataTime ;
-	dcterms:description "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi "@cs .
+	dcterms:description "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi."@cs .
 
 
 zoo:VýběhGoril a ex:Výběh ;
@@ -260,7 +257,7 @@ zoo:KobraKrálovská a ex:ZvířeTyp ;
 	skos:inScheme zoo:TypyZvířat ;
 	skos:prefLabel "Kobra královská"@cs ;
 	ex:lzeSpatřit zoo:TeráriumKober ;
-	dcterms:description "je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie."@cs ;
+	dcterms:description "Je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie."@cs ;
 	ex:popisChovu "Živí se myšmi, nutné je být opatrný, jedná se o jednovatého hada."@cs ;
 	ex:stravuje zoo:Myš .
 
@@ -270,7 +267,7 @@ zoo:GorilaNížnná a ex:ZvířeTyp ;
 	skos:prefLabel "Gorila"@cs ;
 	ex:lzeSpatřit zoo:VýběhGoril ;
 	dcterms:description "Domovem goril jsou tropické lesy v rovníkové Africe, kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve."@cs ;
-	ex:popisChovu "Živí se částí rostlin, ovoce, mravenci. "@cs ;
+	ex:popisChovu "Živí se částí rostlin, ovoce, mravenci."@cs ;
 	ex:stravuje zoo:Meloun .
 
 
@@ -299,7 +296,7 @@ zoo:Bessie a dbo:Animal ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
 	ex:datumNarození "2009-05-12T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2010-01-8T00:00:00"^^xsd:dateTime .
+	ex:datumPříchoduDoZoo "2010-01-08T00:00:00"^^xsd:dateTime .
 
 zoo:George a dbo:Animal ;
 	rdfs:label "George"@cs ;
@@ -307,7 +304,7 @@ zoo:George a dbo:Animal ;
 	ex:domovem zoo:VýběhGoril ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
 	ex:datumNarození "1995-05-12T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2005-01-8T00:00:00"^^xsd:dateTime .
+	ex:datumPříchoduDoZoo "2005-01-08T00:00:00"^^xsd:dateTime .
 
 zoo:Lenka a dbo:Animal ;
 	rdfs:label "Lenka"@cs ;
@@ -320,33 +317,55 @@ zoo:Lenka a dbo:Animal ;
 
 
 zoo:Uklízeč_1 a ex:Uklízeč ;
-	foaf:firstName "Petr"@cs ;
-	foaf:family_name "Novotný"@cs;
-	ex:plat 25000 ;
-	ex:telefonníČíslo "+420 111222333" .
+	foaf:givenName "Petr"@cs ;
+	foaf:familyName "Novotný"@cs ;
+	gr:hasPriceSpecification zoo:plat1 ;
+    vcard:hasTelephone <"tel:+420111222333"> .
+
+    zoo:plat1 a gr:UnitPriceSpecification ;
+	    rdfs:label "Plat"@cs ;
+        gr:hasCurrency "CZK"^^xsd:string ;
+        gr:hasCurrencyValue "25000.0"^^xsd:float .
+
 
 zoo:Pečovatel_1 a ex:Pečovatel ;
-	foaf:firstName "Marie"@cs ;
-	foaf:family_name "Novotná"@cs;
+	foaf:givenName "Marie"@cs ;
+	foaf:familyName "Novotná"@cs ;
 
-	ex:plat 35000 ;
-	ex:telefonníČíslo "+420 111222334" ;
+	gr:hasPriceSpecification zoo:plat2 ;
+	vcard:hasTelephone <"tel:+420111222334"> ;
 	ex:spravuje zoo:Poušť, zoo:Savana, zoo:Hory, zoo:TeráriumKober, zoo:VýběhGoril .
-	
+
+    zoo:plat2 a gr:UnitPriceSpecification ;
+	    rdfs:label "Plat"@cs ;
+        gr:hasCurrency "CZK"^^xsd:string ;
+        gr:hasCurrencyValue "38000.0"^^xsd:float .
+
+
 zoo:Veterinář_1 a ex:Veterinář ;
-	foaf:firstName "Marek"@cs ;
-	foaf:family_name "Novotný"@cs ;
-	ex:plat 40000 ;
-	ex:telefonníČíslo "+420 111222335" ;
+	foaf:givenName "Marek"@cs ;
+	foaf:familyName "Novotný"@cs ;
+	gr:hasPriceSpecification zoo:plat3 ;
+	vcard:hasTelephone <"tel:+420111222335"> ;
 	ex:pečuje zoo:Poušť, zoo:Savana, zoo:Hory, zoo:TeráriumKober, zoo:VýběhGoril .
 
+    zoo:plat3 a gr:UnitPriceSpecification ;
+	    rdfs:label "Plat"@cs ;
+        gr:hasCurrency "CZK"^^xsd:string ;
+        gr:hasCurrencyValue "48000.0"^^xsd:float .
+
+
 zoo:Průvodce_pavilonem_1 a ex:PrůvodcePavilonem ;
-	foaf:firstName "Anna"@cs ;
-	foaf:family_name "Novotná"@cs;
-	ex:plat 30000 ;
-	ex:telefonníČíslo "+420 111222336" ;
+	foaf:givenName "Anna"@cs ;
+	foaf:familyName "Novotná"@cs;
+	gr:hasPriceSpecification zoo:plat4 ;
+	vcard:hasTelephone <"tel:+420111222336"> ;
 	ex:prováděníPavilonem zoo:Afrika, zoo:Plazy, zoo:Prales .
 
+    zoo:plat4 a gr:UnitPriceSpecification ;
+	    rdfs:label "Plat"@cs ;
+        gr:hasCurrency "CZK"^^xsd:string ;
+        gr:hasCurrencyValue "35000.0"^^xsd:float .
 
 
 
