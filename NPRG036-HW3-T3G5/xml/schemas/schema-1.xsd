@@ -23,19 +23,20 @@
 
 
 
-    <xs:element name="název" type="xs:string"/> 
+    <xs:element name="název" type="xs:ID"/> 
     <xs:element name="datumPosledníRekonstrukce" type="xs:date"/>
     <xs:element name="datumVýstavby" type="xs:date"/>
     
     <xs:element name="Pavilon">
         <xs:complexType>
-            <xs:sequence>
+            <xs:sequence minOccurs="0" maxOccurs="1">
                 <xs:element ref="název" maxOccurs="1" />
                 <xs:element ref="datumVýstavby" maxOccurs="1"/>
                 <xs:element ref="datumPosledníRekonstrukce" maxOccurs="1"/>
                 <xs:element ref="Výběh" maxOccurs="unbounded"/>
                 <xs:element ref="PrůvodcePavilonem" maxOccurs="unbounded"/>
             </xs:sequence>
+            <xs:attribute name="ref" type="xs:IDREF"></xs:attribute>
         </xs:complexType>
     </xs:element>
 
@@ -54,8 +55,9 @@
     
     <xs:element name="Výběh">
         <xs:complexType>
-            <xs:sequence minOccurs="0">
+            <xs:sequence minOccurs="0" maxOccurs="1">
                 <xs:element ref="název"/>
+                <xs:element ref="názevProČtení"/>
                 <xs:element ref="lokaceNaMapě"/>
                 <xs:element ref="datumVýstavby"/>
                 <xs:element ref="průměrnáTeplota" maxOccurs="1" minOccurs="0"/>
@@ -65,7 +67,7 @@
                 <xs:element ref="Veterinář" maxOccurs="unbounded" minOccurs="1"/>
                 <xs:element ref="Pečovatel" maxOccurs="unbounded" minOccurs="1"/>
             </xs:sequence>
-            <xs:attribute name="název" type="xs:ID"></xs:attribute>
+            <xs:attribute name="ref" type="xs:IDREF"></xs:attribute>
         </xs:complexType>
     </xs:element>
 
@@ -84,7 +86,7 @@
     <xs:element name="datumPříchoduDoZoo" type="xs:date"/>
     <xs:element name="Zvíře">
         <xs:complexType>
-            <xs:sequence>
+            <xs:sequence maxOccurs="1">
                 <xs:element ref="jméno" maxOccurs="1"/>
                 <xs:element ref="popisZdravotníhoStavu" maxOccurs="1"/>
                 <xs:element ref="datumNarození" maxOccurs="1"/>
@@ -112,19 +114,29 @@
 
     <xs:element name="ZvířeTyp">
         <xs:complexType>
-            <xs:sequence minOccurs="0">
+            <xs:sequence minOccurs="0" maxOccurs="1">
                 <xs:element ref="název" maxOccurs="1"/>
+                <xs:element ref="názevProČtení" maxOccurs="unbounded"/>
                 <xs:element ref="popis" maxOccurs="1"/>
                 <xs:element ref="popisChovu" maxOccurs="1"/>
                 <xs:element ref="TypStravy" maxOccurs="unbounded"/>
                 <xs:element ref="Výběh" maxOccurs="unbounded" minOccurs="0"/>
             </xs:sequence>
-            <xs:attribute name="název" type="xs:ID"></xs:attribute>
-            <xs:attribute name="názevTypu" type="xs:IDREF"></xs:attribute>
+            <xs:attribute name="ref" type="xs:IDREF"></xs:attribute>
         </xs:complexType>
     </xs:element>
 
   
+    <xs:element name="názevProČtení">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="xml:lang" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="popisChovu">
         <xs:complexType>
             <xs:simpleContent>
@@ -180,7 +192,7 @@
                 <xs:element ref="kalorie" maxOccurs="1"/>
             </xs:sequence>
             <xs:attribute name="název" type="xs:ID"></xs:attribute>
-            <xs:attribute name="názevTypu" type="xs:IDREF"></xs:attribute>
+            <xs:attribute name="ref" type="xs:IDREF"></xs:attribute>
         </xs:complexType>
     </xs:element>
 
@@ -248,7 +260,7 @@
             <xs:element ref="telefonníČíslo" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="název" type="xs:ID"></xs:attribute>
-        <xs:attribute name="názevTypu" type="xs:IDREF"></xs:attribute>
+        <xs:attribute name="ref" type="xs:IDREF"></xs:attribute>
     </xs:complexType>
 
 
@@ -256,15 +268,45 @@
     <xs:element name="PrůvodcePavilonem"> 
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="Zaměstnanec" />
+                <xs:extension base="Zaměstnanec" >
+                    <xs:sequence minOccurs="0">
+                        <xs:element ref="provádí" maxOccurs="1" minOccurs="1"/>
+                    </xs:sequence>
+                </xs:extension>
             </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="provádí">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Pavilon" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="pečuje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Výběh" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="spravuje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Výběh" maxOccurs="unbounded"/>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <xs:element name="Veterinář" >
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="Zaměstnanec" />
+                <xs:extension base="Zaměstnanec" >
+                    <xs:sequence minOccurs="0">
+                        <xs:element ref="pečuje" maxOccurs="1" minOccurs="1" />
+                    </xs:sequence>
+                </xs:extension>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
@@ -272,7 +314,11 @@
     <xs:element name="Pečovatel">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="Zaměstnanec" />
+                <xs:extension base="Zaměstnanec">
+                    <xs:sequence minOccurs="0">
+                        <xs:element ref="spravuje" maxOccurs="1" minOccurs="1" />
+                    </xs:sequence>
+                </xs:extension>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>

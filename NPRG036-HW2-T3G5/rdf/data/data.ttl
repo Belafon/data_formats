@@ -320,7 +320,7 @@ zoo:Uklízeč_1 a ex:Uklízeč ;
 	foaf:givenName "Petr"@cs ;
 	foaf:familyName "Novotný"@cs ;
 	gr:hasPriceSpecification zoo:plat1 ;
-    vcard:hasTelephone <"tel:+420111222333"> .
+    vcard:hasTelephone <tel:+420111222333> .
 
     zoo:plat1 a gr:UnitPriceSpecification ;
 	    rdfs:label "Plat"@cs ;
@@ -333,7 +333,7 @@ zoo:Pečovatel_1 a ex:Pečovatel ;
 	foaf:familyName "Novotná"@cs ;
 
 	gr:hasPriceSpecification zoo:plat2 ;
-	vcard:hasTelephone <"tel:+420111222334"> ;
+	vcard:hasTelephone <tel:+420111222334> ;
 	ex:spravuje zoo:Poušť, zoo:Savana, zoo:Hory, zoo:TeráriumKober, zoo:VýběhGoril .
 
     zoo:plat2 a gr:UnitPriceSpecification ;
@@ -346,7 +346,7 @@ zoo:Veterinář_1 a ex:Veterinář ;
 	foaf:givenName "Marek"@cs ;
 	foaf:familyName "Novotný"@cs ;
 	gr:hasPriceSpecification zoo:plat3 ;
-	vcard:hasTelephone <"tel:+420111222335"> ;
+	vcard:hasTelephone <tel:+420111222335> ;
 	ex:pečuje zoo:Poušť, zoo:Savana, zoo:Hory, zoo:TeráriumKober, zoo:VýběhGoril .
 
     zoo:plat3 a gr:UnitPriceSpecification ;
@@ -359,7 +359,7 @@ zoo:Průvodce_pavilonem_1 a ex:PrůvodcePavilonem ;
 	foaf:givenName "Anna"@cs ;
 	foaf:familyName "Novotná"@cs;
 	gr:hasPriceSpecification zoo:plat4 ;
-	vcard:hasTelephone <"tel:+420111222336"> ;
+	vcard:hasTelephone <tel:+420111222336> ;
 	ex:prováděníPavilonem zoo:Afrika, zoo:Plazy, zoo:Prales .
 
     zoo:plat4 a gr:UnitPriceSpecification ;

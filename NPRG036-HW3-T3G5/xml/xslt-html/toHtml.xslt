@@ -36,10 +36,10 @@
                 <xsl:value-of select="název/text()"/>
             </h2>
             <p>
-                datum Výstavby:
+                <b>ldatum Výstavby:</b>
                 <xsl:value-of select="datumVýstavby/text()"/>
                 <br></br>
-                datum poslední rekonstrukce:
+                <b>ldatum poslední rekonstrukce:</b>
                 <xsl:value-of select="datumPosledníRekonstrukce/text()"/>
             </p>
             <ul>
@@ -54,11 +54,13 @@
                 <xsl:value-of select="název/text()"/>
             </h3>
             <p>
-                lokace na mapě:
+                <b>lokace na mapě:</b>
                 <xsl:value-of select="lokaceNaMapě/text()"/>
                 <br></br>
-                datum výstavby:
+                <b>datum výstavby:</b>
                 <xsl:value-of select="datumVýstavby/text()"/>
+                <br></br>
+                <b>popis:</b>
                 <p>
                     <xsl:value-of select="popis[@xml:lang=$lang]/text()"/>
                 </p>
@@ -77,13 +79,13 @@
                 <xsl:value-of select="jméno/text()"/>
             </h4>
             <p>
-                typ:
-                <xsl:value-of select="ZvířeTyp/@názevTypu"/>
+                <b>typ:</b>
+                <xsl:value-of select="ZvířeTyp/@ref"/>
                 <br></br>
-                datum narození:
+                <b>datum narození:</b>
                 <xsl:value-of select="datumNarození/text()"/>
                 <br></br>
-                popis zdravotního stavu:
+                <b>popis zdravotního stavu:</b>
                 <p>
                     <xsl:value-of select="popisZdravotníhoStavu[@xml:lang=$lang]/text()"/>
                 </p>
@@ -99,16 +101,16 @@
                 <xsl:value-of select="název/text()"/>
             </h3>
             <p>
-                popis:
+                <b>popis:</b>
                 <p>
                     <xsl:value-of select="popis[@xml:lang=$lang]/text()"/>
                 </p>
-                popis chovu:
+                <b>popis chovu:</b>
                 <p>
                     <xsl:value-of select="popisChovu[@xml:lang=$lang]/text()"/>
                 </p>
-                typ stravy:
-                <xsl:value-of select="TypStravy/@názevTypu"/>
+                <b>typ stravy:</b>
+                <xsl:value-of select="TypStravy/@ref"/>
             </p>
         </li>
         

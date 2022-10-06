@@ -10,6 +10,8 @@
         <datumPosledníRekonstrukce>2020-02-05</datumPosledníRekonstrukce>
         <Výběh>
             <název>Savana</název>
+            <názevProČtení xml:lang="cs">Savana</názevProČtení>
+            
             <lokaceNaMapě>S1</lokaceNaMapě>
             <datumVýstavby>2002-09-24</datumVýstavby>
             <popis xml:lang="cs">1200 m^2 rovinné travnaté plochy,  na okrajích s velkými rozestupy rostou baobaby a blahovičníky.</popis>
@@ -19,7 +21,7 @@
 	            <popisZdravotníhoStavu xml:lang="cs">Zdravý jedinec</popisZdravotníhoStavu>  
 	            <datumNarození>2012-04-02</datumNarození>
             	<datumPříchoduDoZoo>2012-04-02</datumPříchoduDoZoo>
-                <ZvířeTyp názevTypu="Zebra" />
+                <ZvířeTyp ref="Zebra" />
             </Zvíře>
 
             <Zvíře>
@@ -27,7 +29,7 @@
 	            <popisZdravotníhoStavu xml:lang="cs">Zdravý jedinec</popisZdravotníhoStavu>  
 	            <datumNarození>2010-01-10</datumNarození>
             	<datumPříchoduDoZoo>2010-01-10</datumPříchoduDoZoo>
-                <ZvířeTyp názevTypu="Zebra" />
+                <ZvířeTyp ref="Zebra" />
             </Zvíře>
 
             <Zvíře>
@@ -35,32 +37,36 @@
 	            <popisZdravotníhoStavu xml:lang="cs">Zdravý jedinec</popisZdravotníhoStavu>  
 	            <datumNarození>2009-05-12</datumNarození>
             	<datumPříchoduDoZoo>2010-01-18</datumPříchoduDoZoo>
-                <ZvířeTyp názevTypu="Zebra" />
+                <ZvířeTyp ref="Zebra" />
             </Zvíře>
 
-            <Veterinář názevTypu="Veterinář_1"/>
-            <Pečovatel názevTypu="Pečovatel_1"/>
+            <Veterinář ref="Veterinář_1"/>
+            <Pečovatel ref="Pečovatel_1"/>
         </Výběh>
         
         <Výběh>
             <název>Poušť</název>
+            <názevProČtení xml:lang="cs">Poušť</názevProČtení>
+            
             <lokaceNaMapě>S2</lokaceNaMapě>
             <datumVýstavby>2003-08-19</datumVýstavby>
             <popis xml:lang="cs">1500 m^2 rovinné písčité plochy,  na levém okraji roste mix listnatých stromů. </popis>
-            <Veterinář názevTypu="Veterinář_1"/>
-            <Pečovatel názevTypu="Pečovatel_1"/>
+            <Veterinář ref="Veterinář_1"/>
+            <Pečovatel ref="Pečovatel_1"/>
         </Výběh>
 
         <Výběh>
             <název>Hory</název>
+            <názevProČtení xml:lang="cs">Hory</názevProČtení>
+            
             <lokaceNaMapě>S3</lokaceNaMapě>
             <datumVýstavby>2005-06-02</datumVýstavby>
             <popis xml:lang="cs">1000 m^2 plochy strmitých skalisek. </popis>
-            <Veterinář názevTypu="Veterinář_1"/>
-            <Pečovatel názevTypu="Pečovatel_1"/>
+            <Veterinář ref="Veterinář_1"/>
+            <Pečovatel ref="Pečovatel_1"/>
         </Výběh>
 
-        <PrůvodcePavilonem názevTypu="Průvodce_pavilonem_1"/>
+        <PrůvodcePavilonem ref="Průvodce_pavilonem_1"/>
     </Pavilon>
 
 
@@ -72,6 +78,8 @@
 
         <Výběh>
             <název>TeráriumKober</název>
+            <názevProČtení xml:lang="cs">Terárium Kober</názevProČtení>
+            
             <lokaceNaMapě>PL1</lokaceNaMapě>
             <datumVýstavby>2011-04-01</datumVýstavby>
             <popis xml:lang="cs">4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi </popis>
@@ -80,13 +88,13 @@
 	            <popisZdravotníhoStavu xml:lang="cs">Zdravý jedinec</popisZdravotníhoStavu>  
 	            <datumNarození>2015-03-01</datumNarození>
             	<datumPříchoduDoZoo>2018-05-10</datumPříchoduDoZoo>
-                <ZvířeTyp názevTypu="KobraKrálovská" />
+                <ZvířeTyp ref="KobraKrálovská" />
             </Zvíře>            
-            <Veterinář názevTypu="Veterinář_1"/>
-            <Pečovatel názevTypu="Pečovatel_1"/>
+            <Veterinář ref="Veterinář_1"/>
+            <Pečovatel ref="Pečovatel_1"/>
         </Výběh>
         
-        <PrůvodcePavilonem názevTypu="Průvodce_pavilonem_1"/>
+        <PrůvodcePavilonem ref="Průvodce_pavilonem_1"/>
     </Pavilon>
 
     <Pavilon>
@@ -96,6 +104,8 @@
 
         <Výběh>
             <název>VýběhGoril</název>
+            <názevProČtení xml:lang="cs">Výběh Goril</názevProČtení>
+            
             <lokaceNaMapě>PR2</lokaceNaMapě>
             <datumVýstavby>2010-04-12</datumVýstavby>
             <popis xml:lang="cs">100 m^2 plochy, prosklenný plot, nerovný travnatý povrch, roste zde několik dubů.</popis>
@@ -104,54 +114,60 @@
 	            <popisZdravotníhoStavu xml:lang="cs">Zdravý jedinec</popisZdravotníhoStavu>
 	            <datumNarození>1995-05-12</datumNarození>
             	<datumPříchoduDoZoo>2005-01-18</datumPříchoduDoZoo>
-                <ZvířeTyp názevTypu="GorilaNížnná" />
+                <ZvířeTyp ref="GorilaNížnná" />
             </Zvíře>           
-            <Veterinář názevTypu="Veterinář_1"/>
-            <Pečovatel názevTypu="Pečovatel_1"/>
+            <Veterinář ref="Veterinář_1"/>
+            <Pečovatel ref="Pečovatel_1"/>
         </Výběh>
         
-        <PrůvodcePavilonem názevTypu="Průvodce_pavilonem_1"/>
+        <PrůvodcePavilonem ref="Průvodce_pavilonem_1"/>
     </Pavilon>
 
 
 
     <TypyZvířat>
-        <ZvířeTyp název="Zebra">
+        <ZvířeTyp >
             <název>Zebra</název>
+            <názevProČtení xml:lang="cs">Zebra</názevProČtení>
+            <názevProČtení xml:lang="en">Zebra</názevProČtení>
             <popis xml:lang="cs">Bílý kůň s černýma pruhama</popis>
             <popisChovu xml:lang="cs">Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. Zimu tráví ve stájích</popisChovu>
-            <TypStravy názevTypu="Seno"/>
-            <Výběh název="Savana"></Výběh>
+            <TypStravy ref="Seno"/>
+            <Výběh ref="Savana"></Výběh>
         </ZvířeTyp>
         
-        <ZvířeTyp název="VelbloudDvouhrbý">
-            <název>Velbloud dvouhrbý</název>
+        <ZvířeTyp>
+            <název>VelbloudDvouhrbý</název>
+            <názevProČtení xml:lang="cs">Velbloud Dvouhrbý</názevProČtení>
             <popis xml:lang="cs">Hnědý kůň s dvouma hrbama</popis>
             <popisChovu xml:lang="cs">Velbloud je velmi nenáročné zvíře, živí se trávou, senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu, nic se nestane.</popisChovu>
-            <TypStravy názevTypu="Seno"/>
+            <TypStravy ref="Seno"/>
         </ZvířeTyp>
-
-        <ZvířeTyp název="PaovceHřivnatá">
-            <název>Paovce hřivnatá</název>
+        
+        <ZvířeTyp>
+            <název>PaovceHřivnatá</název>
+            <názevProČtení xml:lang="cs">Paovce Hřivnatá</názevProČtení>
             <popis xml:lang="cs">Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe.</popis>
             <popisChovu xml:lang="cs">Živí se trávou, senem. Zimu tráví ve stájích.</popisChovu>
-            <TypStravy názevTypu="Seno"/>
+            <TypStravy ref="Seno"/>
         </ZvířeTyp>
 
-        <ZvířeTyp název="KobraKrálovská">
-            <název>Kobra královská</název>
+        <ZvířeTyp>
+            <název>KobraKrálovská</název>
+            <názevProČtení xml:lang="cs">Kobra Královská</názevProČtení>
             <popis xml:lang="cs">je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie.</popis>
             <popisChovu xml:lang="cs">Živí se myšmi, nutné je být opatrný, jedná se o jednovatého hada.</popisChovu>
-            <TypStravy názevTypu="Myš"/>
-            <Výběh název="TeráriumKober"></Výběh>
+            <TypStravy ref="Myš"/>
+            <Výběh ref="TeráriumKober"></Výběh>
         </ZvířeTyp>
 
-        <ZvířeTyp název="GorilaNížnná">
-            <název>Gorila Nížnná</název>
+        <ZvířeTyp>
+            <název>GorilaNížnná</název>
+            <názevProČtení xml:lang="cs">Gorila Nížnná</názevProČtení>
             <popis xml:lang="cs">Domovem goril jsou tropické lesy v rovníkové Africe, kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve.</popis>
             <popisChovu xml:lang="cs">Živí se částí rostlin, ovoce, mravenci.</popisChovu>
-            <TypStravy názevTypu="Meloun"/>
-            <Výběh název="VýběhGoril"></Výběh>
+            <TypStravy ref="Meloun"/>
+            <Výběh ref="VýběhGoril"></Výběh>
         </ZvířeTyp>
     </TypyZvířat>
 
@@ -179,29 +195,47 @@
             <givenName>Petr</givenName>   
             <familyName>Novotný</familyName>
             <plat název="plat1" currency="CZK">25000</plat>
-            <telefonníČíslo>tel:+420 111 222 333</telefonníČíslo>
+            <telefonníČíslo>tel:+420111222333</telefonníČíslo>
         </Uklízeč>
 
         <Pečovatel název="Pečovatel_1">
             <givenName>Marie</givenName>   
             <familyName>Novotná</familyName>
             <plat název="plat2" currency="CZK">38000</plat>
-            <telefonníČíslo>tel:+420 111 222 334</telefonníČíslo>
-            <Výběh název="">
+            <telefonníČíslo>tel:+420111222334</telefonníČíslo>
+            <spravuje>
+                <Výběh ref="Poušť"/>
+                <Výběh ref="Savana"/>
+                <Výběh ref="Hory"/>
+                <Výběh ref="TeráriumKober"/>
+                <Výběh ref="VýběhGoril"/>
+            </spravuje>
         </Pečovatel>
 
         <Veterinář název="Veterinář_1">
             <givenName>Marek</givenName>   
             <familyName>Novotný</familyName>
             <plat název="plat3" currency="CZK">48000</plat>
-            <telefonníČíslo>tel:+420 111 222 335</telefonníČíslo>
+            <telefonníČíslo>tel:+420111222335</telefonníČíslo>
+            <pečuje>
+                <Výběh ref="Poušť"/>
+                <Výběh ref="Savana"/>
+                <Výběh ref="Hory"/>
+                <Výběh ref="TeráriumKober"/>
+                <Výběh ref="VýběhGoril"/>
+            </pečuje>
         </Veterinář>
 
         <PrůvodcePavilonem název="Průvodce_pavilonem_1">
             <givenName>Anna</givenName>   
             <familyName>Novotná</familyName>
             <plat název="plat4" currency="CZK">35000</plat>
-            <telefonníČíslo>tel:+420 111 222 336</telefonníČíslo>
+            <telefonníČíslo>tel:+420111222336</telefonníČíslo>
+            <provádí>
+                <Pavilon ref="Afrika"/>    
+                <Pavilon ref="Plazy"/>    
+                <Pavilon ref="Prales"/>    
+            </provádí>
         </PrůvodcePavilonem>
     </Zaměstnanci>
 
