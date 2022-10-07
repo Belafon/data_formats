@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/zvire.schema.json",
+    "title": "Zvíře",
+    "description": "Objekt zvířete",
+    "type": "object",
+    "properties": {
+        "jméno": {
+            "description": "Identifikuje konkrétní zvíře.",
+            "type": "string"
+        },
+        "popisZdravotníhoStavu": {
+            "description": "Popis zdravotního stavu zajištěný veterinářem daného výběhu kde se zvíře nachází.",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                },
+                "additionalProperties": false
+            }
+        },
+        "datumNarození": {
+            "description": "datum narození zvířete",
+            "type": "string",
+            "format": "date"
+        },
+        "datumPříchoduDoZoo": {
+            "description": "datum příchodu do zoo daného zvířete",
+            "type": "string",
+            "format": "date"
+        },
+        "zvířeTyp": {
+            "description": "Identifikuje typ zvířete",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false, 
+    "required": [ "jméno", "popisZdravotníhoStavu", "datumNarození", "datumPříchoduDoZoo", "zvířeTyp" ]
+}

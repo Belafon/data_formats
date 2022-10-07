@@ -1,0 +1,71 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/vybehy.schema.json",
+    "title": "Výběh",
+    "description": "Objekt výběhu",
+    "type": "object",
+    "properties": {
+        "název": {
+            "description": "Identifikuje konkrétní výběh.",
+            "type": "string"
+        },
+        "názevProČtení": {
+            "description": "Název pro daný výběh používaný v běžném textu.",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "lokaceNaMapě": {
+            "description": "Označení místa na mapě.",
+            "type": "string"
+        },
+        "datumVýstavby": {
+            "description": "datum výstavby výběhu",
+            "type": "string",
+            "format": "date"
+        },
+        "popis": {
+            "description": "Stručný popis výběhu, co se na něm nachází, jak vypadá.",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "Zvířata": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "$ref": "http://example.com/zvire.schema.json"
+            }
+        },
+        "Veterináři": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "type": "string"
+            }
+        },
+        "Pečovatelé": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false, 
+    "required": [ "název", "lokaceNaMapě", "datumVýstavby", "popis", "Zvířata", "Veterináři", "Pečovatelé" ]
+}

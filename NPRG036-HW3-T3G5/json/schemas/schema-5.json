@@ -1,0 +1,68 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/typyZvirat.schema.json",
+    "title": "TypyZvířat",
+    "description": "Popis Konkrétního typu zvířete.",
+    "type": "object",
+    "properties": {
+        "název": {
+            "description": "Identifikuje konkrétní zvíře.",
+            "type": "string"
+        },
+        "názevProČtení": {
+            "description": "Název pro daný typ zvířete používaný v běžném textu.",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "popis": {
+            "description": "Empirický popis typu zvířete.",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "popisChovu": {
+            "description": "Popis chovu, postupy, informace pro pečovatele",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "typStravy": {
+            "description": "Identifikuje konkrétní typy stravy kterými se živí",
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "type": "string"
+            }
+        },
+        "Výběhy": {
+            "items": [],
+            "additionalItems": {
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false, 
+    "required": [ "název", "názevProČtení", "popis", "popisChovu", "typStravy"]
+}

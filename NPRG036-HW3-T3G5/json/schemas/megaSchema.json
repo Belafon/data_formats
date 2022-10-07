@@ -1,0 +1,688 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/zoo.schema.json",
+
+
+
+
+    "title": "Zoo",
+    "description": "Objekt naší zoo",
+    "type": "object",
+    "properties": {
+        "Pavilony": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+
+
+
+                "title": "Pavilon",
+                "description": "Pavilon, obsahuje výběhy.",
+                "type": "object",
+                "properties": {
+                    "název": {
+                        "description": "Identifikuje konkrétní pavilon.",
+                        "type": "string"
+                    },
+                    "datumVýstavby": {
+                        "description": "datum výstavby pavilonu",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "datumPosledníRekonstrukce": {
+                        "description": "datum poslední rekonstrukce pavilonu",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "Výběhy": {
+                        "type": "array",
+                        "items": [],
+                        "additionalItems": {
+
+
+
+
+
+                            "title": "Výběh",
+                            "description": "Objekt výběhu",
+                            "type": "object",
+                            "properties": {
+                                "název": {
+                                    "description": "Identifikuje konkrétní výběh.",
+                                    "type": "string"
+                                },
+                                "názevProČtení": {
+                                    "description": "Název pro daný výběh používaný v běžném textu.",
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "string"
+                                        },
+                                        "en": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                },
+                                "lokaceNaMapě": {
+                                    "description": "Označení místa na mapě.",
+                                    "type": "string"
+                                },
+                                "datumVýstavby": {
+                                    "description": "datum výstavby výběhu",
+                                    "type": "string",
+                                    "format": "date"
+                                },
+                                "popis": {
+                                    "description": "Stručný popis výběhu, co se na něm nachází, jak vypadá.",
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "string"
+                                        },
+                                        "en": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                },
+                                "Zvířata": {
+                                    "type": "array",
+                                    "items": [],
+                                    "additionalItems": {
+
+
+
+
+                                        "title": "Zvíře",
+                                        "description": "Objekt zvířete",
+                                        "type": "object",
+                                        "properties": {
+                                            "jméno": {
+                                                "description": "Identifikuje konkrétní zvíře.",
+                                                "type": "string"
+                                            },
+                                            "popisZdravotníhoStavu": {
+                                                "description": "Popis zdravotního stavu zajištěný veterinářem daného výběhu kde se zvíře nachází.",
+                                                "type": "object",
+                                                "properties": {
+                                                    "cs": {
+                                                        "type": "string"
+                                                    },
+                                                    "en": {
+                                                        "type": "string"
+                                                    },
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "datumNarození": {
+                                                "description": "datum narození zvířete",
+                                                "type": "string",
+                                                "format": "date"
+                                            },
+                                            "datumPříchoduDoZoo": {
+                                                "description": "datum příchodu do zoo daného zvířete",
+                                                "type": "string",
+                                                "format": "date"
+                                            },
+                                            "zvířeTyp": {
+                                                "description": "Identifikuje typ zvířete",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": false, 
+                                        "required": [ "jméno", "popisZdravotníhoStavu", "datumNarození", "datumPříchoduDoZoo", "zvířeTyp" ]
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    }
+                                },
+                                "Veterináři": {
+                                    "type": "array",
+                                    "items": [],
+                                    "additionalItems": {
+                                        "type": "string"
+                                    }
+                                },
+                                "Pečovatelé": {
+                                    "type": "array",
+                                    "items": [],
+                                    "additionalItems": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "additionalProperties": false, 
+                            "required": [ "název", "lokaceNaMapě", "datumVýstavby", "popis", "Zvířata", "Veterináři", "Pečovatelé" ]
+                        
+                        
+                        
+                        
+                        
+                        }
+                    },
+                    "PrůvodcePavilonem": {
+                        "type": "array",
+                        "items": [],
+                        "additionalItems": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false, 
+                "required": [ "název", "datumVýstavby", "datumPosledníRekonstrukce", "Výběhy", "PrůvodcePavilonem" ]
+            
+
+                
+            }
+        },
+        "TypyZvířat": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+
+
+
+
+
+                "title": "TypyZvířat",
+                "description": "Popis Konkrétního typu zvířete.",
+                "type": "object",
+                "properties": {
+                    "název": {
+                        "description": "Identifikuje konkrétní zvíře.",
+                        "type": "string"
+                    },
+                    "názevProČtení": {
+                        "description": "Název pro daný typ zvířete používaný v běžném textu.",
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            },
+                            "en": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "popis": {
+                        "description": "Empirický popis typu zvířete.",
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            },
+                            "en": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "popisChovu": {
+                        "description": "Popis chovu, postupy, informace pro pečovatele",
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            },
+                            "en": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "typStravy": {
+                        "description": "Identifikuje konkrétní typy stravy kterými se živí",
+                        "type": "array",
+                        "items": [],
+                        "additionalItems": {
+                            "type": "string"
+                        }
+                    },
+                    "Výběhy": {
+                        "items": [],
+                        "additionalItems": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false, 
+                "required": [ "název", "názevProČtení", "popis", "popisChovu", "typStravy"]
+            
+            
+            
+            
+            
+            }
+        },
+        "TypyStrav": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+
+
+
+
+
+                "title": "TypStravy",
+                "description": "Objekt pro konkrétní typ stravy",
+                "type": "object",
+                "properties": {
+                    "název": {
+                        "description": "Identifikuje konkrétní typ stravy.",
+                        "type": "string"
+                    },
+                    "cena": {
+                        "type": "object",
+                        "properties": {
+                            "currency": {
+                                "type": "string",
+                                "enum": ["EUR", "CZK"]
+                            },
+                            "value": {
+                                "type": "number",
+                                "minimum": 0
+                            }
+                        },
+                        "additionalProperties": false, 
+                        "required": [ "currency", "value" ]
+                    },
+                    "kalorie": {
+                        "type": "number",
+                        "minimum": 0
+                    }
+                },
+                "additionalProperties": false, 
+                "required": [ "název", "cena", "kalorie" ]
+            
+            
+            
+            
+            }
+        },
+        "Zaměstnanci": {
+            "type": "object",
+            "allOf": [
+                {
+
+
+
+
+
+                    "title": "Zaměstnanci",
+                    "description": "Obsahuje všechny zaměstnance",
+                    "type": "object",
+                    "properties": {
+                        "Uklízeči": {
+                            "type": "array",
+                            "items": [],
+                            "additionalItems": {
+                                "allOf": [
+                                    {
+
+                                        
+
+                                        "title": "Zaměstnanec",
+                                        "description": "Informace o konkrétním zaměstnanci",
+                                        "type": "object",
+                                        "properties": {
+                                            "givenName": {
+                                                "type": "string"
+                                            },
+                                            "familyName": {
+                                                "type": "string"
+                                            },
+                                            "plat": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "currency": {
+                                                        "type": "string",
+                                                        "enum": ["EUR", "CZK"]
+                                                    },
+                                                    "value": {
+                                                        "type": "number",
+                                                        "minimum": 0
+                                                    }
+                                                },
+                                                "additionalProperties": false, 
+                                                "required": [ "currency", "value" ]
+                                            },
+                                            "telefonníČíslo": {
+                                                "type": "string",
+                                                "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
+                                            }
+                                            
+                                        },
+                                        "required": ["givenName", "familyName", "plat", "telefonníČíslo"]
+
+
+
+                                    }
+                                ]
+                            }
+                        },
+                        "Pečovatelé": {
+                            "type": "array",
+                            "items": [],
+                            "additionalItems": {
+                                "allOf": [
+                                    {
+
+                                        
+
+                                        "title": "Zaměstnanec",
+                                        "description": "Informace o konkrétním zaměstnanci",
+                                        "type": "object",
+                                        "properties": {
+                                            "givenName": {
+                                                "type": "string"
+                                            },
+                                            "familyName": {
+                                                "type": "string"
+                                            },
+                                            "plat": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "currency": {
+                                                        "type": "string",
+                                                        "enum": ["EUR", "CZK"]
+                                                    },
+                                                    "value": {
+                                                        "type": "number",
+                                                        "minimum": 0
+                                                    }
+                                                },
+                                                "additionalProperties": false, 
+                                                "required": [ "currency", "value" ]
+                                            },
+                                            "telefonníČíslo": {
+                                                "type": "string",
+                                                "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
+                                            }
+                                            
+                                        },
+                                        "required": ["givenName", "familyName", "plat", "telefonníČíslo"]
+
+
+
+                                    },
+                                    {
+                                        "properties": {
+                                            "spravuje": {
+                                                "type": "array",
+                                                "items": [],
+                                                "additionalItems": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "required": ["spravuje"]
+                                    }
+                                ]
+                            }
+                        },
+                        "Veterináři": {
+                            "type": "array",
+                            "items": [],
+                            "additionalItems": {
+                                "allOf": [
+                                    {
+
+                                        
+
+                                        "title": "Zaměstnanec",
+                                        "description": "Informace o konkrétním zaměstnanci",
+                                        "type": "object",
+                                        "properties": {
+                                            "givenName": {
+                                                "type": "string"
+                                            },
+                                            "familyName": {
+                                                "type": "string"
+                                            },
+                                            "plat": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "currency": {
+                                                        "type": "string",
+                                                        "enum": ["EUR", "CZK"]
+                                                    },
+                                                    "value": {
+                                                        "type": "number",
+                                                        "minimum": 0
+                                                    }
+                                                },
+                                                "additionalProperties": false, 
+                                                "required": [ "currency", "value" ]
+                                            },
+                                            "telefonníČíslo": {
+                                                "type": "string",
+                                                "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
+                                            }
+                                            
+                                        },
+                                        "required": ["givenName", "familyName", "plat", "telefonníČíslo"]
+
+
+
+                                    },
+                                    {
+                                        "properties": {
+                                            "pečuje": {
+                                                "type": "array",
+                                                "items": [],
+                                                "additionalItems": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "required": ["pečuje"]
+                                    }
+                                ]
+                            }
+                        },
+                        "PrůvodciPavilonem": {
+                            "type": "array",
+                            "items": [],
+                            "additionalItems": {
+                                "allOf": [
+                                    {
+
+                                        
+
+                                        "title": "Zaměstnanec",
+                                        "description": "Informace o konkrétním zaměstnanci",
+                                        "type": "object",
+                                        "properties": {
+                                            "givenName": {
+                                                "type": "string"
+                                            },
+                                            "familyName": {
+                                                "type": "string"
+                                            },
+                                            "plat": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "currency": {
+                                                        "type": "string",
+                                                        "enum": ["EUR", "CZK"]
+                                                    },
+                                                    "value": {
+                                                        "type": "number",
+                                                        "minimum": 0
+                                                    }
+                                                },
+                                                "additionalProperties": false, 
+                                                "required": [ "currency", "value" ]
+                                            },
+                                            "telefonníČíslo": {
+                                                "type": "string",
+                                                "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
+                                            }
+                                            
+                                        },
+                                        "required": ["givenName", "familyName", "plat", "telefonníČíslo"]
+
+
+
+                                    },
+                                    {
+                                        "properties": {
+                                            "provádí": {
+                                                "type": "array",
+                                                "items": [],
+                                                "additionalItems": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "required": ["provádí"]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "additionalProperties": false
+                
+                }  
+                
+                
+
+                
+            ]
+        },
+        "Výběhy": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+
+
+
+
+
+                "title": "Výběh",
+                "description": "Objekt výběhu",
+                "type": "object",
+                "properties": {
+                    "název": {
+                        "description": "Identifikuje konkrétní výběh.",
+                        "type": "string"
+                    },
+                    "názevProČtení": {
+                        "description": "Název pro daný výběh používaný v běžném textu.",
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            },
+                            "en": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "lokaceNaMapě": {
+                        "description": "Označení místa na mapě.",
+                        "type": "string"
+                    },
+                    "datumVýstavby": {
+                        "description": "datum výstavby výběhu",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "popis": {
+                        "description": "Stručný popis výběhu, co se na něm nachází, jak vypadá.",
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            },
+                            "en": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "Zvířata": {
+                        "type": "array",
+                        "items": [],
+                        "additionalItems": {
+
+                            
+
+
+                            "title": "Zvíře",
+                            "description": "Objekt zvířete",
+                            "type": "object",
+                            "properties": {
+                                "jméno": {
+                                    "description": "Identifikuje konkrétní zvíře.",
+                                    "type": "string"
+                                },
+                                "popisZdravotníhoStavu": {
+                                    "description": "Popis zdravotního stavu zajištěný veterinářem daného výběhu kde se zvíře nachází.",
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "string"
+                                        },
+                                        "en": {
+                                            "type": "string"
+                                        },
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "datumNarození": {
+                                    "description": "datum narození zvířete",
+                                    "type": "string",
+                                    "format": "date"
+                                },
+                                "datumPříchoduDoZoo": {
+                                    "description": "datum příchodu do zoo daného zvířete",
+                                    "type": "string",
+                                    "format": "date"
+                                },
+                                "zvířeTyp": {
+                                    "description": "Identifikuje typ zvířete",
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false, 
+                            "required": [ "jméno", "popisZdravotníhoStavu", "datumNarození", "datumPříchoduDoZoo", "zvířeTyp" ]
+
+
+
+                        }
+                    },
+                    "Veterináři": {
+                        "type": "array",
+                        "items": [],
+                        "additionalItems": {
+                            "type": "string"
+                        }
+                    },
+                    "Pečovatelé": {
+                        "type": "array",
+                        "items": [],
+                        "additionalItems": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false, 
+                "required": [ "název", "lokaceNaMapě", "datumVýstavby", "popis", "Zvířata", "Veterináři", "Pečovatelé" ]
+            
+            
+            
+            
+            
+            }
+        }
+    },
+    "additionalProperties": false, 
+    "required": [ "Pavilony", "TypyZvířat", "TypyStrav", "Zaměstnanci", "Výběhy"]
+}

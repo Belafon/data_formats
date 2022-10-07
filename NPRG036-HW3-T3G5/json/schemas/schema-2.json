@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/pavilon.schema.json",
+    "title": "Pavilon",
+    "description": "Pavilon, obsahuje výběhy.",
+    "type": "object",
+    "properties": {
+        "název": {
+            "description": "Identifikuje konkrétní pavilon.",
+            "type": "string"
+        },
+        "datumVýstavby": {
+            "description": "datum výstavby pavilonu",
+            "type": "string",
+            "format": "date"
+        },
+        "datumPosledníRekonstrukce": {
+            "description": "datum poslední rekonstrukce pavilonu",
+            "type": "string",
+            "format": "date"
+        },
+        "Výběhy": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "$ref": "http://example.com/vybehy.schema.json"
+            }
+        },
+        "PrůvodcePavilonem": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false, 
+    "required": [ "název", "datumVýstavby", "datumPosledníRekonstrukce", "Výběhy", "PrůvodcePavilonem" ]
+}

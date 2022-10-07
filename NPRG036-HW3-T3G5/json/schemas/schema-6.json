@@ -1,0 +1,90 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/zamestnanci.schema.json",
+    "title": "Zaměstnanci",
+    "description": "Obsahuje všechny zaměstnance",
+    "type": "object",
+    "properties": {
+        "Uklízeči": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "allOf": [
+                    {
+                        "$ref": "http://example.com/zamestnanec.schema.json"
+                    }
+                ]
+            }
+        },
+        "Pečovatelé": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "allOf": [
+                    {
+                        "$ref": "http://example.com/zamestnanec.schema.json"
+                    },
+                    {
+                        "properties": {
+                            "spravuje": {
+                                "type": "array",
+                                "items": [],
+                                "additionalItems": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": ["spravuje"]
+                    }
+                ]
+            }
+        },
+        "Veterináři": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "allOf": [
+                    {
+                        "$ref": "http://example.com/zamestnanec.schema.json"
+                    },
+                    {
+                        "properties": {
+                            "pečuje": {
+                                "type": "array",
+                                "items": [],
+                                "additionalItems": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": ["pečuje"]
+                    }
+                ]
+            }
+        },
+        "PrůvodciPavilonem": {
+            "type": "array",
+            "items": [],
+            "additionalItems": {
+                "allOf": [
+                    {
+                        "$ref": "http://example.com/zamestnanec.schema.json"
+                    },
+                    {
+                        "properties": {
+                            "provádí": {
+                                "type": "array",
+                                "items": [],
+                                "additionalItems": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": ["provádí"]
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false
+}

@@ -18,7 +18,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/Pavilon"
@@ -31,7 +32,8 @@
                         },   
                         "dc:description": "name of Pavilon",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
                         "propertyUrl": "rdfs:label"
                     },
@@ -43,7 +45,8 @@
                         },
                         "dc:description": "datum vzniku Pavilonu",
                         "datatype": "date",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
                         "propertyUrl": "http://example.org/vocabulary/datumVzniku"
                     },
@@ -55,7 +58,8 @@
                         },
                         "dc:description": "datum poslední rekonstrukce Pavilonu",
                         "datatype": "date",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
                         "propertyUrl": "dcterms:modified"
                     }
@@ -78,7 +82,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true
+                        "additionalProperties": false
+, "required": true
                     },
                     {
                         "@type": "Column",
@@ -88,7 +93,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "skos:inScheme",
                         "valueUrl": "http://mojezoo.cz/{+pavilon_id}"
@@ -128,7 +134,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/Výběh"
@@ -141,7 +148,8 @@
                         },   
                         "dc:description": "name of Výběh",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "rdfs:label"
                     },
@@ -153,7 +161,8 @@
                         },   
                         "dc:description": "datum výstavby výběhu",
                         "datatype": "date",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "http://example.org/vocabulary/datumVýstavby"
                     },
@@ -165,7 +174,8 @@
                         },
                         "dc:description": ["lokace na mapě zoo", "lokaceNaMapeZoo"],
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "http://example.org/vocabulary/popisLokace"
                     },
@@ -179,7 +189,8 @@
                         "datatype": "integer",
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "http://example.org/vocabulary/průměrnáTeplota",
-                        "required": false
+                        "additionalProperties": false
+, "required": false
                     },
                     {
                         "@type": "Column",
@@ -188,7 +199,8 @@
                             "cs": "popis"
                         },
                         "dc:description": "datum poslední rekonstrukce Pavilonu",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
                         "propertyUrl": "dcterms:description",
                         "datatype": "string",
@@ -213,7 +225,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true
+                        "additionalProperties": false
+, "required": true
                     },
                     {
                         "@type": "Column",
@@ -223,7 +236,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
                         "propertyUrl": "http://example.org/vocabulary/lzeSpatřit"
                     }
@@ -262,7 +276,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/ZvířeTyp"
@@ -275,7 +290,8 @@
                         },   
                         "dc:description": "název",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
                         "propertyUrl": "http://www.w3.org/2004/02/skos/core#prefLabel"
                     },
@@ -286,7 +302,8 @@
                             "cs": "popis"
                         },
                         "dc:description": "datum poslední rekonstrukce Pavilonu",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "datatype": "string",
                         "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
                         "propertyUrl": "http://purl.org/dc/terms/description",
@@ -299,7 +316,8 @@
                             "cs": ["popis chovu", "popisChovu"]
                         },
                         "dc:description": "popis chovu typu zvířete",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "datatype": "string",
                         "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
                         "propertyUrl": "http://example.org/vocabulary/popisChovu",
@@ -324,7 +342,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://dbpedia.org/ontology/Animal"
@@ -337,7 +356,8 @@
                         },   
                         "dc:description": "Jmeno",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "rdfs:label"
                     },
@@ -348,7 +368,8 @@
                             "cs": ["popis zdavotního stavu", "popisZdavotnihoStavu"]
                         },
                         "dc:description": "popis zdavotního stavu zvířete",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "http://example.org/vocabulary/popisZdavotnihoStavu",
                         "datatype": "string",
@@ -361,7 +382,8 @@
                             "cs": ["datum narození", "datumNarozeni"]
                         },
                         "dc:description": "datum narození zvířete",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "http://example.org/vocabulary/datumNarození",
                         "datatype": "date"
@@ -374,7 +396,8 @@
                             "cs": ["datum příchodu do zoo", "datumPrichoduDoZoo"]
                         },
                         "dc:description": "datum příchodu do zoo zvířete",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "http://example.org/vocabulary/datumPříchoduDoZoo",
                         "datatype": "date",
@@ -388,7 +411,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "dcterms:type"
                     },
@@ -400,7 +424,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
                         "propertyUrl": "http://example.org/vocabulary/domovem"
                     }
@@ -439,7 +464,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+veterinar_id}",
                         "propertyUrl": "http://example.org/vocabulary/pečuje"
                     },
@@ -451,7 +477,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true
+                        "additionalProperties": false
+, "required": true
                     }
                 ],
                 "primaryKey": ["vybeh_id", "veterinar_id"],
@@ -488,7 +515,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/Zaměstnanec"
@@ -502,7 +530,8 @@
                         },   
                         "dc:description": "křestní jmeno",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
                         "propertyUrl": "foaf:givenName"
                     },
@@ -515,7 +544,8 @@
                         },   
                         "dc:description": "přijímení, jmeno",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
                         "propertyUrl": "foaf:familyName"
                     },
@@ -526,7 +556,8 @@
                             "cs": ["telefonní číslo", "telefonniCislo"]
                         },
                         "dc:description": "telefonní číslo",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
                         "propertyUrl": "vcard:hasTelephone",
                         "datatype": "string"
@@ -539,7 +570,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
                         "propertyUrl": "http://purl.org/goodrelations/v1#hasPriceSpecification"
                     }
@@ -571,7 +603,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+plat_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://purl.org/goodrelations/v1#UnitPriceSpecification"
@@ -584,7 +617,8 @@
                         },   
                         "dc:description": "měna",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+plat_id}",
                         "propertyUrl": "http://purl.org/goodrelations/v1#hasCurrency"
                     },
@@ -595,7 +629,8 @@
                             "cs": "množství peněz"
                         },
                         "dc:description": "množství peněz",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+plat_id}",
                         "propertyUrl": "http://purl.org/goodrelations/v1#hasCurrencyValue",
                         "datatype": "integer"
@@ -619,7 +654,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+veterinar_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/Veterinář"
@@ -632,7 +668,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+veterinar_id}",
                         "propertyUrl": "http://example.org/vocabulary/je_zamestnanec"
                     }
@@ -664,7 +701,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+uklizec_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/Uklízeč"
@@ -677,7 +715,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+uklizec_id}",
                         "propertyUrl": "http://example.org/vocabulary/je_zamestnanec"
                     }
@@ -709,7 +748,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pruvodce_pavilonem_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/PrůvodcePavilonem"
@@ -722,7 +762,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pruvodce_pavilonem_id}",
                         "propertyUrl": "http://example.org/vocabulary/je_zamestnanec"
                     }
@@ -754,7 +795,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pecovatel_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/Pečovatel"
@@ -767,7 +809,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pecovatel_id}",
                         "propertyUrl": "http://example.org/vocabulary/je_zamestnanec"
                     }
@@ -799,7 +842,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true
+                        "additionalProperties": false
+, "required": true
                     },
                     {
                         "@type": "Column",
@@ -809,7 +853,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pecovatel_id}",
                         "propertyUrl": "http://example.org/vocabulary/spravuje"
                     }
@@ -848,7 +893,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+pruvodce_pavilonem_id}",
                         "propertyUrl": "http://example.org/vocabulary/prováděníPavilonem"
                     },
@@ -860,7 +906,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true
+                        "additionalProperties": false
+, "required": true
                     }
                 ],
                 "primaryKey": ["pavilon_id", "pruvodce_pavilonem_id"],
@@ -897,7 +944,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true
+                        "additionalProperties": false
+, "required": true
                     },
                     {
                         "@type": "Column",
@@ -907,7 +955,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
                         "propertyUrl": "http://example.org/vocabulary/stravuje"
                     }
@@ -946,7 +995,8 @@
                         },
                         "dc:description": "id",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
                         "propertyUrl": "rdf:type",
                         "valueUrl": "http://example.org/vocabulary/"
@@ -959,7 +1009,8 @@
                         },   
                         "dc:description": "název",
                         "datatype": "string",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
                         "propertyUrl": "http://example.org/vocabulary/"
                     },
@@ -970,7 +1021,8 @@
                             "cs": "cena"
                         },
                         "dc:description": "cena produktu",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
                         "propertyUrl": "http://example.org/vocabulary/",
                         "datatype": "integer"
@@ -982,7 +1034,8 @@
                             "cs": "kalorie"
                         },
                         "dc:description": "počet kalorií na porci",
-                        "required": true,
+                        "additionalProperties": false
+, "required": true,
                         "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
                         "propertyUrl": "http://example.org/vocabulary/",
                         "datatype": "integer",
