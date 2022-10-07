@@ -1,0 +1,296 @@
+{
+    "Zoo": {
+        "Pavilony": [
+            {
+                "název": "Afrika",
+                "datumVýstavby": "2004-06-01",
+                "datumPosledníRekonstrukce": "2020-02-05",
+                "Výběhy": [
+                    {
+                        "název": "Savana",
+                        "názevProČtení": {
+                            "cs": "Savana"
+                        },
+                        "lokaceNaMapě": "S1",
+                        "datumVýstavby": "2002-09-24",
+                        "popis": {
+                            "cs": "1200 m^2 rovinné travnaté plochy,  na okrajích s velkými rozestupy rostou baobaby a blahovičníky."
+                        },
+                        "Zvířata": [
+                            {
+                                "jméno": "Černobíl",
+                                "popisZdravotníhoStavu": {
+                                    "cs": "Zdravý jedinec"
+                                },
+                                "datumNarození": "2012-04-02",
+                                "datumPříchoduDoZoo": "2012-04-02",
+                                "ZvířeTyp": "Zebra"
+                            },
+                            {
+                                "jméno": "Erin",
+                                "popisZdravotníhoStavu": {
+                                    "cs": "Zdravý jedinec"
+                                },
+                                "datumNarození": "2009-05-12",
+                                "datumPříchoduDoZoo": "2010-01-18",
+                                "ZvířeTyp": "Zebra"
+                            },
+                            {
+                                "jméno": "Bessie",
+                                "popisZdravotníhoStavu": {
+                                    "cs": "Zdravý jedinec"
+                                },
+                                "datumNarození": "2009-05-12",
+                                "datumPříchoduDoZoo": "2010-01-18",
+                                "ZvířeTyp": "Zebra"
+                            }
+                        ],
+                        "Veterináři": ["Veterinář_1"],
+                        "Pečovatelé": ["Pečovatel_1"]
+                    },
+                    {
+                        "název": "Poušť",
+                        "názevProČtení": {
+                            "cs": "Pouštní krajina"
+                        },
+                        "lokaceNaMapě": "S2",
+                        "datumVýstavby": "2003-08-19",
+                        "popis": {
+                            "cs": "1500 m^2 rovinné písčité plochy,  na levém okraji roste mix listnatých stromů."
+                        },
+                        "Zvířata": [],
+                        "Veterináři": ["Veterinář_1"],
+                        "Pečovatelé": ["Pečovatel_1"]
+                    },
+                    {
+                        "název": "Hory",
+                        "názevProČtení": {
+                            "cs": "Hory"
+                        },
+                        "lokaceNaMapě": "S3",
+                        "datumVýstavby": "2005-06-02",
+                        "popis": {
+                            "cs": "1000 m^2 plochy strmitých skalisek."
+                        },
+                        "Zvířata": [],
+                        "Veterináři": ["Veterinář_1"],
+                        "Pečovatelé": ["Pečovatel_1"]
+                    }
+                ],
+                "PrůvodcePavilonem": ["Průvodce_pavilonem_1"]
+            },
+            {
+                "název": "Plazy",
+                "datumVýstavby": "2004-06-01",
+                "datumPosledníRekonstrukce": "2020-02-05",
+                "Výběhy": [
+                    {
+                        "název": "TeráriumKober",
+                        "názevProČtení": {
+                            "cs": "Terárium Kober"
+                        },
+                        "lokaceNaMapě": "PL1",
+                        "datumVýstavby": "2011-04-01",
+                        "popis": {
+                            "cs": "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi"
+                        },
+                        "Zvířata": [
+                            {
+                                "jméno": "Lenka",
+                                "popisZdravotníhoStavu": {
+                                    "cs": "Zdravý jedinec"
+                                },
+                                "datumNarození": "2015-03-01",
+                                "datumPříchoduDoZoo": "2018-05-10",
+                                "ZvířeTyp": "KobraKrálovská"
+                            }
+                        ],
+                        "Veterináři": ["Veterinář_1"],
+                        "Pečovatelé": ["Pečovatel_1"]
+                    }
+                ],
+                "PrůvodcePavilonem": ["Průvodce_pavilonem_1"]
+            },
+            {
+                "název": "Prales",
+                "datumVýstavby": "2004-06-01",
+                "datumPosledníRekonstrukce": "2018-04-08",
+                "Výběhy": [
+                    {
+                        "název": "VýběhGoril",
+                        "názevProČtení": {
+                            "cs": "Výběh Goril"
+                        },
+                        "lokaceNaMapě": "PR2",
+                        "datumVýstavby": "2010-04-12",
+                        "popis": {
+                            "cs": "100 m^2 plochy, prosklenný plot, nerovný travnatý povrch, roste zde několik dubů."
+                        },
+                        "Zvířata": [
+                            {
+                                "jméno": "George",
+                                "popisZdravotníhoStavu": {
+                                    "cs": "Zdravý jedinec"
+                                },
+                                "datumNarození": "1995-05-12",
+                                "datumPříchoduDoZoo": "2005-01-18",
+                                "ZvířeTyp": "GorilaNížnná"
+                            }
+                        ],
+                        "Veterináři": ["Veterinář_1"],
+                        "Pečovatelé": ["Pečovatel_1"]
+                    }
+                ],
+                "PrůvodcePavilonem": ["Průvodce_pavilonem_1"]
+            }
+        ],
+        "TypyZvířat": [
+            {
+                "název": "Zebra",
+                "názevProČtení": {
+                    "cs": "Zebra",
+                    "en": "Zebra"
+                },
+                "popis": {
+                    "cs": "Bílý kůň s černýma pruhama"
+                },
+                "popisChovu": {
+                    "cs": "Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. Zimu tráví ve stájích"
+                },
+                "TypStravy": "Seno",
+                "Výběhy": ["Savana"]
+            },
+            {
+                "název": "VelbloudDvouhrbý",
+                "názevProČtení": {
+                    "cs": "Velbloud Dvouhrbý"
+                },
+                "popis": {
+                    "cs": "Hnědý kůň s dvouma hrbama"
+                },
+                "popisChovu": {
+                    "cs": "Velbloud je velmi nenáročné zvíře, živí se trávou, senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu, nic se nestane."
+                },
+                "TypStravy": "Seno"
+            },
+            {
+                "název": "PaovceHřivnatá",
+                "názevProČtení": {
+                    "cs": "Paovce Hřivnatá"
+                },
+                "popis": {
+                    "cs": "Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe."
+                },
+                "popisChovu": {
+                    "cs": "Živí se trávou, senem. Zimu tráví ve stájích."
+                },
+                "TypStravy": "Seno"
+            },
+            {
+                "název": "KobraKrálovská",
+                "názevProČtení": {
+                    "cs": "Kobra Královská"
+                },
+                "popis": {
+                    "cs": "Je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie."
+                },
+                "popisChovu": {
+                    "cs": "Živí se myšmi, nutné je být opatrný, jedná se o jednovatého hada."
+                },
+                "TypStravy": "Myš",
+                "Výběhy": ["TeráriumKober"]
+            },
+            {
+                "název": "GorilaNížnná",
+                "názevProČtení": {
+                    "cs": "Gorila Nížnná"
+                },
+                "popis": {
+                    "cs": "Domovem goril jsou tropické lesy v rovníkové Africe, kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve."
+                },
+                "popisChovu": {
+                    "cs": "Živí se částí rostlin, ovoce, mravenci."
+                },
+                "TypStravy": "Meloun",
+                "Výběhy": ["VýběhGoril"]
+            }
+        ],
+        "TypyStrav": [
+            {
+                "název": "Seno",
+                "cena": {
+                    "currency": "CZK",
+                    "value": "65"
+                },
+                "kalorie": "3160"
+            },
+            {
+                "název": "Myš",
+                "cena": {
+                    "currency": "CZK",
+                    "value": "80"
+                },
+                "kalorie": "50"
+            },
+            {
+                "název": "Meloun",
+                "cena": {
+                    "currency": "CZK",
+                    "value": "130"
+                },
+                "kalorie": "28"
+            }
+        ],
+        "Zaměstnanci": {
+            "Uklízeči": [
+                {
+                    "givenName": "Petr",
+                    "familyName": "Novotný",
+                    "plat": {
+                        "currency": "CZK",
+                        "value": "25000"
+                    },
+                    "telefonníČíslo": "tel:+420111222333"
+                }
+            ],
+            "Pečovatel": [
+                {
+                    "givenName": "Marie",
+                    "familyName": "Novotná",
+                    "plat": {
+                        "currency": "CZK",
+                        "value": "38000"
+                    },
+                    "telefonníČíslo": "tel:+420111222334",
+                    "spravuje": ["Poušť", "Savana", "Hory", "TeráriumKober", "VýběhGoril"]
+
+                }
+            ],
+            "Veterináři": [
+                {
+                    "givenName": "Marek",
+                    "familyName": "Novotný",
+                    "plat": {
+                        "currency": "CZK",
+                        "value": "48000"
+                    },
+                    "telefonníČíslo": "tel:+420111222335",
+                    "pečuje": ["Poušť", "Savana", "Hory", "TeráriumKober", "VýběhGoril"]
+                }
+            ],
+            "PrůvodčíPavilonem": [
+                {
+                    "givenName": "Anna",
+                    "familyName": "Novotná",
+                    "plat": {
+                        "currency": "CZK",
+                        "value": "35000"
+                    },
+                    "telefonníČíslo": "tel:+420111222336",
+                    "provádí": ["Afrika", "Plazy", "Prales"]
+                }
+            ]
+        },
+        "Výběhy": []
+    }
+}

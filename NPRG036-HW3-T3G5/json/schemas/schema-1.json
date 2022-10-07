@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/zoo.schema.json",
+    "title": "Zoo",
+    "description": "Object of our zoo",
+    "type": "object",
+    "properties": {
+      "productId": {
+        "description": "The unique identifier for a product",
+        "type": "integer"
+      }
+    },
+    "required": [ "productId" ]
+}

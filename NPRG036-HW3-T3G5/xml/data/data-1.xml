@@ -155,7 +155,7 @@
         <ZvířeTyp>
             <název>KobraKrálovská</název>
             <názevProČtení xml:lang="cs">Kobra Královská</názevProČtení>
-            <popis xml:lang="cs">je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie.</popis>
+            <popis xml:lang="cs">Je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie.</popis>
             <popisChovu xml:lang="cs">Živí se myšmi, nutné je být opatrný, jedná se o jednovatého hada.</popisChovu>
             <TypStravy ref="Myš"/>
             <Výběh ref="TeráriumKober"></Výběh>
