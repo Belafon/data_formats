@@ -1,47 +1,106 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://example.com/zoo.schema.json",
-    "title": "Zoo",
+    "title": "ZooDataGraph",
     "description": "Objekt naší zoo",
     "type": "object",
     "properties": {
-        "Pavilony": {
-            "type": "array",
-            "items": [],
-            "additionalItems": {
-                "$ref": "http://example.com/pavilon.schema.json"
-            }
+        "@context": {
+            "type": "object"
         },
-        "TypyZvířat": {
+        "@graph": {
             "type": "array",
-            "items": [],
-            "additionalItems": {
-                "$ref": "http://example.com/typZvirat.schema.json"
-            }
-        },
-        "TypyStrav": {
-            "type": "array",
-            "items": [],
-            "additionalItems": {
-                "$ref": "http://example.com/typStravy.schema.json"
-            }
-        },
-        "Zaměstnanci": {
-            "type": "object",
-            "allOf": [
+            "items": [
                 {
-                    "$ref": "http://example.com/zamestnanci.schema.json"
-                }   
-            ]
-        },
-        "Výběhy": {
-            "type": "array",
-            "items": [],
+                    "type": "object",
+                    "properties": {
+                        "@id": {
+                            "type": "string"
+                        },
+                        "@type": {
+                            "type": "string"
+                        },
+                        "TypyZvířat": {
+                            "type": "array",
+                            "items": [],
+                            "additionalItems": {
+
+
+
+                                "$ref": "http://example.com/typZvirete.schema.json"
+
+
+
+                            }
+                        }
+                    },
+                    "required": [
+                        "@id",
+                        "@type",
+                        "TypyZvířat"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "@id": {
+                            "type": "string"
+                        },
+                        "@type": {
+                            "type": "string"
+                        },
+                        "seznamTypuStrav": {
+                            "type": "array",
+                            "items": [],
+                            "additionalItems": {
+                                
+
+
+                                "$ref": "http://example.com/typStravy.schema.json"
+
+
+                                
+                            }
+                        }
+                    },
+                    "required": [
+                      "@id",
+                      "@type",
+                      "seznamTypuStrav"
+                    ],
+                    "additionalProperties": false
+                }
+            ],
             "additionalItems": {
-                "$ref": "http://example.com/vybehy.schema.json"
+                "anyOf": [
+                    {
+
+
+
+                        "$ref": "http://example.com/pavilon.schema.json"
+
+
+
+
+                    },
+                    {
+
+
+
+                        "$ref": "http://example.com/zamestnanec.schema.json"
+
+
+
+
+                    }
+                ]
             }
         }
     },
-    "additionalProperties": false, 
-    "required": [ "Pavilony", "TypyZvířat", "TypyStrav", "Zaměstnanci", "Výběhy"]
+    "required": [      
+        "@context",
+        "@graph"
+    ],
+    "additionalProperties": false
 }

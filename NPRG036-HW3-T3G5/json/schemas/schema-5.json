@@ -1,12 +1,14 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "http://example.com/typyZvirat.schema.json",
+    "$id": "http://example.com/typZvirete.schema.json",
     "title": "TypyZvířat",
     "description": "Popis Konkrétního typu zvířete.",
     "type": "object",
     "properties": {
-        "název": {
-            "description": "Identifikuje konkrétní zvíře.",
+        "@id": {
+            "type": "string"
+        },
+        "@type": {
             "type": "string"
         },
         "názevProČtení": {
@@ -53,16 +55,28 @@
             "type": "array",
             "items": [],
             "additionalItems": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "type": "string"
+                    }
+                },
+                "required": [ "@id" ]
             }
         },
-        "Výběhy": {
+        "lzeSpatřit": {
             "items": [],
             "additionalItems": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                    "@id": {
+                        "type": "string"
+                    }
+                },
+                "required": [ "@id" ]
             }
         }
     },
     "additionalProperties": false, 
-    "required": [ "název", "názevProČtení", "popis", "popisChovu", "typStravy"]
+    "required": [ "@id", "@type", "názevProČtení", "popis", "popisChovu", "typStravy"]
 }

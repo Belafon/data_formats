@@ -1,0 +1,240 @@
+@prefix ns0: <http://example.org/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://mojezoo.cz/Afrika>
+  ns0:datumVzniku "2004-06-01"^^xsd:date ;
+  dc:modified "2020-02-05"^^xsd:date ;
+  a ns0:Pavilon .
+
+<http://mojezoo.cz/Bessie>
+  ns0:datumNarození "2009-05-12"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2010-01-18"^^xsd:date ;
+  ns0:domovem <http://mojezoo.cz/Savana> ;
+  ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+  dc:type <http://mojezoo.cz/Zebra> ;
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Bessie" .
+
+<http://mojezoo.cz/Erin>
+  ns0:datumNarození "2009-05-12"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2010-01-18"^^xsd:date ;
+  ns0:domovem <http://mojezoo.cz/Savana> ;
+  ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+  dc:type <http://mojezoo.cz/Zebra> ;
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Erin" .
+
+<http://mojezoo.cz/George>
+  ns0:datumNarození "1995-05-12"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2005-01-18"^^xsd:date ;
+  ns0:domovem <http://mojezoo.cz/VýběhGoril> ;
+  ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+  dc:type <http://mojezoo.cz/GorilaNížnná> ;
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "George" .
+
+<http://mojezoo.cz/GorilaNížnná>
+  ns0:lzeSpatřit <http://mojezoo.cz/VýběhGoril> ;
+  ns0:popisChovu "Živí se částí rostlin, ovoce, mravenci."@cs ;
+  ns0:stravuje <http://mojezoo.cz/Meloun> ;
+  dc:description "Domovem goril jsou tropické lesy v rovníkové Africe, kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve."@cs ;
+  a ns0:ZvířeTyp ;
+  rdfs:label "Gorila Nížnná"@cs ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> .
+
+<http://mojezoo.cz/Hory>
+  ns0:datumVzniku "2005-06-02"^^xsd:date ;
+  ns0:popisLokace "S3" ;
+  dc:description "1000 m^2 plochy strmitých skalisek."@cs ;
+  a ns0:Výběh ;
+  rdfs:label "Hornatá krajina"@cs ;
+  skos:inScheme <http://mojezoo.cz/Afrika> .
+
+<http://mojezoo.cz/KobraKrálovská>
+  ns0:lzeSpatřit <http://mojezoo.cz/TeráriumKober> ;
+  ns0:popisChovu "Živí se myšmi, nutné je být opatrný, jedná se o jednovatého hada."@cs ;
+  ns0:stravuje <http://mojezoo.cz/Myš> ;
+  dc:description "Je druhem jedovatého hada z čeledi korálovcovitých, který žije v oblasti jižní a jihovýchodní Asie."@cs ;
+  a ns0:ZvířeTyp ;
+  rdfs:label "Kobra Královská"@cs ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> .
+
+<http://mojezoo.cz/Lenka>
+  ns0:datumNarození "2015-03-01"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2018-05-10"^^xsd:date ;
+  ns0:domovem <http://mojezoo.cz/TeráriumKober> ;
+  ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+  dc:type <http://mojezoo.cz/KobraKrálovská> ;
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Lenka" .
+
+<http://mojezoo.cz/Meloun>
+  ns0:kalorie 28 ;
+  gr:hasPriceSpecification <http://mojezoo.cz/cena1> ;
+  a ns0:TypStravy ;
+  rdfs:label "Meloun"@cs ;
+  skos:inScheme <http://mojezoo.cz/typyStravy> .
+
+<http://mojezoo.cz/Myš>
+  ns0:kalorie 50 ;
+  gr:hasPriceSpecification <http://mojezoo.cz/cena2> ;
+  a ns0:TypStravy ;
+  rdfs:label "Myš"@cs ;
+  skos:inScheme <http://mojezoo.cz/typyStravy> .
+
+<http://mojezoo.cz/PaovceHřivnatá>
+  ns0:popisChovu "Živí se trávou, senem. Zimu tráví ve stájích."@cs ;
+  ns0:stravuje <http://mojezoo.cz/Seno> ;
+  dc:description "Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe."@cs ;
+  a ns0:ZvířeTyp ;
+  rdfs:label "Paovce Hřivnatá"@cs ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> .
+
+<http://mojezoo.cz/Pečovatel_1>
+  ns0:spravuje <http://mojezoo.cz/Hory>, <http://mojezoo.cz/Poušť>, <http://mojezoo.cz/Savana>, <http://mojezoo.cz/TeráriumKober>, <http://mojezoo.cz/VýběhGoril> ;
+  gr:hasPriceSpecification <http://mojezoo.cz/plat2> ;
+  a ns0:Pečovatel ;
+  vcard:hasTelephone "tel:+420111222334" ;
+  foaf:familyName "Novotná" ;
+  foaf:givenName "Marie" .
+
+<http://mojezoo.cz/Plazy>
+  ns0:datumVzniku "2004-06-01"^^xsd:date ;
+  dc:modified "2020-02-05"^^xsd:date ;
+  a ns0:Pavilon .
+
+<http://mojezoo.cz/Poušť>
+  ns0:datumVzniku "2003-08-19"^^xsd:date ;
+  ns0:popisLokace "S2" ;
+  dc:description "1500 m^2 rovinné písčité plochy,  na levém okraji roste mix listnatých stromů."@cs ;
+  a ns0:Výběh ;
+  rdfs:label "Pouštní krajina"@cs ;
+  skos:inScheme <http://mojezoo.cz/Afrika> .
+
+<http://mojezoo.cz/Prales>
+  ns0:datumVzniku "2004-06-01"^^xsd:date ;
+  dc:modified "2018-04-08"^^xsd:date ;
+  a ns0:Pavilon .
+
+<http://mojezoo.cz/Průvodce_pavilonem_1>
+  ns0:prováděníPavilonem <http://mojezoo.cz/Afrika>, <http://mojezoo.cz/Plazy>, <http://mojezoo.cz/Prales> ;
+  gr:hasPriceSpecification <http://mojezoo.cz/plat4> ;
+  a ns0:PrůvodcePavilonem ;
+  vcard:hasTelephone "tel:+420111222336" ;
+  foaf:familyName "Novotná" ;
+  foaf:givenName "Anna" .
+
+<http://mojezoo.cz/Savana>
+  ns0:datumVzniku "2002-09-24"^^xsd:date ;
+  ns0:popisLokace "S1" ;
+  dc:description "1200 m^2 rovinné travnaté plochy,  na okrajích s velkými rozestupy rostou baobaby a blahovičníky."@cs ;
+  a ns0:Výběh ;
+  rdfs:label "Savana"@cs ;
+  skos:inScheme <http://mojezoo.cz/Afrika> .
+
+<http://mojezoo.cz/Seno>
+  ns0:kalorie 3160 ;
+  gr:hasPriceSpecification <http://mojezoo.cz/cena3> ;
+  a ns0:TypStravy ;
+  rdfs:label "Seno"@cs ;
+  skos:inScheme <http://mojezoo.cz/typyStravy> .
+
+<http://mojezoo.cz/TeráriumKober>
+  ns0:datumVzniku "2011-04-01"^^xsd:date ;
+  ns0:popisLokace "PL1" ;
+  dc:description "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi"@cs ;
+  a ns0:Výběh ;
+  rdfs:label "Terárium Kober"@cs ;
+  skos:inScheme <http://mojezoo.cz/Plazy> .
+
+<http://mojezoo.cz/TypyZvířat> a skos:ConceptScheme .
+<http://mojezoo.cz/Uklízeč_1>
+  gr:hasPriceSpecification <http://mojezoo.cz/plat1> ;
+  a ns0:Uklízeč ;
+  vcard:hasTelephone "tel:+420111222333" ;
+  foaf:familyName "Novotný" ;
+  foaf:givenName "Petr" .
+
+<http://mojezoo.cz/VelbloudDvouhrbý>
+  ns0:popisChovu "Velbloud je velmi nenáročné zvíře, živí se trávou, senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu, nic se nestane."@cs ;
+  ns0:stravuje <http://mojezoo.cz/Seno> ;
+  dc:description "Hnědý kůň s dvouma hrbama"@cs ;
+  a ns0:ZvířeTyp ;
+  rdfs:label "Velbloud Dvouhrbý"@cs ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> .
+
+<http://mojezoo.cz/Veterinář_1>
+  ns0:pečuje <http://mojezoo.cz/Hory>, <http://mojezoo.cz/Poušť>, <http://mojezoo.cz/Savana>, <http://mojezoo.cz/TeráriumKober>, <http://mojezoo.cz/VýběhGoril> ;
+  gr:hasPriceSpecification <http://mojezoo.cz/plat3> ;
+  a ns0:Veterinář ;
+  vcard:hasTelephone "tel:+420111222335" ;
+  foaf:familyName "Novotný" ;
+  foaf:givenName "Marek" .
+
+<http://mojezoo.cz/VýběhGoril>
+  ns0:datumVzniku "2010-04-12"^^xsd:date ;
+  ns0:popisLokace "PR2" ;
+  dc:description "100 m^2 plochy, prosklenný plot, nerovný travnatý povrch, roste zde několik dubů."@cs ;
+  a ns0:Výběh ;
+  rdfs:label "Výběh Goril"@cs ;
+  skos:inScheme <http://mojezoo.cz/Prales> .
+
+<http://mojezoo.cz/Zebra>
+  ns0:lzeSpatřit <http://mojezoo.cz/Savana> ;
+  ns0:popisChovu "Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. Zimu tráví ve stájích"@cs ;
+  ns0:stravuje <http://mojezoo.cz/Seno> ;
+  dc:description "Bílý kůň s černýma pruhama"@cs ;
+  a ns0:ZvířeTyp ;
+  rdfs:label "Zebra"@cs, "Zebra"@en ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> .
+
+<http://mojezoo.cz/cena1>
+  gr:hasCurrencyValue 130 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/cena2>
+  gr:hasCurrencyValue 80 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/cena3>
+  gr:hasCurrencyValue 65 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/plat1>
+  gr:hasCurrencyValue 25000 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/plat2>
+  gr:hasCurrencyValue 38000 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/plat3>
+  gr:hasCurrencyValue 48000 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/plat4>
+  gr:hasCurrencyValue 35000 ;
+  gr:hasPriceSpecification "CZK" ;
+  a gr:UnitPriceSpecification .
+
+<http://mojezoo.cz/typyStravy> a skos:ConceptScheme .
+<http://mojezoo.cz/Černobíl>
+  ns0:datumNarození "2012-04-02"^^xsd:date ;
+  ns0:datumPříchoduDoZoo "2012-04-02"^^xsd:date ;
+  ns0:domovem <http://mojezoo.cz/Savana> ;
+  ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
+  dc:type <http://mojezoo.cz/Zebra> ;
+  a <http://dbpedia.org/ontology/Animal> ;
+  rdfs:label "Černobíl" .

@@ -5,8 +5,10 @@
     "description": "Objekt výběhu",
     "type": "object",
     "properties": {
-        "název": {
-            "description": "Identifikuje konkrétní výběh.",
+        "@id": {
+            "type": "string"
+        },
+        "@type": {
             "type": "string"
         },
         "názevProČtení": {
@@ -44,28 +46,101 @@
             },
             "additionalProperties": false
         },
-        "Zvířata": {
+        "zvířata": {
             "type": "array",
             "items": [],
             "additionalItems": {
+
+
                 "$ref": "http://example.com/zvire.schema.json"
+
+
             }
         },
         "Veterináři": {
             "type": "array",
             "items": [],
             "additionalItems": {
-                "type": "string"
+                "anyOf": [
+                    {
+                        "@id": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "allOf": [
+                            {
+
+
+                                "$ref": "http://example.com/zamestnanec.schema.json"
+        
+        
+                            },
+                            {
+                                "properties": {
+                                    "pečuje": {
+                                        "type": "array",
+                                        "items": [],
+                                        "additionalItems": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [ "@id" ]    
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
             }
         },
         "Pečovatelé": {
             "type": "array",
             "items": [],
             "additionalItems": {
-                "type": "string"
+                "anyOf": [
+                    {
+                        "@id": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "allOf": [
+                            {
+        
+        
+                                "$ref": "http://example.com/zamestnanec.schema.json"
+        
+        
+                            },
+                            {
+                                "properties": {
+                                    "spravuje": {
+                                        "type": "array",
+                                        "items": [],
+                                        "additionalItems": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [ "@id" ]    
+                                        }
+                                    }
+                                },
+                                "required": [ "spravuje" ]
+                            }
+                        ]
+                    }
+                ]
             }
         }
     },
     "additionalProperties": false, 
-    "required": [ "název", "lokaceNaMapě", "datumVýstavby", "popis", "Zvířata", "Veterináři", "Pečovatelé" ]
+    "required": [ "@id", "@type", "názevProČtení", "lokaceNaMapě", "datumVýstavby", "popis", "zvířata", "Veterináři", "Pečovatelé" ]
 }

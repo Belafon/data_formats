@@ -5,6 +5,12 @@
     "description": "Objekt zvířete",
     "type": "object",
     "properties": {
+        "@id": {
+            "type": "string"
+        },
+        "@type": {
+            "type": "string"
+        },
         "jméno": {
             "description": "Identifikuje konkrétní zvíře.",
             "type": "string"
@@ -33,10 +39,17 @@
             "format": "date"
         },
         "zvířeTyp": {
-            "description": "Identifikuje typ zvířete",
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "@id": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [ "@id" ]
+            
         }
     },
     "additionalProperties": false, 
-    "required": [ "jméno", "popisZdravotníhoStavu", "datumNarození", "datumPříchoduDoZoo", "zvířeTyp" ]
+    "required": [ "@id", "@type", "jméno", "popisZdravotníhoStavu", "datumNarození", "datumPříchoduDoZoo", "zvířeTyp" ]
 }

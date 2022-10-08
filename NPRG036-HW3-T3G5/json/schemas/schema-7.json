@@ -5,13 +5,34 @@
     "description": "Objekt pro konkrétní typ stravy",
     "type": "object",
     "properties": {
-        "název": {
-            "description": "Identifikuje konkrétní typ stravy.",
+        "@id": {
             "type": "string"
+        },
+        "@type": {
+            "type": "string"
+        },
+        "názevProČtení": {
+            "description": "Název pro daný typ stravy používaný v běžném textu.",
+            "type": "object",
+            "properties": {
+                "cs": {
+                    "type": "string"
+                },
+                "en": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
         },
         "cena": {
             "type": "object",
             "properties": {
+                "@id": {
+                    "type": "string"
+                },
+                "@type": {
+                    "type": "string"
+                },
                 "currency": {
                     "type": "string",
                     "enum": ["EUR", "CZK"]
@@ -22,7 +43,7 @@
                 }
             },
             "additionalProperties": false, 
-            "required": [ "currency", "value" ]
+            "required": [  "@id", "@type", "currency", "value" ]
         },
         "kalorie": {
             "type": "number",
@@ -30,5 +51,5 @@
         }
     },
     "additionalProperties": false, 
-    "required": [ "název", "cena", "kalorie" ]
+    "required": [  "@id", "@type", "cena", "kalorie" ]
 }

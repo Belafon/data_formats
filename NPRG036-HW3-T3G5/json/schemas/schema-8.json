@@ -5,6 +5,12 @@
     "description": "Informace o konkrétním zaměstnanci",
     "type": "object",
     "properties": {
+        "@id": {
+            "type": "string"
+        },
+        "@type": {
+            "type": "string"
+        },
         "givenName": {
             "type": "string"
         },
@@ -14,6 +20,12 @@
         "plat": {
             "type": "object",
             "properties": {
+                "@id": {
+                    "type": "string"
+                },
+                "@type": {
+                    "type": "string"
+                },
                 "currency": {
                     "type": "string",
                     "enum": ["EUR", "CZK"]
@@ -24,7 +36,7 @@
                 }
             },
             "additionalProperties": false, 
-            "required": [ "currency", "value" ]
+            "required": [ "@id", "@type", "currency", "value" ]
         },
         "telefonníČíslo": {
             "type": "string",
@@ -32,5 +44,5 @@
         }
         
     },
-    "required": ["givenName", "familyName", "plat", "telefonníČíslo"]
+    "required": ["@id", "@type", "givenName", "familyName", "plat", "telefonníČíslo"]
 }

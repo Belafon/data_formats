@@ -5,8 +5,10 @@
     "description": "Pavilon, obsahuje výběhy.",
     "type": "object",
     "properties": {
-        "název": {
-            "description": "Identifikuje konkrétní pavilon.",
+        "@id": {
+            "type": "string"
+        },
+        "@type": {
             "type": "string"
         },
         "datumVýstavby": {
@@ -19,21 +21,56 @@
             "type": "string",
             "format": "date"
         },
-        "Výběhy": {
+        "výběhy": {
             "type": "array",
             "items": [],
             "additionalItems": {
+
+
                 "$ref": "http://example.com/vybehy.schema.json"
+
+
             }
         },
         "PrůvodcePavilonem": {
             "type": "array",
             "items": [],
             "additionalItems": {
-                "type": "string"
+                "anyOf": [
+                    {
+                        "@id": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "allOf": [
+                            {
+        
+        
+                                "$ref": "http://example.com/zamestnanec.schema.json"
+        
+        
+                            },
+                            {
+                                "provádí": {
+                                    "type": "array",
+                                    "items": [],
+                                    "additionalItems": {
+                                        "type": "object",
+                                        "properties": {
+                                            "@id": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [ "@id" ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
             }
         }
     },
-    "additionalProperties": false, 
-    "required": [ "název", "datumVýstavby", "datumPosledníRekonstrukce", "Výběhy", "PrůvodcePavilonem" ]
+    "required": [ "@id", "@type", "datumVýstavby", "datumPosledníRekonstrukce", "výběhy", "PrůvodcePavilonem" ]
 }

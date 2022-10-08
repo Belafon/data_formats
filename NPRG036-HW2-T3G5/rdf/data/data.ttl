@@ -67,11 +67,6 @@ ex:TypStravy a rdfs:Class ;
 	rdf:subClassOf skos:Concept ;
 	rdfs:label "Typ Stravy"@cs .
 
-	ex:cena a rdf:Property ;
-		rdfs:label "Cena"@cs ;
-		rdfs:domain  ex:TypStravy ;
-		rdfs:range xsd:integer .
-
 	ex:kalorie a rdf:Property ;
 		rdfs:label "Kalorie"@cs ;
 		rdfs:domain  ex:TypStravy ;
@@ -145,23 +140,21 @@ ex:prováděníPavilonem a rdf:Property ;
 	rdfs:domain ex:PrůvodcePavilonem .
 
 
-
-
+# 
 zoo:Afrika a ex:Pavilon ;
 	rdfs:label "Afrika"@cs ;
-	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
-    dcterms:modified "2020-02-05"^^xsd:dataTime .
+	ex:datumVzniku "2004-06-01"^^xsd:date ;
+    dcterms:modified "2020-02-05"^^xsd:date .
 
 zoo:Plazy a ex:Pavilon ;
 	rdfs:label "Plazy"@cs ;
-	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
-    dcterms:modified "2019-02-15"^^xsd:dataTime .
-
+	ex:datumVzniku "2004-06-01"^^xsd:date ;
+    dcterms:modified "2019-02-15"^^xsd:date .
 
 zoo:Prales a ex:Pavilon ;
 	rdfs:label "Prales"@cs ;
-	ex:datumVzniku "2004-06-01"^^xsd:dataTime ;
-    dcterms:modified "2018-04-08"^^xsd:dataTime .
+	ex:datumVzniku "2004-06-01"^^xsd:date ;
+    dcterms:modified "2018-04-08"^^xsd:date .
 
 
 
@@ -169,32 +162,33 @@ zoo:Prales a ex:Pavilon ;
 
 
 
+#
 zoo:Savana a ex:Výběh ;
 	skos:inScheme zoo:Afrika ;
 	rdfs:label "Savana"@cs ;
 	ex:popisLokace "S1" ;
-	ex:datumVýstavby "2002-09-24"^^xsd:dataTime ;
+	ex:datumVýstavby "2002-09-24"^^xsd:date ;
 	dcterms:description "1200 m^2 rovinné travnaté plochy,  na okrajích s velkými rozestupy rostou baobaby a blahovičníky."@cs .
 
 zoo:Poušť a ex:Výběh ;
 	skos:inScheme zoo:Afrika ;
 	rdfs:label "Pouštní krajina"@cs ;
 	ex:popisLokace "S2" ;
-	ex:datumVýstavby "2003-08-19"^^xsd:dataTime ;
+	ex:datumVýstavby "2003-08-19"^^xsd:date ;
 	dcterms:description "1500 m^2 rovinné písčité plochy,  na levém okraji roste mix listnatých stromů. "@cs .
 	
 zoo:Hory a ex:Výběh ;
 	skos:inScheme zoo:Afrika ;
 	rdfs:label "Hornatá krajina"@cs ;
 	ex:popisLokace "S3" ;
-	ex:datumVýstavby "2005-06-02"^^xsd:dataTime ;
+	ex:datumVýstavby "2005-06-02"^^xsd:date ;
 	dcterms:description "1000 m^2 plochy strmitých skalisek. "@cs .
 
 zoo:TeráriumKober a ex:Výběh ;
 	skos:inScheme zoo:Plazy ;
 	rdfs:label "Terárium kober"@cs ;
 	ex:popisLokace "PL1" ;
-	ex:datumVýstavby "2011-04-01"^^xsd:dataTime ;
+	ex:datumVýstavby "2011-04-01"^^xsd:date ;
 	dcterms:description "4 m^2 plochy, prosklenné terrárium s umělým jezírkem a starými dubovými větvemi."@cs .
 
 
@@ -202,35 +196,48 @@ zoo:VýběhGoril a ex:Výběh ;
 	skos:inScheme zoo:Prales ;
 	rdfs:label "Výběh goril"@cs ;
 	ex:popisLokace "PR2" ;
-	ex:datumVýstavby "2010-04-12"^^xsd:dataTime ;
+	ex:datumVýstavby "2010-04-12"^^xsd:date ;
 	dcterms:description "100 m^2 plochy, prosklenný plot, nerovný travnatý povrch, roste zde několik dubů. "@cs .
 
 
 
 
 
+#
 zoo:typyStravy a skos:ConceptScheme .
 
 zoo:Seno a ex:TypStravy ;
 	skos:inScheme zoo:typyStravy ;
 	rdfs:label "Seno"@cs ;
-	ex:cena 65 ; # za jídlo na jeden den pro jedno zvíře
+    gr:hasPriceSpecification zoo:cena3 ;
 	ex:kalorie 3160 . # kilo kalorií na 1 kg sena
-
+    
+    zoo:cena3 a gr:UnitPriceSpecification ;
+        gr:hasCurrencyValue "65"^^xsd:integer ;
+        gr:hasPriceSpecification "CZK" .
+    
 zoo:Myš a ex:TypStravy ;
 	rdfs:label "Myš"@cs ; 
-	ex:cena 80 ; # za jídlo na jeden den pro jedno zvíře
+    gr:hasPriceSpecification zoo:cena2 ;
 	ex:kalorie 50 .
+
+    zoo:cena2 a gr:UnitPriceSpecification ;
+        gr:hasCurrencyValue "80"^^xsd:integer ;
+        gr:hasPriceSpecification "CZK" .
 
 zoo:Meloun a ex:TypStravy ; 
 	skos:inScheme zoo:typyStravy ;
 	rdfs:label "Meloun"@cs ;
-	ex:cena 130 ; # za jídlo na jeden den pro jedno zvíře
+    gr:hasPriceSpecification zoo:cena1 ;
 	ex:kalorie 28 .
 
+    zoo:cena1 a gr:UnitPriceSpecification ;
+            gr:hasCurrencyValue "130"^^xsd:integer ;
+            gr:hasPriceSpecification "CZK" .
 
 
 
+#
 zoo:Zebra a ex:ZvířeTyp ;
 	skos:inScheme zoo:TypyZvířat ;
 	skos:prefLabel "Zebra"@cs, "Zebra"@en ;
@@ -238,6 +245,7 @@ zoo:Zebra a ex:ZvířeTyp ;
 	dcterms:description "Bílý kůň s černýma pruhama"@cs ;
 	ex:popisChovu "Zebry mají rády slunné teplé travnaté pláně, živí se trávou, senem. Zimu tráví ve stájích"@cs ;
 	ex:stravuje zoo:Seno .
+
 
 zoo:VelbloudDvouhrbý a ex:ZvířeTyp ;
 	skos:inScheme zoo:TypyZvířat ;
@@ -274,6 +282,7 @@ zoo:GorilaNížnná a ex:ZvířeTyp ;
 
 
 
+#
 zoo:Černobíl a dbo:Animal ;
 	rdfs:label "Černobíl"@cs ;
 	dcterms:type zoo:Zebra ;
@@ -316,6 +325,7 @@ zoo:Lenka a dbo:Animal ;
 
 
 
+#
 zoo:Uklízeč_1 a ex:Uklízeč ;
 	foaf:givenName "Petr"@cs ;
 	foaf:familyName "Novotný"@cs ;
