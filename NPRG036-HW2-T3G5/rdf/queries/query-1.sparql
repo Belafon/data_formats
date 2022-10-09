@@ -16,13 +16,13 @@ PREFIX dbo: <http://dbpedia.org/ontology/>
 SELECT ?celkovýVýdejZaMěsíc  WHERE {
   	{
     	SELECT (SUM(?cenaJidla) AS ?cenaJidel) WHERE {
-		  	?zvire dcterms:type/ex:stravuje/ex:cena ?cenaJidla .
+		  	?zvire dcterms:type/ex:stravuje/gr:hasPriceSpecification/gr:hasCurrencyValue ?cenaJidla .
       	}
   	}
   
   	{
     	SELECT (SUM(?plat) AS ?výdejNaPlaty) WHERE {
-         	?zamestnanec ex:plat ?plat .
+         	?zamestnanec gr:hasPriceSpecification/gr:hasCurrencyValue ?plat .
       	}
   	}
   	BIND(?cenaJidel + ?výdejNaPlaty as ?celkovýVýdejZaMěsíc)
