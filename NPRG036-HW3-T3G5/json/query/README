@@ -1,0 +1,16 @@
+1.
+zjistí počet zvířat jednotlivých typů, kromě těch typů, od kterého není žádné zvíře
+
+2.
+vybere 1 typ stravy každého zvířete, které se v zoo nachází
+a vrátí objekty, jaké typy  stravy zvířata jedí, kolik zvířat který
+typ jídla
+vynechá kobru Lenku 
+
+3.
+vypočítá počet všech zaměstnanců v zoo
+
+4.
+vyhledá, popíše typy stravy a seřadí je od nejdražší po nejlevnější
+(převední hodnoty na string a přidání jednotky je zde pouze pro procviční práce se stringem,
+pochopitelně to není praktické)

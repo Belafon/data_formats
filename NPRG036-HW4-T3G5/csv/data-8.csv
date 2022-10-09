@@ -1,0 +1,5 @@
+zamestnanec_id,prace,givenName,familyName,telefonniCislo,plat_id
+Uklízeč_1,Uklízeč,Petr,Novotný,tel:+420111222333,plat_1
+Pečovatel_1,Pečovatel,Marie,Novotná,tel:+420111222334,plat_2
+Veterinář_1,Veterinář,Marek,Novotný,tel:+420111222335,plat_3
+Pruvodce_pavilonem_1,PrůvodcePavilonem,Anna,Novotná,tel:+420111222336,plat_4

@@ -288,40 +288,40 @@ zoo:Černobíl a dbo:Animal ;
 	dcterms:type zoo:Zebra ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození "2012-04-02T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2012-04-02T00:00:00"^^xsd:dateTime .
+	ex:datumNarození "2012-04-02"^^xsd:date ;
+	ex:datumPříchoduDoZoo "2012-04-02"^^xsd:date .
 
 zoo:Erin a dbo:Animal ;
 	rdfs:label "Erin"@cs ;
 	dcterms:type zoo:Zebra ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození "2010-01-10T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2010-01-10T00:00:00"^^xsd:dateTime .
+	ex:datumNarození "2010-01-10"^^xsd:date ;
+	ex:datumPříchoduDoZoo "2010-01-10"^^xsd:date .
 
 zoo:Bessie a dbo:Animal ;
 	rdfs:label "Bessie"@cs ;
 	dcterms:type zoo:Zebra ;
 	ex:domovem zoo:Savana ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození "2009-05-12T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2010-01-08T00:00:00"^^xsd:dateTime .
+	ex:datumNarození "2009-05-12"^^xsd:date ;
+	ex:datumPříchoduDoZoo "2010-01-08"^^xsd:date .
 
 zoo:George a dbo:Animal ;
 	rdfs:label "George"@cs ;
 	dcterms:type zoo:GorilaNížnná ;
 	ex:domovem zoo:VýběhGoril ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození "1995-05-12T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2005-01-08T00:00:00"^^xsd:dateTime .
+	ex:datumNarození "1995-05-12"^^xsd:date ;
+	ex:datumPříchoduDoZoo "2005-01-08"^^xsd:date .
 
 zoo:Lenka a dbo:Animal ;
 	rdfs:label "Lenka"@cs ;
 	dcterms:type zoo:KobraKrálovská ;
 	ex:domovem zoo:TeráriumKober ;
 	ex:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
-	ex:datumNarození "2015-03-01T00:00:00"^^xsd:dateTime ;
-	ex:datumPříchoduDoZoo "2018-05-10T00:00:00"^^xsd:dateTime .
+	ex:datumNarození "2015-03-01"^^xsd:date ;
+	ex:datumPříchoduDoZoo "2018-05-10"^^xsd:date .
 
 
 

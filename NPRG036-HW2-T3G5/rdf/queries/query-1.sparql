@@ -14,18 +14,18 @@ PREFIX dbo: <http://dbpedia.org/ontology/>
 # vypočítá celkové výdaje zoo za měsíc, spočítá tedy ceny potravy pro všechny zvířata a přičte všechny platy zaměstnanců 
 
 SELECT ?celkovýVýdejZaMěsíc  WHERE {
-  	{    
+  	{
     	SELECT (SUM(?cenaJidla) AS ?cenaJidel) WHERE {
 		  	?zvire dcterms:type/ex:stravuje/ex:cena ?cenaJidla .
       	}
   	}
   
-  	{    
+  	{
     	SELECT (SUM(?plat) AS ?výdejNaPlaty) WHERE {
          	?zamestnanec ex:plat ?plat .
       	}
   	}
-  	BIND(?cenaJidel + ?výdejNaPlaty as ?celkovýVýdejZaMěsíc) 
+  	BIND(?cenaJidel + ?výdejNaPlaty as ?celkovýVýdejZaMěsíc)
 }
   
   

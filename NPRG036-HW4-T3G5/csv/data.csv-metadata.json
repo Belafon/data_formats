@@ -1,0 +1,877 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        { 
+            "@language": "cs" 
+        } 
+    ],
+    "@type": "TableGroup",
+    "@id": "http://mojezoo.cz/data.csv-metadata.json", 
+    "dc:description": "informace o Zoo",
+    "tables": [
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_Pavilon", 
+            "url": "data-1.csv", 
+            "dc:title": "Pavilon",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "pavilon_id",
+                        "titles": {
+                            "cs": "pavilon_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/Pavilon"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "nazev",
+                        "titles": {
+                            "cs": ["nazev", "název"]
+                        },   
+                        "dc:description": "name of Pavilon",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
+                        "propertyUrl": "rdfs:label",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "datumVzniku",
+                        "titles": {
+                            "cs": ["datumVzniku", "datum vzniku"]
+                        },
+                        "dc:description": "datum vzniku Pavilonu",
+                        "datatype": "date",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
+                        "propertyUrl": "http://example.org/vocabulary/datumVzniku"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "datumPosledniRekonstrukce",
+                        "titles": {
+                            "cs": ["datum poslední rekonstrukce", "datumPosledniRekonstrukce"]
+                        },
+                        "dc:description": "datum poslední rekonstrukce Pavilonu",
+                        "datatype": "date",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+pavilon_id}",
+                        "propertyUrl": "dcterms:modified"
+                    }
+                ],
+                "primaryKey": "pavilon_id"
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_sekci", 
+            "url": "data-2.csv", 
+            "dc:title": "sekcí",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "pavilon_id",
+                        "titles": {
+                            "cs": "pavilon_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/pavilon_id"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "vybeh_id",
+                        "titles": {
+                            "cs": "vybeh_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "skos:inScheme",
+                        "valueUrl": "http://mojezoo.cz/{+pavilon_id}"
+                    }
+                ],
+                "primaryKey": "vybeh_id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "pavilon_id",
+                        "reference": {
+                            "resource": "data-1.csv",
+                            "columnReference": "pavilon_id"
+                        }
+                    },
+                    {
+                        "columnReference": "vybeh_id",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "vybeh_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_Vybeh", 
+            "url": "data-3.csv", 
+            "dc:title": "Výběh",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "vybeh_id",
+                        "titles": {
+                            "cs": "vybeh_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/Výběh"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "nazev",
+                        "titles": {
+                            "cs": ["nazev", "název"]
+                        },   
+                        "dc:description": "name of Výběh",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "rdfs:label",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "datumVystavby",
+                        "titles": {
+                            "cs": ["datum výstavby", "datumVystavby"]
+                        },   
+                        "dc:description": "datum výstavby výběhu",
+                        "datatype": "date",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "http://example.org/vocabulary/datumVýstavby"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "lokaceNaMapeZoo",
+                        "titles": {
+                            "cs": "lokace na mapě zoo"
+                        },
+                        "dc:description": ["lokace na mapě zoo", "lokaceNaMapeZoo"],
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "http://example.org/vocabulary/popisLokace"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "prumernaTeplota",
+                        "titles": {
+                            "cs": ["průměrná teplota", "prumernaTeplota"]
+                        },
+                        "dc:description": "datum poslední rekonstrukce Pavilonu",
+                        "datatype": "integer",
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "http://example.org/vocabulary/průměrnáTeplota",
+                        "required": false
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "popis",
+                        "titles": {
+                            "cs": "popis"
+                        },
+                        "dc:description": "datum poslední rekonstrukce Pavilonu",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+vybeh_id}",
+                        "propertyUrl": "dcterms:description",
+                        "datatype": "string",
+                        "lang": "cs"
+                    }
+                ],
+                "primaryKey": "vybeh_id"
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/lze_spatrit",
+            "url": "data-4.csv", 
+            "dc:title": "lze_spatrit",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "zvireTyp_id",
+                        "titles": {
+                            "cs": "zvireTyp_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/zvireTyp_id"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "vybeh_id",
+                        "titles": {
+                            "cs": "vybeh_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "http://example.org/vocabulary/lzeSpatřit"
+                    }
+                ],
+                "primaryKey": ["vybeh_id", "zvireTyp_id"],
+                "foreignKeys": [
+                    {
+                        "columnReference": "vybeh_id",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "vybeh_id"
+                        }
+                    },
+                    {
+                        "columnReference": "zvireTyp_id",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "zvireTyp_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_ZvireTyp", 
+            "url": "data-5.csv", 
+            "dc:title": "ZvířeTyp",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "zvireTyp_id",
+                        "titles": {
+                            "cs": "zvireTyp_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/ZvířeTyp"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "nazev",
+                        "titles": {
+                            "cs": ["nazev", "název"]
+                        },   
+                        "dc:description": "název",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "popis",
+                        "titles": {
+                            "cs": "popis"
+                        },
+                        "dc:description": "datum poslední rekonstrukce Pavilonu",
+                        "required": true,
+                        "datatype": "string",
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "http://purl.org/dc/terms/description",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "popisChovu",
+                        "titles": {
+                            "cs": ["popis chovu", "popisChovu"]
+                        },
+                        "dc:description": "popis chovu typu zvířete",
+                        "required": true,
+                        "datatype": "string",
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "http://example.org/vocabulary/popisChovu",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "skupina",
+                        "dc:description": "skupina do ktere patri",
+                        "required": true,
+                        "datatype": "string",
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "skos:inScheme",
+                        "valueUrl": "http://mojezoo.cz/{+skupina}"
+                    }
+                ],
+                "primaryKey": "zvireTyp_id"
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_Zvire", 
+            "url": "data-6.csv", 
+            "dc:title": "Zvíře",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "zvire_id",
+                        "titles": {
+                            "cs": "zvire_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://dbpedia.org/ontology/Animal"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "Jmeno",
+                        "titles": {
+                            "cs": "Jméno"
+                        },   
+                        "dc:description": "Jmeno",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "rdfs:label",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "popisZdavotnihoStavu",
+                        "titles": {
+                            "cs": ["popis zdavotního stavu", "popisZdavotnihoStavu"]
+                        },
+                        "dc:description": "popis zdavotního stavu zvířete",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "http://example.org/vocabulary/popisZdavotnihoStavu",
+                        "datatype": "string",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "datumNarozeni",
+                        "titles": {
+                            "cs": ["datum narození", "datumNarozeni"]
+                        },
+                        "dc:description": "datum narození zvířete",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "http://example.org/vocabulary/datumNarození",
+                        "datatype": "date"
+                    },
+
+                    {
+                        "@type": "Column",
+                        "name": "datumPrichoduDoZoo",
+                        "titles": {
+                            "cs": ["datum příchodu do zoo", "datumPrichoduDoZoo"]
+                        },
+                        "dc:description": "datum příchodu do zoo zvířete",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "http://example.org/vocabulary/datumPříchoduDoZoo",
+                        "datatype": "date",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "zvireTyp_id",
+                        "titles": {
+                            "cs": "zvireTyp_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "dcterms:type",
+                        "valueUrl": "http://mojezoo.cz/{+zvireTyp_id}"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "vybeh_id",
+                        "titles": {
+                            "cs": "vybeh_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvire_id}",
+                        "propertyUrl": "http://example.org/vocabulary/domovem",
+                        "valueUrl": "http://mojezoo.cz/{+vybeh_id}"
+                    }
+                ],
+                "primaryKey": "zvire_id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "zvireTyp_id",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "zvireTyp_id"
+                        }
+                    },
+                    {
+                        "columnReference": "vybeh_id",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "vybeh_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_pecuje", 
+            "url": "data-7.csv", 
+            "dc:title": "pečuje",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "vybeh_id",
+                        "titles": {
+                            "cs": "vybeh_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+veterinar_id}",
+                        "propertyUrl": "http://example.org/vocabulary/pečuje",
+                        "valueUrl": "http://mojezoo.cz/vybeh_id"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "veterinar_id",
+                        "titles": {
+                            "cs": "veterinar_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/veterinar_id"
+                    }
+                ],
+                "primaryKey": ["vybeh_id", "veterinar_id"],
+                "foreignKeys": [
+                    {
+                        "columnReference": "vybeh_id",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "vybeh_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_Zamestnanec", 
+            "url": "data-8.csv", 
+            "dc:title": "Zaměstnanec",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "zamestnanec_id",
+                        "titles": {
+                            "cs": "zamestnanec_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/{+prace}"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "prace",
+                        "titles": {
+                            "cs": "prace"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/prace"
+
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "givenName",
+                        "titles": {
+                            "cs": "jméno",
+                            "en": "givenName"
+                        },   
+                        "dc:description": "křestní jmeno",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
+                        "propertyUrl": "foaf:givenName"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "familyName",
+                        "titles": {
+                            "cs": "přijímení",
+                            "en": "familyName"
+                        },   
+                        "dc:description": "přijímení, jmeno",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
+                        "propertyUrl": "foaf:familyName"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "telefonniCislo",
+                        "titles": {
+                            "cs": ["telefonní číslo", "telefonniCislo"]
+                        },
+                        "dc:description": "telefonní číslo",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
+                        "propertyUrl": "vcard:hasTelephone",
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "plat_id",
+                        "titles": {
+                            "cs": "plat_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
+                        "propertyUrl": "http://purl.org/goodrelations/v1#hasPriceSpecification"
+                    }
+                ],
+                "primaryKey": "zamestnanec_id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "plat_id",
+                        "reference": {
+                            "resource": "data-9.csv",
+                            "columnReference": "plat_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_UnitPriceSpecification", 
+            "url": "data-9.csv", 
+            "dc:title": "UnitPriceSpecification",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "plat_id",
+                        "titles": {
+                            "cs": "plat_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+plat_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://purl.org/goodrelations/v1#UnitPriceSpecification"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "mena",
+                        "titles": {
+                            "cs": "mena"
+                        },   
+                        "dc:description": "měna",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+plat_id}",
+                        "propertyUrl": "http://purl.org/goodrelations/v1#hasCurrency"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "mnozstviPenez",
+                        "titles": {
+                            "cs": "mnozstviPenez"
+                        },
+                        "dc:description": "množství peněz",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+plat_id}",
+                        "propertyUrl": "http://purl.org/goodrelations/v1#hasCurrencyValue",
+                        "datatype": "float"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "nazev",
+                        "titles": {
+                            "cs": "nazev"
+                        },
+                        "dc:description": "nazev",
+                        "aboutUrl": "http://mojezoo.cz/{+plat_id}",
+                        "propertyUrl": "rdfs:label",
+                        "datatype": "string",
+                        "lang": "cs"
+                    }
+                ],
+                "primaryKey": "plat_id"
+            }
+        },        
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_spravuje", 
+            "url": "data-14.csv", 
+            "dc:title": "spravuje",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "pecovatel_id",
+                        "titles": {
+                            "cs": "pecovatel_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/pecovatel_id"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "vybeh_id",
+                        "titles": {
+                            "cs": "vybeh_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+pecovatel_id}",
+                        "propertyUrl": "http://example.org/vocabulary/spravuje",
+                        "valueUrl": "http://mojezoo.cz/vybeh_id"
+
+                    }
+                ],
+                "primaryKey": ["pecovatel_id", "vybeh_id"],
+                "foreignKeys": [
+                    {
+                        "columnReference": "vybeh_id",
+                        "reference": {
+                            "resource": "data-3.csv",
+                            "columnReference": "vybeh_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_provadeni_pavilonem", 
+            "url": "data-15.csv", 
+            "dc:title": "Provádění pavilonem",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "pavilon_id",
+                        "titles": {
+                            "cs": "pavilon_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+pruvodce_pavilonem_id}",
+                        "propertyUrl": "http://example.org/vocabulary/prováděníPavilonem",
+                        "valueUrl": "http://mojezoo.cz/pavilon_id"
+
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "pruvodce_pavilonem_id",
+                        "titles": {
+                            "cs": "pruvodce_pavilonem_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/pruvodce_pavilonem_id"
+                    }
+                ],
+                "primaryKey": ["pavilon_id", "pruvodce_pavilonem_id"],
+                "foreignKeys": [
+                    {
+                        "columnReference": "pavilon_id",
+                        "reference": {
+                            "resource": "data-1.csv",
+                            "columnReference": "pavilon_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_stravuje", 
+            "url": "data-16.csv", 
+            "dc:title": "stravuje",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "zvireTyp_id",
+                        "titles": {
+                            "cs": "zvireTyp_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/zvireTyp_id"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "typ_stravy_id",
+                        "titles": {
+                            "cs": "typ_stravy_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zvireTyp_id}",
+                        "propertyUrl": "http://example.org/vocabulary/stravuje",
+                        "valueUrl": "http://mojezoo.cz/{+typ_stravy_id}"
+                    }
+                ],
+                "primaryKey": ["zvireTyp_id", "typ_stravy_id"],
+                "foreignKeys": [
+                    {
+                        "columnReference": "zvireTyp_id",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "zvireTyp_id"
+                        }
+                    },
+                    {
+                        "columnReference": "typ_stravy_id",
+                        "reference": {
+                            "resource": "data-17.csv",
+                            "columnReference": "typ_stravy_id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "@id": "http://mojezoo.cz/Table_TypyStravy", 
+            "url": "data-17.csv", 
+            "dc:title": "TypStravy",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "typ_stravy_id",
+                        "titles": {
+                            "cs": "typ_stravy_id"
+                        },
+                        "dc:description": "id",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/TypStravy"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "nazev",
+                        "titles": {
+                            "cs": ["nazev", "název"]
+                        },   
+                        "dc:description": "název",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
+                        "propertyUrl": "rdfs:label",
+                        "lang": "cs"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "cena",
+                        "titles": {
+                            "cs": "cena"
+                        },
+                        "dc:description": "cena produktu",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
+                        "propertyUrl": "gr:hasPriceSpecification",
+                        "valueUrl": "http://mojezoo.cz/{+cena}",
+                        "datatype": "string"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "kalorie",
+                        "titles": {
+                            "cs": "kalorie"
+                        },
+                        "dc:description": "počet kalorií na porci",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+typ_stravy_id}",
+                        "propertyUrl": "http://example.org/vocabulary/kalorie",
+                        "datatype": "integer"
+                    }
+                ],
+                "primaryKey": "typ_stravy_id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "cena",
+                        "reference": {
+                            "resource": "data-9.csv",
+                            "columnReference": "plat_id"
+                        }
+                    }
+                ]
+            }
+        }
+
+    ]
+}
