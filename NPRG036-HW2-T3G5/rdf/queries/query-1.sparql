@@ -10,6 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX w3c: <http://www.w3.org/ns/org#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX gr: <http://purl.org/goodrelations/v1#> 
 
 # vypočítá celkové výdaje zoo za měsíc, spočítá tedy ceny potravy pro všechny zvířata a přičte všechny platy zaměstnanců 
 
