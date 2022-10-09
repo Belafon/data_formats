@@ -26,15 +26,15 @@ SELECT ?zvíře ?jmenoPečovatele ?jmenoVeterináře  WHERE {
     	&& DAY(?datumNarození) = DAY(?datumPřichoduDoZoo))
   	
   	?pečovatel a ex:Pečovatel ;
-     	foaf:family_name ?primeniPečovatele ;
-     	foaf:firstName ?krestniPečovatele ;
+     	foaf:familyName ?primeniPečovatele ;
+     	foaf:givenName ?krestniPečovatele ;
       	ex:spravuje ?výběh .
   	
   	BIND(CONCAT(STR(?krestniPečovatele), " ", STR(?primeniPečovatele)) AS ?jmenoPečovatele )
   
   	?veterinář a ex:Veterinář ;
-    	foaf:family_name ?primeniVeterináře ;
-     	foaf:firstName ?krestniVeterináře ;
+    	foaf:familyName ?primeniVeterináře ;
+     	foaf:givenName ?krestniVeterináře ;
       	ex:pečuje ?výběh .
 
     BIND(CONCAT(STR(?krestniVeterináře), " ", STR(?primeniVeterináře)) AS ?jmenoVeterináře )
