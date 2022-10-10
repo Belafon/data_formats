@@ -91,6 +91,11 @@ ex:Pavilon a rdfs:Class;
 ex:Zaměstnanec a skos:Concept ;
 	rdfs:subClassOf foaf:Person;	
 	rdfs:label "Zaměstnanec"@cs .
+
+ex:jeOčkován a rdfs:Property ;	
+	rdfs:label "subjekt je očkován"@cs ;
+	rdfs:domain ex:Zaměstnanec .
+
 	
 ex:Uklízeč a rdfs:Class ;
 	rdfs:subClassOf ex:Zaměstnanec;	
@@ -330,7 +335,9 @@ zoo:Uklízeč_1 a ex:Uklízeč ;
 	foaf:givenName "Petr"@cs ;
 	foaf:familyName "Novotný"@cs ;
 	gr:hasPriceSpecification zoo:plat1 ;
-    vcard:hasTelephone <tel:+420111222333> .
+    vcard:hasTelephone <tel:+420111222333> ;
+    ex:jeOčkován "Daptacel" ;
+    ex:jeOčkován "Pentacel" .
 
     zoo:plat1 a gr:UnitPriceSpecification ;
 	    rdfs:label "Plat"@cs ;

@@ -251,13 +251,15 @@
             </xs:restriction>
         </xs:simpleType> 
     </xs:element>
+    <xs:element name="jeOčkován" type="xs:string" />
 
-    <xs:complexType name="Zaměstnanec" >
+    <xs:complexType name="Zaměstnanec">
         <xs:sequence minOccurs="0">
             <xs:element ref="givenName" />
             <xs:element ref="familyName" />
             <xs:element ref="plat"/>
             <xs:element ref="telefonníČíslo" minOccurs="0"/>
+            <xs:element ref="jeOčkován" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="název" type="xs:ID"></xs:attribute>
         <xs:attribute name="ref" type="xs:IDREF"></xs:attribute>

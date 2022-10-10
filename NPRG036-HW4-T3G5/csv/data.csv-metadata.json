@@ -658,6 +658,42 @@
         },        
         {
             "@type": "Table",
+            "@id": "http://mojezoo.cz/ockovani", 
+            "url": "data-10.csv", 
+            "dc:title": "ockovani",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns" : [
+                    {
+                        "@type": "Column",
+                        "name": "zamestnanec_id",
+                        "titles": {
+                            "cs": "zamestnanec_id"
+                        },
+                        "dc:description": "id zamestnance",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/zamestnanec_id"
+
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "jeOckovan",
+                        "titles": {
+                            "cs": "jeOckovan"
+                        },   
+                        "dc:description": "info o očkování zaměstnance",
+                        "datatype": "string",
+                        "required": true,
+                        "aboutUrl": "http://mojezoo.cz/{+zamestnanec_id}",
+                        "propertyUrl": "http://example.org/vocabulary/jeOčkován"
+                    }
+                ],
+                "primaryKey": ["zamestnanec_id", "jeOckovan"]
+            }
+        },        
+        {
+            "@type": "Table",
             "@id": "http://mojezoo.cz/Table_spravuje", 
             "url": "data-14.csv", 
             "dc:title": "spravuje",

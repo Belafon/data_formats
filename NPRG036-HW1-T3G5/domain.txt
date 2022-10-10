@@ -54,3 +54,7 @@ nebo pečovatele, který spravuje alespoň jeden výběh a všechna zvířata v 
 Uklízeč, Veterinář, Pečovatel a Průvodce pavilonem:
 Reprezentace konkrétního typu zaměstnance.
     • Zaměstnanec: Reprezentován typem Zaměstnanec.
+
+Očkování:
+Označuje očkování
+    • Název:  odpovídá běžným zkratkám pro typ očkoání

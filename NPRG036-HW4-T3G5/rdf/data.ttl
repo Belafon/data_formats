@@ -33,7 +33,7 @@
   ns0:popisLokace "S1" ;
   dc:description "\"1200 m^2 rovinné travnaté plochy, na okrajích s velkými rozestupy rostou baobaby a blahovičníky.\""@cs .
 
-<http://mojezoo.cz/Pou%C5%A1%C5%A5>
+<http://mojezoo.cz/Poušť>
   skos:inScheme <http://mojezoo.cz/Afrika> ;
   a ns0:Výběh ;
   rdfs:label "Poušť"@cs ;
@@ -49,7 +49,7 @@
   ns0:popisLokace "S3" ;
   dc:description "\"1000 m^2 plochy strmitých skalisek. \""@cs .
 
-<http://mojezoo.cz/Ter%C3%A1riumKober>
+<http://mojezoo.cz/TeráriumKober>
   skos:inScheme <http://mojezoo.cz/Plazy> ;
   a ns0:Výběh ;
   rdfs:label "TeráriumKober"@cs ;
@@ -57,7 +57,7 @@
   ns0:popisLokace "PL1" ;
   dc:description "\"4 m^2 plochy,prosklenné terrárium s umělým jezírkem a starými dubovými větvemi \""@cs .
 
-<http://mojezoo.cz/V%C3%BDb%C4%9BhGoril>
+<http://mojezoo.cz/VýběhGoril>
   skos:inScheme <http://mojezoo.cz/Prales> ;
   a ns0:Výběh ;
   rdfs:label "VýběhGoril"@cs ;
@@ -71,44 +71,44 @@
   skos:prefLabel "Zebra"@cs ;
   dc:description "\"Bílý kůň s černýma pruhama\""@cs ;
   ns0:popisChovu "\"Zebry mají rády slunné teplé travnaté pláně,živí se trávou,senem. Zimu tráví ve stájích\""@cs ;
-  skos:inScheme <http://mojezoo.cz/TypyZv%C3%AD%C5%99at> ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> ;
   ns0:stravuje <http://mojezoo.cz/Seno> .
 
-<http://mojezoo.cz/KobraKr%C3%A1lovsk%C3%A1>
+<http://mojezoo.cz/KobraKrálovská>
   ns0:lzeSpatřit "TeráriumKober" ;
   a ns0:ZvířeTyp ;
   skos:prefLabel "KobraKrálovská"@cs ;
   dc:description "\"je druhem jedovatého hada z čeledi korálovcovitých,který žije v oblasti jižní a jihovýchodní Asie.\""@cs ;
   ns0:popisChovu "\"Živí se myšmi,nutné je být opatrný,jedná se o jednovatého hada.\""@cs ;
-  skos:inScheme <http://mojezoo.cz/TypyZv%C3%AD%C5%99at> ;
-  ns0:stravuje <http://mojezoo.cz/My%C5%A1> .
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> ;
+  ns0:stravuje <http://mojezoo.cz/Myš> .
 
-<http://mojezoo.cz/GorilaN%C3%AD%C5%BEnn%C3%A1>
+<http://mojezoo.cz/GorilaNížnná>
   ns0:lzeSpatřit "VýběhGoril" ;
   a ns0:ZvířeTyp ;
   skos:prefLabel "GorilaNížnná"@cs ;
   dc:description "\"Domovem goril jsou tropické lesy v rovníkové Africe,kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve.\""@cs ;
   ns0:popisChovu "\"Živí se částí rostlin, ovoce, mravenci. \""@cs ;
-  skos:inScheme <http://mojezoo.cz/TypyZv%C3%AD%C5%99at> ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> ;
   ns0:stravuje <http://mojezoo.cz/Meloun> .
 
-<http://mojezoo.cz/VelbloudDvouhrb%C3%BD>
+<http://mojezoo.cz/VelbloudDvouhrbý>
   a ns0:ZvířeTyp ;
   skos:prefLabel "VelbloudDvouhrbý"@cs ;
   dc:description "\"Hnědý kůň s dvouma hrbama\""@cs ;
   ns0:popisChovu "\"Velbloud je velmi nenáročné zvíře,živí se trávou,senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu,nic se nestane.\""@cs ;
-  skos:inScheme <http://mojezoo.cz/TypyZv%C3%AD%C5%99at> ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> ;
   ns0:stravuje <http://mojezoo.cz/Seno> .
 
-<http://mojezoo.cz/PaovceH%C5%99ivnat%C3%A1>
+<http://mojezoo.cz/PaovceHřivnatá>
   a ns0:ZvířeTyp ;
   skos:prefLabel "PaovceHřivnatá"@cs ;
   dc:description "\"Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe.\""@cs ;
   ns0:popisChovu "\"Živí se trávou,senem. Zimu tráví ve stájích.\""@cs ;
-  skos:inScheme <http://mojezoo.cz/TypyZv%C3%AD%C5%99at> ;
+  skos:inScheme <http://mojezoo.cz/TypyZvířat> ;
   ns0:stravuje <http://mojezoo.cz/Seno> .
 
-<http://mojezoo.cz/%C4%8Cernob%C3%ADl>
+<http://mojezoo.cz/Černobíl>
   a <http://dbpedia.org/ontology/Animal> ;
   rdfs:label "Černobíl"@cs ;
   ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
@@ -141,8 +141,8 @@
   ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
   ns0:datumNarození "1995-05-12"^^xsd:date ;
   ns0:datumPříchoduDoZoo "2010-01-08"^^xsd:date ;
-  dc:type <http://mojezoo.cz/GorilaN%C3%AD%C5%BEnn%C3%A1> ;
-  ns0:domovem <http://mojezoo.cz/V%C3%BDb%C4%9BhGoril> .
+  dc:type <http://mojezoo.cz/GorilaNížnná> ;
+  ns0:domovem <http://mojezoo.cz/VýběhGoril> .
 
 <http://mojezoo.cz/Lenka>
   a <http://dbpedia.org/ontology/Animal> ;
@@ -150,26 +150,27 @@
   ns0:popisZdavotnihoStavu "Zdravý jedinec"@cs ;
   ns0:datumNarození "2015-05-12"^^xsd:date ;
   ns0:datumPříchoduDoZoo "2018-01-08"^^xsd:date ;
-  dc:type <http://mojezoo.cz/KobraKr%C3%A1lovsk%C3%A1> ;
-  ns0:domovem <http://mojezoo.cz/Ter%C3%A1riumKober> .
+  dc:type <http://mojezoo.cz/KobraKrálovská> ;
+  ns0:domovem <http://mojezoo.cz/TeráriumKober> .
 
-<http://mojezoo.cz/Veterin%C3%A1%C5%99_1>
+<http://mojezoo.cz/Veterinář_1>
   ns0:pečuje <http://mojezoo.cz/vybeh_id> ;
-  a ns0:Veterin%C3%A1%C5%99 ;
+  a ns0:Veterinář ;
   foaf:givenName "Marek" ;
   foaf:familyName "Novotný" ;
   vcard:hasTelephone "tel:+420111222335" ;
   gr:hasPriceSpecification "plat_3" .
 
-<http://mojezoo.cz/Ukl%C3%ADze%C4%8D_1>
-  a ns0:Ukl%C3%ADze%C4%8D ;
+<http://mojezoo.cz/Uklízeč_1>
+  a ns0:Uklízeč ;
   foaf:givenName "Petr" ;
   foaf:familyName "Novotný" ;
   vcard:hasTelephone "tel:+420111222333" ;
-  gr:hasPriceSpecification "plat_1" .
+  gr:hasPriceSpecification "plat_1" ;
+  ns0:jeOčkován "Daptacel", "Pentacel" .
 
-<http://mojezoo.cz/Pe%C4%8Dovatel_1>
-  a ns0:Pe%C4%8Dovatel ;
+<http://mojezoo.cz/Pečovatel_1>
+  a ns0:Pečovatel ;
   foaf:givenName "Marie" ;
   foaf:familyName "Novotná" ;
   vcard:hasTelephone "tel:+420111222334" ;
@@ -177,7 +178,7 @@
   ns0:spravuje <http://mojezoo.cz/vybeh_id> .
 
 <http://mojezoo.cz/Pruvodce_pavilonem_1>
-  a ns0:Pr%C5%AFvodcePavilonem ;
+  a ns0:PrůvodcePavilonem ;
   foaf:givenName "Anna" ;
   foaf:familyName "Novotná" ;
   vcard:hasTelephone "tel:+420111222336" ;
@@ -229,7 +230,7 @@
   gr:hasPriceSpecification <http://mojezoo.cz/cena3> ;
   ns0:kalorie 3160 .
 
-<http://mojezoo.cz/My%C5%A1>
+<http://mojezoo.cz/Myš>
   a ns0:TypStravy ;
   rdfs:label "Myš"@cs ;
   gr:hasPriceSpecification <http://mojezoo.cz/cena2> ;
@@ -258,6 +259,8 @@
 [] ns0:prace "Pečovatel" .
 [] ns0:prace "Veterinář" .
 [] ns0:prace "PrůvodcePavilonem" .
+[] ns0:zamestnanec_id "Uklízeč_1" .
+[] ns0:zamestnanec_id "Uklízeč_1" .
 [] ns0:pecovatel_id "Pečovatel_1" .
 [] ns0:pecovatel_id "Pečovatel_1" .
 [] ns0:pecovatel_id "Pečovatel_1" .

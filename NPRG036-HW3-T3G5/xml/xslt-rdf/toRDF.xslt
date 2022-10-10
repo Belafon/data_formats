@@ -93,8 +93,7 @@
         zoo:<xsl:value-of select="@název"/> a ex:Uklízeč ;
             foaf:givenName"<xsl:value-of select="givenName"/>"@cs ;
             foaf:familyName"<xsl:value-of select="familyName"/>"@cs ;
-            gr:hasPriceSpecification zoo:<xsl:value-of select="plat/@název"/> ;
-            vcard:hasTelephone &lt;<xsl:value-of select="telefonníČíslo"/>&gt;  .
+            gr:hasPriceSpecification zoo:<xsl:value-of select="plat/@název"/> ;<xsl:apply-templates select="jeOčkován"/>vcard:hasTelephone &lt;<xsl:value-of select="telefonníČíslo"/>&gt;  .
         
             zoo:<xsl:value-of select="plat/@název"/> a gr:UnitPriceSpecification ;
                 rdfs:label "Plat"@cs ;
@@ -106,6 +105,7 @@
             foaf:givenName "<xsl:value-of select="givenName"/>"@cs ;
             foaf:familyName "<xsl:value-of select="familyName"/>"@cs ;
             gr:hasPriceSpecification zoo:<xsl:value-of select="plat/@název"/> ;
+            <xsl:apply-templates select="jeOčkován"/>
             <xsl:apply-templates select="./spravuje/Výběh"/>
             vcard:hasTelephone &lt;<xsl:value-of select="telefonníČíslo"/>&gt;  .
         
@@ -124,6 +124,7 @@
             foaf:givenName "<xsl:value-of select="givenName"/>"@cs ;
             foaf:familyName "<xsl:value-of select="familyName"/>"@cs ;
             gr:hasPriceSpecification zoo:<xsl:value-of select="plat/@název"/> ;
+            <xsl:apply-templates select="jeOčkován"/>
             <xsl:apply-templates select="./pečuje/Výběh"/>
             vcard:hasTelephone &lt;<xsl:value-of select="telefonníČíslo"/>&gt;  .
         
@@ -140,6 +141,7 @@
             foaf:givenName "<xsl:value-of select="givenName"/>"@cs ;
             foaf:familyName "<xsl:value-of select="familyName"/>"@cs ;
             gr:hasPriceSpecification zoo:<xsl:value-of select="plat/@název"/> ;
+            <xsl:apply-templates select="jeOčkován"/>
             <xsl:apply-templates select="./provádí/Pavilon"/>
             vcard:hasTelephone &lt;<xsl:value-of select="telefonníČíslo"/>&gt;  .
         
@@ -151,5 +153,8 @@
     
     <xsl:template match="provádí/Pavilon">
             ex:prováděníPavilonem zoo:<xsl:value-of select="@ref"/> ;        
+    </xsl:template>    
+    <xsl:template match="jeOčkován">
+            ex:jeOčkován "<xsl:value-of select="text()"/>" ;              
     </xsl:template>    
 </xsl:stylesheet>

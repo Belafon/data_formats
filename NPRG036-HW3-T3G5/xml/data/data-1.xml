@@ -196,6 +196,8 @@
             <familyName>Novotný</familyName>
             <plat název="plat1" currency="CZK">25000</plat>
             <telefonníČíslo>tel:+420111222333</telefonníČíslo>
+            <jeOčkován>Daptacel</jeOčkován>
+            <jeOčkován>Pentacel</jeOčkován>
         </Uklízeč>
 
         <Pečovatel název="Pečovatel_1">

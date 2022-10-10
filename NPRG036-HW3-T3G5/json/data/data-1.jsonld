@@ -45,6 +45,7 @@
         "zvířata": {
             "@reverse": "ex:domovem"
         },
+        "jeOčkován": "ex:jeOčkován",
         "lokaceNaMapě": "ex:popisLokace",
         "popis": { 
             "@id": "dcterms:description", 
@@ -343,6 +344,7 @@
                                 "value": 48000
                             },
                             "telefonníČíslo": "tel:+420111222335",
+                            "jeOčkován": [],
                             "pečuje": [
                                 {
                                     "@id": "zoo:Poušť"
@@ -375,6 +377,7 @@
                                 "value": 38000
                             },
                             "telefonníČíslo": "tel:+420111222334",
+                            "jeOčkován": [],
                             "spravuje": [
                                 {
                                     "@id": "zoo:Poušť"
@@ -457,6 +460,7 @@
                         "value": 35000
                     },
                     "telefonníČíslo": "tel:+420111222336",
+                    "jeOčkován": [],
                     "provádí": [
                         {
                             "@id": "zoo:Afrika"
@@ -591,7 +595,11 @@
                 "currency": "CZK",
                 "value": 25000
             },
-            "telefonníČíslo": "tel:+420111222333"
+            "telefonníČíslo": "tel:+420111222333",
+            "jeOčkován": [
+                "Daptacel",
+                "Pentacel"
+            ]
         }
     ]
 }

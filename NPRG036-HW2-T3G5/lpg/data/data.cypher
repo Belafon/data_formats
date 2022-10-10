@@ -190,7 +190,9 @@ CREATE (GorilaNížnná)-[:STRAVUJE]->(Meloun)
 
 CREATE (Uklízeč_1:Uklízeč {
         jméno: 'Petr Novotný',
-        telefoníČíslo: 'tel:+420111222333'
+        telefoníČíslo: 'tel:+420111222333',
+        jeOčkován: "Daptacel",
+        jeOčkován: "Pentacel"
     })
 CREATE (Pečovatel_1:Pečovatel {
         jméno: 'Marie Novotná',

@@ -1,0 +1,204 @@
+<http://mojezoo.cz/Afrika> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Pavilon> .
+<http://mojezoo.cz/Afrika> <http://www.w3.org/2000/01/rdf-schema#label> "Afrika"@cs .
+<http://mojezoo.cz/Afrika> <http://example.org/vocabulary/datumVzniku> "2004-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Afrika> <http://purl.org/dc/terms/modified> "2020-02-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Plazy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Pavilon> .
+<http://mojezoo.cz/Plazy> <http://www.w3.org/2000/01/rdf-schema#label> "Plazy"@cs .
+<http://mojezoo.cz/Plazy> <http://example.org/vocabulary/datumVzniku> "2004-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Plazy> <http://purl.org/dc/terms/modified> "2019-02-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Prales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Pavilon> .
+<http://mojezoo.cz/Prales> <http://www.w3.org/2000/01/rdf-schema#label> "Prales"@cs .
+<http://mojezoo.cz/Prales> <http://example.org/vocabulary/datumVzniku> "2004-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Prales> <http://purl.org/dc/terms/modified> "2018-04-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:g451140 <http://example.org/vocabulary/pavilon_id> "Afrika" .
+<http://mojezoo.cz/Savana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/Afrika> .
+<http://mojezoo.cz/Savana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Výběh> .
+<http://mojezoo.cz/Savana> <http://www.w3.org/2000/01/rdf-schema#label> "Savana"@cs .
+<http://mojezoo.cz/Savana> <http://example.org/vocabulary/datumVýstavby> "2002-09-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Savana> <http://example.org/vocabulary/popisLokace> "S1" .
+<http://mojezoo.cz/Savana> <http://purl.org/dc/terms/description> "\"1200 m^2 rovinné travnaté plochy, na okrajích s velkými rozestupy rostou baobaby a blahovičníky.\""@cs .
+_:g451180 <http://example.org/vocabulary/pavilon_id> "Afrika" .
+<http://mojezoo.cz/Poušť> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/Afrika> .
+<http://mojezoo.cz/Poušť> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Výběh> .
+<http://mojezoo.cz/Poušť> <http://www.w3.org/2000/01/rdf-schema#label> "Poušť"@cs .
+<http://mojezoo.cz/Poušť> <http://example.org/vocabulary/datumVýstavby> "2003-08-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Poušť> <http://example.org/vocabulary/popisLokace> "S2" .
+<http://mojezoo.cz/Poušť> <http://purl.org/dc/terms/description> "\"1500 m^2 rovinné písčité plochy, na levém okraji roste mix listnatých stromů. \""@cs .
+_:g451220 <http://example.org/vocabulary/pavilon_id> "Afrika" .
+<http://mojezoo.cz/Hory> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/Afrika> .
+<http://mojezoo.cz/Hory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Výběh> .
+<http://mojezoo.cz/Hory> <http://www.w3.org/2000/01/rdf-schema#label> "Hory"@cs .
+<http://mojezoo.cz/Hory> <http://example.org/vocabulary/datumVýstavby> "2005-06-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Hory> <http://example.org/vocabulary/popisLokace> "S3" .
+<http://mojezoo.cz/Hory> <http://purl.org/dc/terms/description> "\"1000 m^2 plochy strmitých skalisek. \""@cs .
+_:g451260 <http://example.org/vocabulary/pavilon_id> "Plazy" .
+<http://mojezoo.cz/TeráriumKober> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/Plazy> .
+<http://mojezoo.cz/TeráriumKober> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Výběh> .
+<http://mojezoo.cz/TeráriumKober> <http://www.w3.org/2000/01/rdf-schema#label> "TeráriumKober"@cs .
+<http://mojezoo.cz/TeráriumKober> <http://example.org/vocabulary/datumVýstavby> "2011-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/TeráriumKober> <http://example.org/vocabulary/popisLokace> "PL1" .
+<http://mojezoo.cz/TeráriumKober> <http://purl.org/dc/terms/description> "\"4 m^2 plochy,prosklenné terrárium s umělým jezírkem a starými dubovými větvemi \""@cs .
+_:g451300 <http://example.org/vocabulary/pavilon_id> "Prales" .
+<http://mojezoo.cz/VýběhGoril> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/Prales> .
+<http://mojezoo.cz/VýběhGoril> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Výběh> .
+<http://mojezoo.cz/VýběhGoril> <http://www.w3.org/2000/01/rdf-schema#label> "VýběhGoril"@cs .
+<http://mojezoo.cz/VýběhGoril> <http://example.org/vocabulary/datumVýstavby> "2010-04-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/VýběhGoril> <http://example.org/vocabulary/popisLokace> "PR2" .
+<http://mojezoo.cz/VýběhGoril> <http://purl.org/dc/terms/description> "\"100 m^2 plochy,prosklenný plot,nerovný travnatý povrch,roste zde několik dubů. \""@cs .
+_:g451540 <http://example.org/vocabulary/zvireTyp_id> "Zebra" .
+<http://mojezoo.cz/Zebra> <http://example.org/vocabulary/lzeSpatřit> "Savana" .
+<http://mojezoo.cz/Zebra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/ZvířeTyp> .
+<http://mojezoo.cz/Zebra> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zebra"@cs .
+<http://mojezoo.cz/Zebra> <http://purl.org/dc/terms/description> "\"Bílý kůň s černýma pruhama\""@cs .
+<http://mojezoo.cz/Zebra> <http://example.org/vocabulary/popisChovu> "\"Zebry mají rády slunné teplé travnaté pláně,živí se trávou,senem. Zimu tráví ve stájích\""@cs .
+<http://mojezoo.cz/Zebra> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/TypyZvířat> .
+<http://mojezoo.cz/Zebra> <http://example.org/vocabulary/stravuje> <http://mojezoo.cz/Seno> .
+_:g451580 <http://example.org/vocabulary/zvireTyp_id> "KobraKrálovská" .
+<http://mojezoo.cz/KobraKrálovská> <http://example.org/vocabulary/lzeSpatřit> "TeráriumKober" .
+<http://mojezoo.cz/KobraKrálovská> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/ZvířeTyp> .
+<http://mojezoo.cz/KobraKrálovská> <http://www.w3.org/2004/02/skos/core#prefLabel> "KobraKrálovská"@cs .
+<http://mojezoo.cz/KobraKrálovská> <http://purl.org/dc/terms/description> "\"je druhem jedovatého hada z čeledi korálovcovitých,který žije v oblasti jižní a jihovýchodní Asie.\""@cs .
+<http://mojezoo.cz/KobraKrálovská> <http://example.org/vocabulary/popisChovu> "\"Živí se myšmi,nutné je být opatrný,jedná se o jednovatého hada.\""@cs .
+<http://mojezoo.cz/KobraKrálovská> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/TypyZvířat> .
+<http://mojezoo.cz/KobraKrálovská> <http://example.org/vocabulary/stravuje> <http://mojezoo.cz/Myš> .
+_:g451620 <http://example.org/vocabulary/zvireTyp_id> "GorilaNížnná" .
+<http://mojezoo.cz/GorilaNížnná> <http://example.org/vocabulary/lzeSpatřit> "VýběhGoril" .
+<http://mojezoo.cz/GorilaNížnná> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/ZvířeTyp> .
+<http://mojezoo.cz/GorilaNížnná> <http://www.w3.org/2004/02/skos/core#prefLabel> "GorilaNížnná"@cs .
+<http://mojezoo.cz/GorilaNížnná> <http://purl.org/dc/terms/description> "\"Domovem goril jsou tropické lesy v rovníkové Africe,kde se vyskytují ve dvou oblastech oddělených deštným lesem konžské pánve.\""@cs .
+<http://mojezoo.cz/GorilaNížnná> <http://example.org/vocabulary/popisChovu> "\"Živí se částí rostlin, ovoce, mravenci. \""@cs .
+<http://mojezoo.cz/GorilaNížnná> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/TypyZvířat> .
+<http://mojezoo.cz/GorilaNížnná> <http://example.org/vocabulary/stravuje> <http://mojezoo.cz/Meloun> .
+<http://mojezoo.cz/VelbloudDvouhrbý> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/ZvířeTyp> .
+<http://mojezoo.cz/VelbloudDvouhrbý> <http://www.w3.org/2004/02/skos/core#prefLabel> "VelbloudDvouhrbý"@cs .
+<http://mojezoo.cz/VelbloudDvouhrbý> <http://purl.org/dc/terms/description> "\"Hnědý kůň s dvouma hrbama\""@cs .
+<http://mojezoo.cz/VelbloudDvouhrbý> <http://example.org/vocabulary/popisChovu> "\"Velbloud je velmi nenáročné zvíře,živí se trávou,senem. Zimu tráví ve stájích. Když jednou zapomenete dodat vodu,nic se nestane.\""@cs .
+<http://mojezoo.cz/VelbloudDvouhrbý> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/TypyZvířat> .
+<http://mojezoo.cz/VelbloudDvouhrbý> <http://example.org/vocabulary/stravuje> <http://mojezoo.cz/Seno> .
+<http://mojezoo.cz/PaovceHřivnatá> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/ZvířeTyp> .
+<http://mojezoo.cz/PaovceHřivnatá> <http://www.w3.org/2004/02/skos/core#prefLabel> "PaovceHřivnatá"@cs .
+<http://mojezoo.cz/PaovceHřivnatá> <http://purl.org/dc/terms/description> "\"Jedná se o druh z podčeledi kozy a ovce původem ze skal hor v Severní Africe.\""@cs .
+<http://mojezoo.cz/PaovceHřivnatá> <http://example.org/vocabulary/popisChovu> "\"Živí se trávou,senem. Zimu tráví ve stájích.\""@cs .
+<http://mojezoo.cz/PaovceHřivnatá> <http://www.w3.org/2004/02/skos/core#inScheme> <http://mojezoo.cz/TypyZvířat> .
+<http://mojezoo.cz/PaovceHřivnatá> <http://example.org/vocabulary/stravuje> <http://mojezoo.cz/Seno> .
+<http://mojezoo.cz/Černobíl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://mojezoo.cz/Černobíl> <http://www.w3.org/2000/01/rdf-schema#label> "Černobíl"@cs .
+<http://mojezoo.cz/Černobíl> <http://example.org/vocabulary/popisZdavotnihoStavu> "Zdravý jedinec"@cs .
+<http://mojezoo.cz/Černobíl> <http://example.org/vocabulary/datumNarození> "2012-04-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Černobíl> <http://example.org/vocabulary/datumPříchoduDoZoo> "2012-04-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Černobíl> <http://purl.org/dc/terms/type> <http://mojezoo.cz/Zebra> .
+<http://mojezoo.cz/Černobíl> <http://example.org/vocabulary/domovem> <http://mojezoo.cz/Savana> .
+<http://mojezoo.cz/Erin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://mojezoo.cz/Erin> <http://www.w3.org/2000/01/rdf-schema#label> "Erin"@cs .
+<http://mojezoo.cz/Erin> <http://example.org/vocabulary/popisZdavotnihoStavu> "Zdravý jedinec"@cs .
+<http://mojezoo.cz/Erin> <http://example.org/vocabulary/datumNarození> "2010-04-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Erin> <http://example.org/vocabulary/datumPříchoduDoZoo> "2010-04-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Erin> <http://purl.org/dc/terms/type> <http://mojezoo.cz/Zebra> .
+<http://mojezoo.cz/Erin> <http://example.org/vocabulary/domovem> <http://mojezoo.cz/Savana> .
+<http://mojezoo.cz/Bessie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://mojezoo.cz/Bessie> <http://www.w3.org/2000/01/rdf-schema#label> "Bessie"@cs .
+<http://mojezoo.cz/Bessie> <http://example.org/vocabulary/popisZdavotnihoStavu> "Zdravý jedinec"@cs .
+<http://mojezoo.cz/Bessie> <http://example.org/vocabulary/datumNarození> "2009-04-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Bessie> <http://example.org/vocabulary/datumPříchoduDoZoo> "2010-04-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Bessie> <http://purl.org/dc/terms/type> <http://mojezoo.cz/Zebra> .
+<http://mojezoo.cz/Bessie> <http://example.org/vocabulary/domovem> <http://mojezoo.cz/Savana> .
+<http://mojezoo.cz/George> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://mojezoo.cz/George> <http://www.w3.org/2000/01/rdf-schema#label> "George"@cs .
+<http://mojezoo.cz/George> <http://example.org/vocabulary/popisZdavotnihoStavu> "Zdravý jedinec"@cs .
+<http://mojezoo.cz/George> <http://example.org/vocabulary/datumNarození> "1995-05-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/George> <http://example.org/vocabulary/datumPříchoduDoZoo> "2010-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/George> <http://purl.org/dc/terms/type> <http://mojezoo.cz/GorilaNížnná> .
+<http://mojezoo.cz/George> <http://example.org/vocabulary/domovem> <http://mojezoo.cz/VýběhGoril> .
+<http://mojezoo.cz/Lenka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://mojezoo.cz/Lenka> <http://www.w3.org/2000/01/rdf-schema#label> "Lenka"@cs .
+<http://mojezoo.cz/Lenka> <http://example.org/vocabulary/popisZdavotnihoStavu> "Zdravý jedinec"@cs .
+<http://mojezoo.cz/Lenka> <http://example.org/vocabulary/datumNarození> "2015-05-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Lenka> <http://example.org/vocabulary/datumPříchoduDoZoo> "2018-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://mojezoo.cz/Lenka> <http://purl.org/dc/terms/type> <http://mojezoo.cz/KobraKrálovská> .
+<http://mojezoo.cz/Lenka> <http://example.org/vocabulary/domovem> <http://mojezoo.cz/TeráriumKober> .
+<http://mojezoo.cz/Veterinář_1> <http://example.org/vocabulary/pečuje> <http://mojezoo.cz/vybeh_id> .
+<http://mojezoo.cz/Veterinář_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Veterinář> .
+<http://mojezoo.cz/Veterinář_1> <http://xmlns.com/foaf/0.1/givenName> "Marek" .
+<http://mojezoo.cz/Veterinář_1> <http://xmlns.com/foaf/0.1/familyName> "Novotný" .
+<http://mojezoo.cz/Veterinář_1> <http://www.w3.org/2006/vcard/ns#hasTelephone> "tel:+420111222335" .
+<http://mojezoo.cz/Veterinář_1> <http://purl.org/goodrelations/v1#hasPriceSpecification> "plat_3" .
+_:g452060 <http://example.org/vocabulary/veterinar_id> "Veterinář_1" .
+_:g452100 <http://example.org/vocabulary/veterinar_id> "Veterinář_1" .
+_:g452140 <http://example.org/vocabulary/veterinar_id> "Veterinář_1" .
+_:g452180 <http://example.org/vocabulary/veterinar_id> "Veterinář_1" .
+_:g452220 <http://example.org/vocabulary/veterinar_id> "Veterinář_1" .
+<http://mojezoo.cz/Uklízeč_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Uklízeč> .
+<http://mojezoo.cz/Uklízeč_1> <http://xmlns.com/foaf/0.1/givenName> "Petr" .
+<http://mojezoo.cz/Uklízeč_1> <http://xmlns.com/foaf/0.1/familyName> "Novotný" .
+<http://mojezoo.cz/Uklízeč_1> <http://www.w3.org/2006/vcard/ns#hasTelephone> "tel:+420111222333" .
+<http://mojezoo.cz/Uklízeč_1> <http://purl.org/goodrelations/v1#hasPriceSpecification> "plat_1" .
+<http://mojezoo.cz/Uklízeč_1> <http://example.org/vocabulary/jeOčkován> "Daptacel" .
+<http://mojezoo.cz/Uklízeč_1> <http://example.org/vocabulary/jeOčkován> "Pentacel" .
+_:g452260 <http://example.org/vocabulary/prace> "Uklízeč" .
+<http://mojezoo.cz/Pečovatel_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Pečovatel> .
+<http://mojezoo.cz/Pečovatel_1> <http://xmlns.com/foaf/0.1/givenName> "Marie" .
+<http://mojezoo.cz/Pečovatel_1> <http://xmlns.com/foaf/0.1/familyName> "Novotná" .
+<http://mojezoo.cz/Pečovatel_1> <http://www.w3.org/2006/vcard/ns#hasTelephone> "tel:+420111222334" .
+<http://mojezoo.cz/Pečovatel_1> <http://purl.org/goodrelations/v1#hasPriceSpecification> "plat_2" .
+<http://mojezoo.cz/Pečovatel_1> <http://example.org/vocabulary/spravuje> <http://mojezoo.cz/vybeh_id> .
+_:g452300 <http://example.org/vocabulary/prace> "Pečovatel" .
+_:g452340 <http://example.org/vocabulary/prace> "Veterinář" .
+<http://mojezoo.cz/Pruvodce_pavilonem_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/PrůvodcePavilonem> .
+<http://mojezoo.cz/Pruvodce_pavilonem_1> <http://xmlns.com/foaf/0.1/givenName> "Anna" .
+<http://mojezoo.cz/Pruvodce_pavilonem_1> <http://xmlns.com/foaf/0.1/familyName> "Novotná" .
+<http://mojezoo.cz/Pruvodce_pavilonem_1> <http://www.w3.org/2006/vcard/ns#hasTelephone> "tel:+420111222336" .
+<http://mojezoo.cz/Pruvodce_pavilonem_1> <http://purl.org/goodrelations/v1#hasPriceSpecification> "plat_4" .
+<http://mojezoo.cz/Pruvodce_pavilonem_1> <http://example.org/vocabulary/prováděníPavilonem> <http://mojezoo.cz/pavilon_id> .
+_:g452380 <http://example.org/vocabulary/prace> "PrůvodcePavilonem" .
+<http://mojezoo.cz/plat_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/plat_1> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/plat_1> <http://purl.org/goodrelations/v1#hasCurrencyValue> "25000"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://mojezoo.cz/plat_1> <http://www.w3.org/2000/01/rdf-schema#label> "Plat"@cs .
+<http://mojezoo.cz/plat_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/plat_2> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/plat_2> <http://purl.org/goodrelations/v1#hasCurrencyValue> "38000"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://mojezoo.cz/plat_2> <http://www.w3.org/2000/01/rdf-schema#label> "Plat"@cs .
+<http://mojezoo.cz/plat_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/plat_3> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/plat_3> <http://purl.org/goodrelations/v1#hasCurrencyValue> "48000"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://mojezoo.cz/plat_3> <http://www.w3.org/2000/01/rdf-schema#label> "Plat"@cs .
+<http://mojezoo.cz/plat_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/plat_4> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/plat_4> <http://purl.org/goodrelations/v1#hasCurrencyValue> "35000"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://mojezoo.cz/plat_4> <http://www.w3.org/2000/01/rdf-schema#label> "Plat"@cs .
+<http://mojezoo.cz/cena3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/cena3> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/cena3> <http://purl.org/goodrelations/v1#hasCurrencyValue> "65"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://mojezoo.cz/cena2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/cena2> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/cena2> <http://purl.org/goodrelations/v1#hasCurrencyValue> "80"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://mojezoo.cz/cena1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://mojezoo.cz/cena1> <http://purl.org/goodrelations/v1#hasCurrency> "CZK" .
+<http://mojezoo.cz/cena1> <http://purl.org/goodrelations/v1#hasCurrencyValue> "130"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:g452700 <http://example.org/vocabulary/zamestnanec_id> "Uklízeč_1" .
+_:g452740 <http://example.org/vocabulary/zamestnanec_id> "Uklízeč_1" .
+_:g452780 <http://example.org/vocabulary/pecovatel_id> "Pečovatel_1" .
+_:g452820 <http://example.org/vocabulary/pecovatel_id> "Pečovatel_1" .
+_:g452860 <http://example.org/vocabulary/pecovatel_id> "Pečovatel_1" .
+_:g452900 <http://example.org/vocabulary/pecovatel_id> "Pečovatel_1" .
+_:g452940 <http://example.org/vocabulary/pecovatel_id> "Pečovatel_1" .
+_:g452980 <http://example.org/vocabulary/pruvodce_pavilonem_id> "Pruvodce_pavilonem_1" .
+_:g453020 <http://example.org/vocabulary/pruvodce_pavilonem_id> "Pruvodce_pavilonem_1" .
+_:g453060 <http://example.org/vocabulary/pruvodce_pavilonem_id> "Pruvodce_pavilonem_1" .
+_:g453100 <http://example.org/vocabulary/zvireTyp_id> "Zebra" .
+_:g453140 <http://example.org/vocabulary/zvireTyp_id> "VelbloudDvouhrbý" .
+_:g453180 <http://example.org/vocabulary/zvireTyp_id> "PaovceHřivnatá" .
+_:g453220 <http://example.org/vocabulary/zvireTyp_id> "KobraKrálovská" .
+_:g453260 <http://example.org/vocabulary/zvireTyp_id> "GorilaNížnná" .
+<http://mojezoo.cz/Seno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TypStravy> .
+<http://mojezoo.cz/Seno> <http://www.w3.org/2000/01/rdf-schema#label> "Seno"@cs .
+<http://mojezoo.cz/Seno> <http://purl.org/goodrelations/v1#hasPriceSpecification> <http://mojezoo.cz/cena3> .
+<http://mojezoo.cz/Seno> <http://example.org/vocabulary/kalorie> "3160"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mojezoo.cz/Myš> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TypStravy> .
+<http://mojezoo.cz/Myš> <http://www.w3.org/2000/01/rdf-schema#label> "Myš"@cs .
+<http://mojezoo.cz/Myš> <http://purl.org/goodrelations/v1#hasPriceSpecification> <http://mojezoo.cz/cena2> .
+<http://mojezoo.cz/Myš> <http://example.org/vocabulary/kalorie> "5000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mojezoo.cz/Meloun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TypStravy> .
+<http://mojezoo.cz/Meloun> <http://www.w3.org/2000/01/rdf-schema#label> "Meloun"@cs .
+<http://mojezoo.cz/Meloun> <http://purl.org/goodrelations/v1#hasPriceSpecification> <http://mojezoo.cz/cena1> .
+<http://mojezoo.cz/Meloun> <http://example.org/vocabulary/kalorie> "2800"^^<http://www.w3.org/2001/XMLSchema#integer> .

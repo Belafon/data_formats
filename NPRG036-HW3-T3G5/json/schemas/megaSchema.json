@@ -404,6 +404,14 @@
                                                                         "type": "string",
                                                                         "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
                                                                     }
+                                                                    ,
+                                                                        "jeOčkován": {
+                                                                            "type": "array",
+                                                                            "items": [],
+                                                                            "additionalItems": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
                                                                     
                                                                 },
                                                                 "required": ["@id", "@type", "givenName", "familyName", "plat", "telefonníČíslo"]
@@ -487,6 +495,14 @@
                                                                         "telefonníČíslo": {
                                                                             "type": "string",
                                                                             "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
+                                                                        }
+                                                                        ,
+                                                                        "jeOčkován": {
+                                                                            "type": "array",
+                                                                            "items": [],
+                                                                            "additionalItems": {
+                                                                                "type": "string"
+                                                                            }
                                                                         }
                                                                         
                                                                     },
@@ -581,6 +597,14 @@
                                                             "type": "string",
                                                             "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
                                                         }
+                                                        ,
+                                                                        "jeOčkován": {
+                                                                            "type": "array",
+                                                                            "items": [],
+                                                                            "additionalItems": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
                                                         
                                                     },
                                                     "required": ["@id", "@type", "givenName", "familyName", "plat", "telefonníČíslo"]
@@ -660,6 +684,14 @@
                                     "type": "string",
                                     "pattern": "^tel:(\\+[0-9]{3})?[0-9]{9}$"
                                 }
+                                ,
+                                                                        "jeOčkován": {
+                                                                            "type": "array",
+                                                                            "items": [],
+                                                                            "additionalItems": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
                                 
                             },
                             "required": ["@id", "@type", "givenName", "familyName", "plat", "telefonníČíslo"]
