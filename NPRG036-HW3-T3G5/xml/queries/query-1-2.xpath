@@ -1,4 +1,4 @@
 (: Kód níže vybere všechny Zvířata, které se stravují (je součástí jejich jídelníčku)
      nějakým typem stravy, který je dražší, než 100 kč na den :)
     
-//Zvíře[./ZvířeTyp/@názevTypu = /Zoo/TypyZvířat/child::*/@název[../TypStravy/@názevTypu = /Zoo/TypyStrav/child::*/@název[../cena/@currency = "CZK" and ../cena/text() > 100]]]
+//Zvíře[./ZvířeTyp/@ref = /Zoo/TypyZvířat/child::*/název[../TypStravy/@ref = /Zoo/TypyStrav/child::*/@název[../cena/@currency = "CZK" and ../cena/text() > 100]]]

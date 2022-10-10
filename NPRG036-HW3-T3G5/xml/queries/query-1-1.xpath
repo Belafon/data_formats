@@ -1,4 +1,4 @@
 (: Kód níže vybere všechny elementy, které v uml modelu "dědí" ze Zaměstnanec, a které 
     mají nějaký podíl na provozu nějakého výběhu :)
     
-/Zoo/Zaměstnanci/child::*[@název = //Výběh/child::*/@názevTypu]
+/Zoo/Zaměstnanci/child::*[@název = //Výběh/child::*/@ref]
