@@ -92,7 +92,10 @@
         "familyName": "foaf:familyName",
         "plat": "gr:hasPriceSpecification",
         "telefonníČíslo": "vcard:hasTelephone",
-        "jméno": "rdfs:label"
+        "jméno": { 
+            "@id": "rdfs:label", 
+            "@container": "@language"
+        }
     },
     "@graph": [
         {
@@ -274,7 +277,9 @@
                             "@id": "zoo:Černobíl",
                             "@type": "dbo:Animal",
 
-                            "jméno": "Černobíl",
+                            "jméno": {
+                                "cs": "Černobíl"
+                            },
                             "popisZdravotníhoStavu": {
                                 "cs": "Zdravý jedinec"
                             },
@@ -288,7 +293,9 @@
                             "@id": "zoo:Erin",
                             "@type": "dbo:Animal",
 
-                            "jméno": "Erin",
+                            "jméno": {
+                                "cs": "Erin"
+                            },
                             "popisZdravotníhoStavu": {
                                 "cs": "Zdravý jedinec"
                             },
@@ -302,7 +309,9 @@
                             "@id": "zoo:Bessie",
                             "@type": "dbo:Animal",
 
-                            "jméno": "Bessie",
+                            "jméno": {
+                                "cs": "Bessie"
+                            },
                             "popisZdravotníhoStavu": {
                                 "cs": "Zdravý jedinec"
                             },
@@ -485,7 +494,9 @@
                             "@id": "zoo:Lenka",
                             "@type": "dbo:Animal",
 
-                            "jméno": "Lenka",
+                            "jméno": {
+                                "cs": "Lenka"
+                            },
                             "popisZdravotníhoStavu": {
                                 "cs": "Zdravý jedinec"
                             },
@@ -537,7 +548,9 @@
                             "@id": "zoo:George",
                             "@type": "dbo:Animal",
 
-                            "jméno": "George",
+                            "jméno": {
+                                "cs": "George"
+                            },
                             "popisZdravotníhoStavu": {
                                 "cs": "Zdravý jedinec"
                             },

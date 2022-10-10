@@ -295,7 +295,16 @@
                                                     },
                                                     "jméno": {
                                                         "description": "Identifikuje konkrétní zvíře.",
-                                                        "type": "string"
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "cs": {
+                                                                "type": "string"
+                                                            },
+                                                            "en": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "additionalProperties": false
                                                     },
                                                     "popisZdravotníhoStavu": {
                                                         "description": "Popis zdravotního stavu zajištěný veterinářem daného výběhu kde se zvíře nachází.",

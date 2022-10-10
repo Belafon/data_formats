@@ -19,7 +19,7 @@
   ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
   dc:type <http://mojezoo.cz/Zebra> ;
   a <http://dbpedia.org/ontology/Animal> ;
-  rdfs:label "Bessie" .
+  rdfs:label "Bessie"@cs .
 
 <http://mojezoo.cz/Erin>
   ns0:datumNarození "2009-05-12"^^xsd:date ;
@@ -28,7 +28,7 @@
   ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
   dc:type <http://mojezoo.cz/Zebra> ;
   a <http://dbpedia.org/ontology/Animal> ;
-  rdfs:label "Erin" .
+  rdfs:label "Erin"@cs .
 
 <http://mojezoo.cz/George>
   ns0:datumNarození "1995-05-12"^^xsd:date ;
@@ -37,7 +37,7 @@
   ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
   dc:type <http://mojezoo.cz/GorilaNížnná> ;
   a <http://dbpedia.org/ontology/Animal> ;
-  rdfs:label "George" .
+  rdfs:label "George"@cs .
 
 <http://mojezoo.cz/GorilaNížnná>
   ns0:lzeSpatřit <http://mojezoo.cz/VýběhGoril> ;
@@ -72,7 +72,7 @@
   ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
   dc:type <http://mojezoo.cz/KobraKrálovská> ;
   a <http://dbpedia.org/ontology/Animal> ;
-  rdfs:label "Lenka" .
+  rdfs:label "Lenka"@cs .
 
 <http://mojezoo.cz/Meloun>
   ns0:kalorie 28 ;
@@ -237,4 +237,4 @@
   ns0:popisZdavotníhoStavu "Zdravý jedinec"@cs ;
   dc:type <http://mojezoo.cz/Zebra> ;
   a <http://dbpedia.org/ontology/Animal> ;
-  rdfs:label "Černobíl" .
+  rdfs:label "Černobíl"@cs .
